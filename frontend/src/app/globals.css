@@ -1,0 +1,34 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    @apply text-text-main;
+}
+
+@layer utilities {
+
+    .reset-number-input::-webkit-inner-spin-button,
+    .reset-number-input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .reset-number-input {
+        appearance: unset;
+        -moz-appearance: textfield;
+    }
+
+    .teste {
+        column-count: 3;
+        column-fill: auto;
+    }
+}
+
+.horizontal-scroll {
+    scrollbar-width: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,252 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Furadeira de Impacto Bosch 450W 3/8 GSB 450 127V",
+            "price": 319.90,
+            "promotionalPrice": 279.90,
+            "quantity": 1,
+            "departament": "Materiais elétricos",
+            "sectionHomePage": "promotion",
+            "image": "https://cdn.leroymerlin.com.br/products/furadeira_de_impacto_gsb_450_3_8_127v__110v__bosch_90203162_e8ad_600x600.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Escada Doméstica em Alumínio 8 Degraus",
+            "price": 389.51,
+            "promotionalPrice": 319.90,
+            "quantity": 8,
+            "departament": "Equipamentos",
+            "sectionHomePage": "promotion",
+            "image": "https://casamattos.fbitsstatic.net/img/p/escada-aluminio-7-degraus-e1207-71525/258034.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Jogo de chaves de fenda/phillips com 10 peças Vonder",
+            "price": 57.50,
+            "promotionalPrice": 43.45,
+            "quantity": 43,
+            "departament": "Equipamentos",
+            "sectionHomePage": "promotion",
+            "image": "https://img.lojadomecanico.com.br/IMAGENS/2/121/128452/Jogo-de-chaves-de-fendaphillips-com-10-pecas-VONDER-PLUS-7893946161842-2.JPG"
+        },
+        {
+            "id": 4,
+            "name": "Cabo Fio Elétrico Flexível Sil 2,5mm Rolo 100 Metros Azul",
+            "price": 169.95,
+            "promotionalPrice": 153.54,
+            "quantity": 18,
+            "departament": "Equipamentos",
+            "sectionHomePage": "promotion",
+            "image": "https://static.construlardistribuidora.com.br/public/construlardistribuidora/imagens/produtos/cabo-fio-eletrico-flexivel-sil-2-5mm-rolo-100-metros-azul-2509.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Pistola de Cola Quente Profissional 23W/80W - K-800",
+            "price": 165.24,
+            "promotionalPrice": 147.24,
+            "quantity": 50,
+            "departament": "Equipamentos",
+            "sectionHomePage": "promotion",
+            "image": "https://images.tcdn.com.br/img/img_prod/806551/pistola_de_cola_quente_profissional_23w_100w_k_1000_bastao_de_cola_quente_grossa_11_5mm_45_1_f8afbc29e3a1f882decab822199fe00c.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Chuveiro Lorenzetti Advanced 7500 Watts",
+            "price": 168.51,
+            "promotionalPrice": 128.71,
+            "quantity": 10,
+            "departament": "Equipamentos",
+            "sectionHomePage": "promotion",
+            "image": "https://m.media-amazon.com/images/I/31R5grXUtZL._AC_UF894,1000_QL80_.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Massa Adesiva Epóxi Durepoxi Loctite 100g",
+            "price": 14.00,
+            "promotionalPrice": null,
+            "quantity": 87,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlight",
+            "image": "https://decorpecas.fbitsstatic.net/img/p/massa-adesiva-epoxi-durepoxi-loctite-100g-91878/278391.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Cabo Fio De Internet 15 Metros com conector",
+            "price": 37.95,
+            "promotionalPrice": null,
+            "quantity": 90,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlight",
+            "image": "https://http2.mlstatic.com/D_NQ_NP_717291-MLB54460139424_032023-O.webp"
+        },
+        {
+            "id": 9,
+            "name": "Cano PVC Marrom Soldável 1m 1.1/2\" 50mm Equation",
+            "price": 34.90,
+            "promotionalPrice": null,
+            "quantity": 150,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlight",
+            "image": "https://cdn.leroymerlin.com.br/products/cano_pvc_marrom_solda_1m_1_1_2_50mm_equation_90119883_c27d_600x600.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Multímetro Digital HM-1002 Hikari",
+            "price": 52.00,
+            "promotionalPrice": null,
+            "quantity": 24,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlight",
+            "image": "https://www.saravati.com.br/media/catalog/product/cache/ff61517d26ace703648229d56c081b52/4/0/40106ee1b1.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Filtro de Linha de 6 Tomadas 3M Preto Megatron",
+            "price": 39.99,
+            "promotionalPrice": null,
+            "quantity": 40,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlight",
+            "image": "https://d2l6qh3bt135o5.cloudfront.net/Custom/Content/Products/45/05/45052_filtro-de-linha-c-6-tomadas-pp-circular-3x0-75-c-1mt-preto-pr-13145-33_m1_637842454861081039.png"
+        },
+        {
+            "id": 12,
+            "name": "Tinta Spray Colorgin 350 ml",
+            "price": 21.90,
+            "promotionalPrice": null,
+            "quantity": 15,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlight",
+            "image": "https://acdn.mitiendanube.com/stores/001/797/134/products/12345631-b4146c86ce3d59b9be16402716118760-640-0.png"
+        },
+        {
+            "id": 13,
+            "name": "Torneira Bóia para Caixa D Água 1/2\" Bruto Deca",
+            "price": 95.75,
+            "promotionalPrice": null,
+            "quantity": 23,
+            "departament": "Equipamentos",
+            "sectionHomePage": "SeeToo",
+            "image": "https://images.cws.digital/produtos/gg/60/07/torneira-de-boia-para-caixa-dagua-12-bruto-7450760-1600456035762.jpg"
+        },
+        {
+            "id": 14,
+            "name": "Assento Sanitário Elevado Almofadado - Mebuki - 7,5cm",
+            "price": 159.90,
+            "promotionalPrice": null,
+            "quantity": 2,
+            "departament": "Equipamentos",
+            "sectionHomePage": "SeeToo",
+            "image": "https://cinquentamaissaude.vteximg.com.br/arquivos/ids/160307-1000-1000/assento-tampa-vaso-sanitario-elevado-almofadado-7-5.jpg?v=637952192688830000"
+        },
+        {
+            "id": 15,
+            "name": "Kit para Pintura Prática (rolo 23cm + bandeja)",
+            "price": 32.90,
+            "promotionalPrice": null,
+            "quantity": 8,
+            "departament": "Equipamentos",
+            "sectionHomePage": "SeeToo",
+            "image": "https://outletdastintas.com.br/wp-content/uploads/2016/11/kit-pintura-tigre-brinde-coral.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Spot de Luz Trilho",
+            "price": 16.80,
+            "promotionalPrice": null,
+            "quantity": 13,
+            "departament": "Equipamentos",
+            "sectionHomePage": "SeeToo",
+            "image": "https://19472.cdn.simplo7.net/static/19472/sku/spot-trilho-luminaria-spot-trilho-p-lampada-par20--p-1641581534535.png"
+        },
+        {
+            "id": 17,
+            "name": "Interruptor Simples Com Tomada 2P+T 20A Fame",
+            "price": 19.80,
+            "promotionalPrice": null,
+            "quantity": 27,
+            "departament": "Equipamentos",
+            "sectionHomePage": "SeeToo",
+            "image": "https://images.tcdn.com.br/img/img_prod/861603/interruptor_simples_com_tomada_2p_t_20a_modulare_1436_fame_82271_1_f0cd839dc3689c457d686399a2253b3c.jpg"
+        },
+        {
+            "id": 19,
+            "name": "Philips Lâmpada LED 90W Luz Quente 13W",
+            "price": 28.30,
+            "promotionalPrice": null,
+            "quantity": 27,
+            "departament": "Equipamentos",
+            "sectionHomePage": "SeeToo",
+            "image": "https://shoppr.com.br/cdn/shop/products/Imagem3_bdc18016-92f7-4320-aacb-2fcac7abef79_2048x.png"
+        },
+        {
+            "id": 20,
+            "name": "Chuveiro Lorenzetti Acqua Duo 220V,7800W",
+            "price": 608.25,
+            "promotionalPrice": 554.90,
+            "quantity": 4,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlightHorizontal",
+            "image": "https://cdn.vnda.com.br/elevato/2021/10/27/11_10_3_382_Desenhotecnicolorenzetti2.jpg?v=1635344179"
+        },
+        {
+            "id": 21,
+            "name": "Torneira tanque cromada 17 cm parede",
+            "price": 52.50,
+            "promotionalPrice": 40.50,
+            "quantity": 57,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlightHorizontal",
+            "image": "https://images.tcdn.com.br/img/img_prod/670572/torneira_tanque_pia_cozinha_tanque_abs_cromada_c31_17_cm_parede_531_1_e458100729060c3aaa8c5d0f386623b8.jpg"
+        },
+        {
+            "id": 22,
+            "name": "Serra Tico Tico 450W 220V Modelo-GST-650",
+            "price": 499.99,
+            "promotionalPrice": 423.00,
+            "quantity": 1,
+            "departament": "Equipamentos",
+            "sectionHomePage": "highlightHorizontal",
+            "image": "https://images.tcdn.com.br/img/img_prod/1034283/serra_tico_tico_450w_220v_modelo_gst_650_bosch_217_1_a07ad2946450c4281674ab4016987003.jpg"
+        }
+    ],
+    "blog": [
+        {
+            "image": "https://images.unsplash.com/photo-1576678433413-202829a1ab98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+            "title": "Tipos de chuveiros: Saiba escolher o ideal para você"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1554825959-e9a6670d4f18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1664&q=80",
+            "title": "Confira as 10 ferramentas essenciais que você precisa ter"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1564226591723-659ff3852b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+            "title": "Tipos de chuveiros: Saiba escolher o ideal para você"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1516684402831-c151c11c6023?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80",
+            "title": "Faça você mesmo: Aprenda a trocar a resistência do chuveiro"
+        }
+    ],
+    "departaments": [
+        {
+            "name": "Materiais elétricos",
+            "icon": "material-symbols:energy-savings-leaf",
+            "categories": [
+                {
+                    "name": "Cabos e extensões",
+                    "link": "/extensao"
+                },
+                {
+                    "name": "Lâmpadas",
+                    "link": "/lampada"
+                },
+                {
+                    "name": "Luminárias",
+                    "link": "/luminaria"
+                }
+            ]
+        }
+    ]
+}
