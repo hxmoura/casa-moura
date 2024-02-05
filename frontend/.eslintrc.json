@@ -1,5 +1,6 @@
 {
   "extends": [
+    "next/babel",
     "next/core-web-vitals",
     "plugin:prettier/recommended",
     "prettier"
