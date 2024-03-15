@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 
 export default function useAnimatedUnmount(visible: boolean) {
-  const [shouldRender, setShouldRender] = useState(visible);
-  const animatedElementRef = useRef(null);
+  const [shouldRender, setShouldRender] = useState<boolean>(visible);
+  const animatedElementRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (visible) {
