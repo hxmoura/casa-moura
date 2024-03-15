@@ -3,5 +3,20 @@
 @import "tailwindcss/utilities";
 
 body {
-    @apply text-text-main;
+  @apply text-text-main;
+}
+
+.disableScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.disableScroll {
+  scrollbar-width: none;
+}
+
+.lineLimit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
 }

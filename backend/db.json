@@ -5,10 +5,42 @@
             "name": "Furadeira de Impacto Bosch 450W 3/8 GSB 450 127V",
             "price": 319.90,
             "promotionalPrice": 279.90,
-            "quantity": 1,
+            "quantity": 4,
             "departament": "Materiais elétricos",
             "sectionHomePage": "promotion",
-            "image": "https://cdn.leroymerlin.com.br/products/furadeira_de_impacto_gsb_450_3_8_127v__110v__bosch_90203162_e8ad_600x600.jpg"
+            "image": "https://cdn.leroymerlin.com.br/products/furadeira_de_impacto_gsb_450_3_8_127v__110v__bosch_90203162_e8ad_600x600.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 2,
@@ -18,7 +50,49 @@
             "quantity": 8,
             "departament": "Equipamentos",
             "sectionHomePage": "promotion",
-            "image": "https://casamattos.fbitsstatic.net/img/p/escada-aluminio-7-degraus-e1207-71525/258034.jpg"
+            "image": "https://casamattos.fbitsstatic.net/img/p/escada-aluminio-7-degraus-e1207-71525/258034.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 3,
@@ -28,7 +102,74 @@
             "quantity": 43,
             "departament": "Equipamentos",
             "sectionHomePage": "promotion",
-            "image": "https://img.lojadomecanico.com.br/IMAGENS/2/121/128452/Jogo-de-chaves-de-fendaphillips-com-10-pecas-VONDER-PLUS-7893946161842-2.JPG"
+            "image": "https://img.lojadomecanico.com.br/IMAGENS/2/121/128452/Jogo-de-chaves-de-fendaphillips-com-10-pecas-VONDER-PLUS-7893946161842-2.JPG",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 4,
@@ -38,7 +179,29 @@
             "quantity": 18,
             "departament": "Equipamentos",
             "sectionHomePage": "promotion",
-            "image": "https://static.construlardistribuidora.com.br/public/construlardistribuidora/imagens/produtos/cabo-fio-eletrico-flexivel-sil-2-5mm-rolo-100-metros-azul-2509.jpg"
+            "image": "https://static.construlardistribuidora.com.br/public/construlardistribuidora/imagens/produtos/cabo-fio-eletrico-flexivel-sil-2-5mm-rolo-100-metros-azul-2509.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 5,
@@ -48,7 +211,39 @@
             "quantity": 50,
             "departament": "Equipamentos",
             "sectionHomePage": "promotion",
-            "image": "https://images.tcdn.com.br/img/img_prod/806551/pistola_de_cola_quente_profissional_23w_100w_k_1000_bastao_de_cola_quente_grossa_11_5mm_45_1_f8afbc29e3a1f882decab822199fe00c.jpg"
+            "image": "https://images.tcdn.com.br/img/img_prod/806551/pistola_de_cola_quente_profissional_23w_100w_k_1000_bastao_de_cola_quente_grossa_11_5mm_45_1_f8afbc29e3a1f882decab822199fe00c.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 6,
@@ -58,7 +253,39 @@
             "quantity": 10,
             "departament": "Equipamentos",
             "sectionHomePage": "promotion",
-            "image": "https://m.media-amazon.com/images/I/31R5grXUtZL._AC_UF894,1000_QL80_.jpg"
+            "image": "https://m.media-amazon.com/images/I/31R5grXUtZL._AC_UF894,1000_QL80_.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 7,
@@ -85,7 +312,7 @@
             "name": "Cano PVC Marrom Soldável 1m 1.1/2\" 50mm Equation",
             "price": 34.90,
             "promotionalPrice": null,
-            "quantity": 150,
+            "quantity": 15,
             "departament": "Equipamentos",
             "sectionHomePage": "highlight",
             "image": "https://cdn.leroymerlin.com.br/products/cano_pvc_marrom_solda_1m_1_1_2_50mm_equation_90119883_c27d_600x600.jpg"
