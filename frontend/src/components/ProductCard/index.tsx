@@ -1,5 +1,6 @@
 import { currencyConverter } from "@/utils/CurrencyConverter";
 import { Icon } from "@iconify/react";
+import ImageFallback from "../ImageFallback";
 
 interface ProductCardProps {
   promotion?: boolean;
@@ -7,9 +8,12 @@ interface ProductCardProps {
   price: number;
   promotionalPrice: number;
   img: string;
-  installments: number;
-  reviewsQuantity: number;
-  reviewsNote: 1 | 2 | 3 | 4 | 5;
+  reviews: Array<{
+    perfilName: string;
+    raiting: number;
+    description: string;
+  }>;
+  onBuy: () => void;
 }
 
 export default function ProductCard({
@@ -18,12 +22,22 @@ export default function ProductCard({
   price,
   promotionalPrice = 0,
   img,
-  installments = 1,
-  reviewsQuantity = 0,
-  reviewsNote,
+  reviews,
+  onBuy,
 }: ProductCardProps) {
   if (!label || !price) {
     return null;
+  }
+
+  const ratingSum = reviews
+    ?.map((review) => review.raiting)
+    .reduce((acc, value) => acc + value, 0);
+
+  const ratingAverage = Math.round(ratingSum / reviews?.length);
+
+  function btnBuy(event: React.MouseEvent) {
+    event.preventDefault();
+    onBuy();
   }
 
   return (
@@ -35,14 +49,15 @@ export default function ProductCard({
               -{Math.round(((price - promotionalPrice) / price) * 100)}%
             </span>
           )}
-          {img ? (
-            <img src={img} alt="asjdajsd" className="w-full max-h-[218px]" />
-          ) : (
-            <div className="w-full h-[218px] flex items-center justify-center">
-              <Icon icon="carbon:no-image" className="w-12 h-12" />
-            </div>
-          )}
-          <button className="bg-brand-secondary text-white items-center justify-center absolute bottom-0 right-0 left-0 gap-2 h-9 hover:bg-brand-secondaryDark flex opacity-0 lg:group-hover:opacity-100 transition-opacity">
+          <ImageFallback
+            image={img}
+            className="w-full h-[218px] object-contain"
+            classNameFallback="w-full h-[218px]"
+          />
+          <button
+            className="bg-brand-secondary text-white items-center justify-center absolute bottom-0 gap-2 h-9 hover:bg-brand-secondaryDark flex opacity-0 lg:group-hover:opacity-100 transition-opacity w-full"
+            onClick={(event) => btnBuy(event)}
+          >
             <Icon icon="lucide:shopping-cart" className="w-6 h-6" />
             <span className="text-sm font-medium">Comprar</span>
           </button>
@@ -53,12 +68,12 @@ export default function ProductCard({
             {[1, 2, 3, 4, 5].map((star, index) => (
               <Icon
                 key={index}
-                icon={`${reviewsNote >= star ? "heroicons:star-solid" : "heroicons:star"}`}
+                icon={`${ratingAverage >= star ? "heroicons:star-solid" : "heroicons:star"}`}
                 className={`text-[#FFA800] w-4 h-4`}
               />
             ))}
             <span className="text-xs text-text-light ml-1">
-              ({reviewsQuantity})
+              ({reviews?.length})
             </span>
           </div>
           <div className="flex flex-col">
@@ -73,10 +88,10 @@ export default function ProductCard({
                 : currencyConverter(price)}
             </strong>
             <small className="text-text-light text-xs mt-1">
-              {installments}x de{" "}
+              12x de{" "}
               {promotion
-                ? currencyConverter(promotionalPrice / installments)
-                : currencyConverter(price / installments)}{" "}
+                ? currencyConverter(promotionalPrice / 12)
+                : currencyConverter(price / 12)}{" "}
               sem juros
             </small>
           </div>

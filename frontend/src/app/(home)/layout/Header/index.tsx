@@ -3,156 +3,21 @@
 import Container from "@/components/Container";
 import Logo from "@/components/Logo";
 import { Icon } from "@iconify/react";
-import { RefObject, createRef, useState } from "react";
+import { useContext } from "react";
 import useAnimatedUnmount from "@/hooks/useAnimatedEnd";
 import DepartamentsMobile from "./Components/Departaments/DepartamentsMobile";
-import { departaments } from "./TypeDepartaments";
 import DepartamentsDesktop from "./Components/Departaments/DepartamentsDesktop";
 import Cart from "./Components/Cart";
 import useDepartaments from "./hooks/useDepartaments";
+import { CartContext } from "@/app/contexts/CartContext";
+import { departament } from "../../types/departament";
+import Link from "next/link";
 
-interface CartRef {
-  handleCart: () => void;
+interface HeaderProps {
+  departaments: departament[];
 }
 
-export default function Header() {
-  const departaments: departaments[] = [
-    {
-      name: "Materiais elétricos",
-      icon: "jhashdahsd",
-      url: "/eletricos",
-      categories: [
-        { name: "Lampadas", url: "/lampadas" },
-        { name: "Tomadas e extensões", url: "/tomadas" },
-        { name: "Cabos e fios", url: "/cabos" },
-        { name: "Chuveiros e duchas", url: "/duchas" },
-        { name: "Lampadas", url: "/lampadas" },
-        { name: "Tomadas e extensões", url: "/tomadas" },
-        { name: "Cabos e fios", url: "/cabos" },
-        { name: "Chuveiros e duchas", url: "/duchas" },
-        { name: "Lampadas", url: "/lampadas" },
-        { name: "Tomadas e extensões", url: "/tomadas" },
-        { name: "Cabos e fios", url: "/cabos" },
-        { name: "Chuveiros e duchas", url: "/duchas" },
-        { name: "Lampadas", url: "/lampadas" },
-        { name: "Tomadas e extensões", url: "/tomadas" },
-        { name: "Cabos e fios", url: "/cabos" },
-        { name: "Chuveiros e duchas", url: "/duchas" },
-        { name: "Lampadas", url: "/lampadas" },
-        { name: "Tomadas e extensões", url: "/tomadas" },
-        { name: "Cabos e fios", url: "/cabos" },
-        { name: "Chuveiros e duchas", url: "/duchas" },
-        { name: "Lampadas", url: "/lampadas" },
-        { name: "Tomadas e extensões", url: "/tomadas" },
-        { name: "Cabos e fios", url: "/cabos" },
-        { name: "Chuveiros e duchas", url: "/duchas" },
-        { name: "Lampadas", url: "/lampadas" },
-        { name: "Tomadas e extensões", url: "/tomadas" },
-        { name: "Cabos e fios", url: "/cabos" },
-        { name: "Chuveiros e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Ferramentas",
-      icon: "jhashdahsd",
-      url: "/hidraulicos",
-      categories: [
-        { name: "afdsgdsdf", url: "/lampadas" },
-        { name: "asdsgsgwrasf e extensões", url: "/tomadas" },
-        { name: "Cabos e dfasdtzca", url: "/cabos" },
-        { name: "amogjohojewt e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Ferragens",
-      icon: "jhashdahsd",
-      url: "/ferramentas",
-      categories: [
-        { name: "sdgyyuyggh", url: "/lampadas" },
-        { name: "qeasdasf e extensões", url: "/tomadas" },
-        { name: "llhjkghj e fios", url: "/cabos" },
-        { name: "rsrsfvsdhsg e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Materiais hidráulicos",
-      icon: "jhashdahsd",
-      url: "/ferragens",
-      categories: [
-        { name: "sqdfjhdedtetg", url: "/lampadas" },
-        { name: "sfdhethdgesrdg e extensões", url: "/tomadas" },
-        { name: "Cabos e fios", url: "/cabos" },
-        { name: "sdtgwertyg e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Iluminação",
-      icon: "jhashdahsd",
-      url: "/seguranca",
-      categories: [
-        { name: "srgheurujegh", url: "/lampadas" },
-        { name: "asdgtsyartf e extensões", url: "/tomadas" },
-        { name: "asdaetgaf e fios", url: "/cabos" },
-        { name: "aetatstsrsar e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Duchas e chuveiros",
-      icon: "jhashdahsd",
-      url: "/seguranca",
-      categories: [
-        { name: "srgheurujegh", url: "/lampadas" },
-        { name: "asdgtsyartf e extensões", url: "/tomadas" },
-        { name: "asdaetgaf e fios", url: "/cabos" },
-        { name: "aetatstsrsar e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Segurança",
-      icon: "jhashdahsd",
-      url: "/seguranca",
-      categories: [
-        { name: "srgheurujegh", url: "/lampadas" },
-        { name: "asdgtsyartf e extensões", url: "/tomadas" },
-        { name: "asdaetgaf e fios", url: "/cabos" },
-        { name: "aetatstsrsar e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Pintura",
-      icon: "jhashdahsd",
-      url: "/seguranca",
-      categories: [
-        { name: "srgheurujegh", url: "/lampadas" },
-        { name: "asdgtsyartf e extensões", url: "/tomadas" },
-        { name: "asdaetgaf e fios", url: "/cabos" },
-        { name: "aetatstsrsar e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Equipamentos",
-      icon: "jhashdahsd",
-      url: "/seguranca",
-      categories: [
-        { name: "srgheurujegh", url: "/lampadas" },
-        { name: "asdgtsyartf e extensões", url: "/tomadas" },
-        { name: "asdaetgaf e fios", url: "/cabos" },
-        { name: "aetatstsrsar e duchas", url: "/duchas" },
-      ],
-    },
-    {
-      name: "Sinalização",
-      icon: "jhashdahsd",
-      url: "/seguranca",
-      categories: [
-        { name: "srgheurujegh", url: "/lampadas" },
-        { name: "asdgtsyartf e extensões", url: "/tomadas" },
-        { name: "asdaetgaf e fios", url: "/cabos" },
-        { name: "aetatstsrsar e duchas", url: "/duchas" },
-      ],
-    },
-  ];
-
+export default function Header({ departaments }: HeaderProps) {
   const {
     handleMobileMenu,
     handleMobileBgMenu,
@@ -165,13 +30,13 @@ export default function Header() {
     setOpenMobileMenu,
   } = useDepartaments();
 
-  const cartRef: RefObject<CartRef> = createRef();
+  const { cart, handleCartOpening } = useContext(CartContext)!;
   const { animatedElementRef, shouldRender } =
     useAnimatedUnmount(openMobileMenu);
 
   return (
     <header className="h-[120px] lg:h-[150px] bg-brand-primary">
-      <Cart ref={cartRef} />
+      <Cart />
 
       <Container>
         <div className="flex flex-col justify-center h-full gap-8 py-4">
@@ -210,21 +75,23 @@ export default function Header() {
                 </a>
               </button>
               <button className="lg:w-9 lg:h-9" title="Conta">
-                <a href="#" className="text-white">
+                <Link href="/signin" className="text-white">
                   <Icon
                     className="w-7 h-7 lg:w-8 lg:h-8 lg:hover:w-9 lg:hover:h-9 transition-all"
                     icon="lucide:user"
                   />
-                </a>
+                </Link>
               </button>
               <button
-                className="text-white lg:w-9 lg:h-9 relative"
+                className="text-white lg:w-9 lg:h-9 relative group"
                 title="Carrinho"
-                onClick={() => cartRef.current?.handleCart()}
+                onClick={handleCartOpening}
               >
-                <div className="bg-brand-secondary w-3 h-3 lg:w-4 lg:h-4 rounded-full absolute top-0 -right-1"></div>
+                {cart?.length > 0 && (
+                  <div className="bg-brand-secondary w-3 h-3 lg:w-4 lg:h-4 rounded-full absolute top-0 -right-1 transition-all lg:group-hover:translate-x-1"></div>
+                )}
                 <Icon
-                  className="w-7 h-7 lg:w-8 lg:h-8 lg:hover:w-9 lg:hover:h-9 transition-all"
+                  className="w-7 h-7 lg:w-8 lg:h-8 lg:group-hover:w-9 lg:group-hover:h-9 transition-all"
                   icon="lucide:shopping-cart"
                 />
               </button>

@@ -1,9 +1,9 @@
-export interface departaments {
+export interface departament {
   name: string;
+  link: string;
   icon: string;
-  url: string;
   categories: Array<{
     name: string;
-    url: string;
+    link: string;
   }>;
 }

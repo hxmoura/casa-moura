@@ -3,33 +3,13 @@
         {
             "id": 1,
             "name": "Furadeira de Impacto Bosch 450W 3/8 GSB 450 127V",
+            "brand": "Bosch",
             "price": 319.90,
             "promotionalPrice": 279.90,
-            "quantity": 4,
-            "departament": "Materiais elétricos",
+            "quantityInStock": 4,
             "sectionHomePage": "promotion",
             "image": "https://cdn.leroymerlin.com.br/products/furadeira_de_impacto_gsb_450_3_8_127v__110v__bosch_90203162_e8ad_600x600.jpg",
             "reviews": [
-                {
-                    "perfilName": "Juliano Gonçalves",
-                    "raiting": 3,
-                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                },
-                {
-                    "perfilName": "Juliano Gonçalves",
-                    "raiting": 1,
-                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                },
-                {
-                    "perfilName": "Juliano Gonçalves",
-                    "raiting": 4,
-                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                },
-                {
-                    "perfilName": "Juliano Gonçalves",
-                    "raiting": 4,
-                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                },
                 {
                     "perfilName": "Juliano Gonçalves",
                     "raiting": 4,
@@ -39,16 +19,36 @@
                     "perfilName": "Juliano Gonçalves",
                     "raiting": 2,
                     "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }
             ]
         },
         {
             "id": 2,
             "name": "Escada Doméstica em Alumínio 8 Degraus",
+            "brand": "Mor",
             "price": 389.51,
             "promotionalPrice": 319.90,
-            "quantity": 8,
-            "departament": "Equipamentos",
+            "quantityInStock": 8,
             "sectionHomePage": "promotion",
             "image": "https://casamattos.fbitsstatic.net/img/p/escada-aluminio-7-degraus-e1207-71525/258034.jpg",
             "reviews": [
@@ -97,10 +97,10 @@
         {
             "id": 3,
             "name": "Jogo de chaves de fenda/phillips com 10 peças Vonder",
+            "brand": "Vonder",
             "price": 57.50,
             "promotionalPrice": 43.45,
-            "quantity": 43,
-            "departament": "Equipamentos",
+            "quantityInStock": 43,
             "sectionHomePage": "promotion",
             "image": "https://img.lojadomecanico.com.br/IMAGENS/2/121/128452/Jogo-de-chaves-de-fendaphillips-com-10-pecas-VONDER-PLUS-7893946161842-2.JPG",
             "reviews": [
@@ -174,10 +174,10 @@
         {
             "id": 4,
             "name": "Cabo Fio Elétrico Flexível Sil 2,5mm Rolo 100 Metros Azul",
+            "brand": "Sil",
             "price": 169.95,
             "promotionalPrice": 153.54,
-            "quantity": 18,
-            "departament": "Equipamentos",
+            "quantityInStock": 18,
             "sectionHomePage": "promotion",
             "image": "https://static.construlardistribuidora.com.br/public/construlardistribuidora/imagens/produtos/cabo-fio-eletrico-flexivel-sil-2-5mm-rolo-100-metros-azul-2509.jpg",
             "reviews": [
@@ -206,10 +206,10 @@
         {
             "id": 5,
             "name": "Pistola de Cola Quente Profissional 23W/80W - K-800",
+            "brand": "Rhamos & Brito",
             "price": 165.24,
             "promotionalPrice": 147.24,
-            "quantity": 50,
-            "departament": "Equipamentos",
+            "quantityInStock": 50,
             "sectionHomePage": "promotion",
             "image": "https://images.tcdn.com.br/img/img_prod/806551/pistola_de_cola_quente_profissional_23w_100w_k_1000_bastao_de_cola_quente_grossa_11_5mm_45_1_f8afbc29e3a1f882decab822199fe00c.jpg",
             "reviews": [
@@ -248,10 +248,10 @@
         {
             "id": 6,
             "name": "Chuveiro Lorenzetti Advanced 7500 Watts",
+            "brand": "Lorenzetti",
             "price": 168.51,
             "promotionalPrice": 128.71,
-            "quantity": 10,
-            "departament": "Equipamentos",
+            "quantityInStock": 10,
             "sectionHomePage": "promotion",
             "image": "https://m.media-amazon.com/images/I/31R5grXUtZL._AC_UF894,1000_QL80_.jpg",
             "reviews": [
@@ -290,152 +290,767 @@
         {
             "id": 7,
             "name": "Massa Adesiva Epóxi Durepoxi Loctite 100g",
+            "brand": "Loctite",
             "price": 14.00,
             "promotionalPrice": null,
-            "quantity": 87,
-            "departament": "Equipamentos",
+            "quantityInStock": 87,
             "sectionHomePage": "highlight",
-            "image": "https://decorpecas.fbitsstatic.net/img/p/massa-adesiva-epoxi-durepoxi-loctite-100g-91878/278391.jpg"
+            "image": "https://decorpecas.fbitsstatic.net/img/p/massa-adesiva-epoxi-durepoxi-loctite-100g-91878/278391.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 8,
             "name": "Cabo Fio De Internet 15 Metros com conector",
+            "brand": "Megatron",
             "price": 37.95,
             "promotionalPrice": null,
-            "quantity": 90,
-            "departament": "Equipamentos",
+            "quantityInStock": 90,
             "sectionHomePage": "highlight",
-            "image": "https://http2.mlstatic.com/D_NQ_NP_717291-MLB54460139424_032023-O.webp"
+            "image": "https://http2.mlstatic.com/D_NQ_NP_717291-MLB54460139424_032023-O.webp",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 9,
             "name": "Cano PVC Marrom Soldável 1m 1.1/2\" 50mm Equation",
+            "brand": "Krona",
             "price": 34.90,
             "promotionalPrice": null,
-            "quantity": 15,
-            "departament": "Equipamentos",
+            "quantityInStock": 15,
             "sectionHomePage": "highlight",
-            "image": "https://cdn.leroymerlin.com.br/products/cano_pvc_marrom_solda_1m_1_1_2_50mm_equation_90119883_c27d_600x600.jpg"
+            "image": "https://cdn.leroymerlin.com.br/products/cano_pvc_marrom_solda_1m_1_1_2_50mm_equation_90119883_c27d_600x600.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 10,
             "name": "Multímetro Digital HM-1002 Hikari",
+            "brand": "Hikari",
             "price": 52.00,
             "promotionalPrice": null,
-            "quantity": 24,
-            "departament": "Equipamentos",
+            "quantityInStock": 24,
             "sectionHomePage": "highlight",
-            "image": "https://www.saravati.com.br/media/catalog/product/cache/ff61517d26ace703648229d56c081b52/4/0/40106ee1b1.jpg"
+            "image": "https://www.saravati.com.br/media/catalog/product/cache/ff61517d26ace703648229d56c081b52/4/0/40106ee1b1.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 11,
             "name": "Filtro de Linha de 6 Tomadas 3M Preto Megatron",
+            "brand": "Megatron",
             "price": 39.99,
             "promotionalPrice": null,
-            "quantity": 40,
-            "departament": "Equipamentos",
+            "quantityInStock": 40,
             "sectionHomePage": "highlight",
-            "image": "https://d2l6qh3bt135o5.cloudfront.net/Custom/Content/Products/45/05/45052_filtro-de-linha-c-6-tomadas-pp-circular-3x0-75-c-1mt-preto-pr-13145-33_m1_637842454861081039.png"
+            "image": "https://d2l6qh3bt135o5.cloudfront.net/Custom/Content/Products/45/05/45052_filtro-de-linha-c-6-tomadas-pp-circular-3x0-75-c-1mt-preto-pr-13145-33_m1_637842454861081039.png",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 12,
             "name": "Tinta Spray Colorgin 350 ml",
+            "brand": "Colorgin",
             "price": 21.90,
             "promotionalPrice": null,
-            "quantity": 15,
-            "departament": "Equipamentos",
+            "quantityInStock": 15,
             "sectionHomePage": "highlight",
-            "image": "https://acdn.mitiendanube.com/stores/001/797/134/products/12345631-b4146c86ce3d59b9be16402716118760-640-0.png"
+            "image": "https://acdn.mitiendanube.com/stores/001/797/134/products/12345631-b4146c86ce3d59b9be16402716118760-640-0.png",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 13,
             "name": "Torneira Bóia para Caixa D Água 1/2\" Bruto Deca",
+            "brand": "Deca",
             "price": 95.75,
             "promotionalPrice": null,
-            "quantity": 23,
-            "departament": "Equipamentos",
+            "quantityInStock": 23,
             "sectionHomePage": "SeeToo",
-            "image": "https://images.cws.digital/produtos/gg/60/07/torneira-de-boia-para-caixa-dagua-12-bruto-7450760-1600456035762.jpg"
+            "image": "https://images.cws.digital/produtos/gg/60/07/torneira-de-boia-para-caixa-dagua-12-bruto-7450760-1600456035762.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 14,
             "name": "Assento Sanitário Elevado Almofadado - Mebuki - 7,5cm",
+            "brand": "Mebuki",
             "price": 159.90,
             "promotionalPrice": null,
-            "quantity": 2,
-            "departament": "Equipamentos",
+            "quantityInStock": 2,
             "sectionHomePage": "SeeToo",
-            "image": "https://cinquentamaissaude.vteximg.com.br/arquivos/ids/160307-1000-1000/assento-tampa-vaso-sanitario-elevado-almofadado-7-5.jpg?v=637952192688830000"
+            "image": "https://cinquentamaissaude.vteximg.com.br/arquivos/ids/160307-1000-1000/assento-tampa-vaso-sanitario-elevado-almofadado-7-5.jpg?v=637952192688830000",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 15,
             "name": "Kit para Pintura Prática (rolo 23cm + bandeja)",
+            "brand": "Castor",
             "price": 32.90,
             "promotionalPrice": null,
-            "quantity": 8,
-            "departament": "Equipamentos",
+            "quantityInStock": 8,
             "sectionHomePage": "SeeToo",
-            "image": "https://outletdastintas.com.br/wp-content/uploads/2016/11/kit-pintura-tigre-brinde-coral.jpg"
+            "image": "https://outletdastintas.com.br/wp-content/uploads/2016/11/kit-pintura-tigre-brinde-coral.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 16,
             "name": "Spot de Luz Trilho",
+            "brand": null,
             "price": 16.80,
             "promotionalPrice": null,
-            "quantity": 13,
-            "departament": "Equipamentos",
+            "quantityInStock": 13,
             "sectionHomePage": "SeeToo",
-            "image": "https://19472.cdn.simplo7.net/static/19472/sku/spot-trilho-luminaria-spot-trilho-p-lampada-par20--p-1641581534535.png"
+            "image": "https://19472.cdn.simplo7.net/static/19472/sku/spot-trilho-luminaria-spot-trilho-p-lampada-par20--p-1641581534535.png",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 17,
             "name": "Interruptor Simples Com Tomada 2P+T 20A Fame",
+            "brand": "Fame",
             "price": 19.80,
             "promotionalPrice": null,
-            "quantity": 27,
-            "departament": "Equipamentos",
+            "quantityInStock": 27,
             "sectionHomePage": "SeeToo",
-            "image": "https://images.tcdn.com.br/img/img_prod/861603/interruptor_simples_com_tomada_2p_t_20a_modulare_1436_fame_82271_1_f0cd839dc3689c457d686399a2253b3c.jpg"
+            "image": "https://img.irroba.com.br/fluzaoco/catalog/api/fluzaoco_citelirr/646fa189e746c.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 19,
             "name": "Philips Lâmpada LED 90W Luz Quente 13W",
+            "brand": "Philips",
             "price": 28.30,
             "promotionalPrice": null,
-            "quantity": 27,
-            "departament": "Equipamentos",
+            "quantityInStock": 27,
             "sectionHomePage": "SeeToo",
-            "image": "https://shoppr.com.br/cdn/shop/products/Imagem3_bdc18016-92f7-4320-aacb-2fcac7abef79_2048x.png"
+            "image": "https://shoppr.com.br/cdn/shop/products/Imagem3_bdc18016-92f7-4320-aacb-2fcac7abef79_2048x.png",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 20,
             "name": "Chuveiro Lorenzetti Acqua Duo 220V,7800W",
+            "brand": "Lorenzetti",
             "price": 608.25,
             "promotionalPrice": 554.90,
-            "quantity": 4,
-            "departament": "Equipamentos",
+            "quantityInStock": 4,
             "sectionHomePage": "highlightHorizontal",
-            "image": "https://cdn.vnda.com.br/elevato/2021/10/27/11_10_3_382_Desenhotecnicolorenzetti2.jpg?v=1635344179"
+            "image": "https://cdn.vnda.com.br/elevato/2021/10/27/11_10_3_382_Desenhotecnicolorenzetti2.jpg?v=1635344179",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 21,
             "name": "Torneira tanque cromada 17 cm parede",
+            "brand": "Docol",
             "price": 52.50,
             "promotionalPrice": 40.50,
-            "quantity": 57,
-            "departament": "Equipamentos",
+            "quantityInStock": 57,
             "sectionHomePage": "highlightHorizontal",
-            "image": "https://images.tcdn.com.br/img/img_prod/670572/torneira_tanque_pia_cozinha_tanque_abs_cromada_c31_17_cm_parede_531_1_e458100729060c3aaa8c5d0f386623b8.jpg"
+            "image": "https://images.tcdn.com.br/img/img_prod/670572/torneira_tanque_pia_cozinha_tanque_abs_cromada_c31_17_cm_parede_531_1_e458100729060c3aaa8c5d0f386623b8.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         },
         {
             "id": 22,
             "name": "Serra Tico Tico 450W 220V Modelo-GST-650",
+            "brand": "Bosch",
             "price": 499.99,
             "promotionalPrice": 423.00,
-            "quantity": 1,
-            "departament": "Equipamentos",
+            "quantityInStock": 1,
             "sectionHomePage": "highlightHorizontal",
-            "image": "https://images.tcdn.com.br/img/img_prod/1034283/serra_tico_tico_450w_220v_modelo_gst_650_bosch_217_1_a07ad2946450c4281674ab4016987003.jpg"
+            "image": "https://images.tcdn.com.br/img/img_prod/1034283/serra_tico_tico_450w_220v_modelo_gst_650_bosch_217_1_a07ad2946450c4281674ab4016987003.jpg",
+            "reviews": [
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 3,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 2,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 1,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 5,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "perfilName": "Juliano Gonçalves",
+                    "raiting": 4,
+                    "description": "LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            ]
         }
     ],
     "blog": [
@@ -448,32 +1063,406 @@
             "title": "Confira as 10 ferramentas essenciais que você precisa ter"
         },
         {
-            "image": "https://images.unsplash.com/photo-1564226591723-659ff3852b2a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-            "title": "Tipos de chuveiros: Saiba escolher o ideal para você"
+            "image": "https://images.unsplash.com/photo-1453806839674-d1a9087ca1ed?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "Dicas práticas para manutenção de ferramentas de construção"
         },
         {
-            "image": "https://images.unsplash.com/photo-1516684402831-c151c11c6023?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80",
-            "title": "Faça você mesmo: Aprenda a trocar a resistência do chuveiro"
+            "image": "https://images.unsplash.com/photo-1535673774336-ef95d2851cf3?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "Tipos de tintas e seus usos na construção"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "Como planejar e executar um projeto de construção do início ao fim"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1585871746932-e133d3fedf4d?q=80&w=1670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "Tendências atuais para uma construção sustentável"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1478486982180-2de2fafa19f9?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "O papel da sinalização na segurança da construção"
+        },
+        {
+            "image": "https://images.unsplash.com/photo-1606170033648-5d55a3edf314?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "title": "Como escolher a iluminação adequada para cada ambiente da sua casa"
         }
     ],
     "departaments": [
         {
             "name": "Materiais elétricos",
+            "link": "#",
             "icon": "material-symbols:energy-savings-leaf",
             "categories": [
                 {
-                    "name": "Cabos e extensões",
-                    "link": "/extensao"
+                    "name": "Fios e cabos",
+                    "link": "#"
                 },
                 {
-                    "name": "Lâmpadas",
-                    "link": "/lampada"
+                    "name": "Disjuntores e fusíveis",
+                    "link": "#"
+                },
+                {
+                    "name": "Caixas de distribuição",
+                    "link": "#"
+                },
+                {
+                    "name": "Conduítes e eletrodutos",
+                    "link": "#"
+                },
+                {
+                    "name": "Lâmpadas e luminárias",
+                    "link": "#"
+                },
+                {
+                    "name": "Transformadores",
+                    "link": "#"
+                },
+                {
+                    "name": "Extensões e filtros de linha",
+                    "link": "#"
+                },
+                {
+                    "name": "Produtos para aterramento",
+                    "link": "#"
+                },
+                {
+                    "name": "Multímetros e detectores de tensão",
+                    "link": "#"
+                },
+                {
+                    "name": "Baterias, pilhas e carregadores",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Ferramentas",
+            "link": "#",
+            "icon": "mingcute:tool-fill",
+            "categories": [
+                {
+                    "name": "Fita métrica, níveis e paquímetro",
+                    "link": "#"
+                },
+                {
+                    "name": "Pincéis, rolos e bandeijas",
+                    "link": "#"
+                },
+                {
+                    "name": "Enxadas e tesouras de poda",
+                    "link": "#"
+                },
+                {
+                    "name": "Ferramentas automotivas",
+                    "link": "#"
+                },
+                {
+                    "name": "Chaves de fenda e philips",
+                    "link": "#"
+                },
+                {
+                    "name": "Martelos",
+                    "link": "#"
+                },
+                {
+                    "name": "Alicates de corte",
+                    "link": "#"
+                },
+                {
+                    "name": "Alicates de ponta",
+                    "link": "#"
+                },
+                {
+                    "name": "Alicates",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Ferragens",
+            "link": "#",
+            "icon": "mdi:screw-flat-top",
+            "categories": [
+                {
+                    "name": "Parafusos",
+                    "link": "#"
+                },
+                {
+                    "name": "Porcas",
+                    "link": "#"
+                },
+                {
+                    "name": "Dobradiças e abraçadeiras",
+                    "link": "#"
+                },
+                {
+                    "name": "Ganchos/Suportes",
+                    "link": "#"
+                },
+                {
+                    "name": "Puxadores",
+                    "link": "#"
+                },
+                {
+                    "name": "Correntes e cabos de aço",
+                    "link": "#"
+                },
+                {
+                    "name": "Grampos",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Materiais hidráulicos",
+            "link": "#",
+            "icon": "mdi:pipe-valve",
+            "categories": [
+                {
+                    "name": "Tubos e conexões",
+                    "link": "#"
+                },
+                {
+                    "name": "Válvulas",
+                    "link": "#"
+                },
+                {
+                    "name": "Registros",
+                    "link": "#"
+                },
+                {
+                    "name": "Materiais para irrigação",
+                    "link": "#"
+                },
+                {
+                    "name": "Bombas de água",
+                    "link": "#"
+                },
+                {
+                    "name": "Sifões e ralos",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Iluminação",
+            "link": "#",
+            "icon": "ic:baseline-lightbulb",
+            "categories": [
+                {
+                    "name": "Lâmpadas frias",
+                    "link": "#"
+                },
+                {
+                    "name": "Lâmpads quentes",
+                    "link": "#"
+                },
+                {
+                    "name": "Lâmpadas coloridas",
+                    "link": "#"
                 },
                 {
                     "name": "Luminárias",
-                    "link": "/luminaria"
+                    "link": "#"
+                },
+                {
+                    "name": "Refletores",
+                    "link": "#"
+                },
+                {
+                    "name": "Lâmpadas inteligentes",
+                    "link": "#"
+                },
+                {
+                    "name": "Arandelas",
+                    "link": "#"
+                },
+                {
+                    "name": "Fitas de led",
+                    "link": "#"
                 }
             ]
+        },
+        {
+            "name": "Duchas e chuveiros",
+            "link": "#",
+            "icon": "fa6-solid:shower",
+            "categories": [
+                {
+                    "name": "Chuveiros elétricos",
+                    "link": "#"
+                },
+                {
+                    "name": "Duchas",
+                    "link": "#"
+                },
+                {
+                    "name": "Chuveiros a gás",
+                    "link": "#"
+                },
+                {
+                    "name": "Acessórios para duchas e chuveiros",
+                    "link": "#"
+                },
+                {
+                    "name": "Chuveiros híbridos",
+                    "link": "#"
+                },
+                {
+                    "name": "Chuveiros com filtro",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Segurança",
+            "link": "#",
+            "icon": "ri:door-lock-fill",
+            "categories": [
+                {
+                    "name": "Alarmes e sensores de movimento",
+                    "link": "#"
+                },
+                {
+                    "name": "Fechaduras e trancas",
+                    "link": "#"
+                },
+                {
+                    "name": "Equipamentos de proteção",
+                    "link": "#"
+                },
+                {
+                    "name": "Cordas e cintos de segurança",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Pintura",
+            "link": "#",
+            "icon": "game-icons:paint-bucket",
+            "categories": [
+                {
+                    "name": "Tintas látex",
+                    "link": "#"
+                },
+                {
+                    "name": "Sprays",
+                    "link": "#"
+                },
+                {
+                    "name": "Massas para alisamento",
+                    "link": "#"
+                },
+                {
+                    "name": "Removedores de tinta",
+                    "link": "#"
+                },
+                {
+                    "name": "Proteção e segurança",
+                    "link": "#"
+                },
+                {
+                    "name": "Texturas e efeitos decorativos",
+                    "link": "#"
+                },
+                {
+                    "name": "Solventes e diluentes",
+                    "link": "#"
+                },
+                {
+                    "name": "Primers e seladores",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Equipamentos",
+            "link": "#",
+            "icon": "clarity:tools-solid",
+            "categories": [
+                {
+                    "name": "Perfuração",
+                    "link": "#"
+                },
+                {
+                    "name": "Solda",
+                    "link": "#"
+                },
+                {
+                    "name": "Limpeza",
+                    "link": "#"
+                },
+                {
+                    "name": "Medição",
+                    "link": "#"
+                },
+                {
+                    "name": "Escavação",
+                    "link": "#"
+                }
+            ]
+        },
+        {
+            "name": "Sinalização",
+            "link": "#",
+            "icon": "ic:round-pan-tool",
+            "categories": [
+                {
+                    "name": "Placas",
+                    "link": "#"
+                },
+                {
+                    "name": "Cones",
+                    "link": "#"
+                },
+                {
+                    "name": "Materiais refletivos",
+                    "link": "#"
+                }
+            ]
+        }
+    ],
+    "brands": [
+        {
+            "name": "Lorenzetti",
+            "logo": "https://logodownload.org/wp-content/uploads/2019/09/lorenzetti-logo-0.png"
+        },
+        {
+            "name": "Bosch",
+            "logo": "https://logosmarcas.net/wp-content/uploads/2020/08/Bosch-Logo.png"
+        },
+        {
+            "name": "Vonder",
+            "logo": "https://logodownload.org/wp-content/uploads/2020/11/vonder-logo-0.png"
+        },
+        {
+            "name": "Sil",
+            "logo": "https://logodownload.org/wp-content/uploads/2020/11/sil-logo-0.png"
+        },
+        {
+            "name": "Mebuki",
+            "logo": "https://hidroplusbauru.com.br/image/cache/catalog/MARCAS/Captura%20de%20tela%202021-07-05%20145850-200x200.png"
+        },
+        {
+            "name": "Philips",
+            "logo": "https://www.imcbrasil.com/wp-content/uploads/2016/08/philips-logo-wordmark.png"
+        },
+        {
+            "name": "Megatron",
+            "logo": "https://raichu-uploads.s3.amazonaws.com/logo_null_Xz3QEn.jpg"
+        },
+        {
+            "name": "Colorgin",
+            "logo": "https://img.irroba.com.br/fit-in/600x600/filters:fill(transparent):quality(80)/totaltin/catalog/marca/logo-colorgin.png"
+        },
+        {
+            "name": "Fame",
+            "logo": "https://logodownload.org/wp-content/uploads/2017/11/fame-logo.png"
+        },
+        {
+            "name": "Fortlev",
+            "logo": "https://www.fortlev.com.br/wp-content/themes/fortlev/assets/downloads/sem_slogan_cor.png"
         }
     ]
 }

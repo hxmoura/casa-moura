@@ -4,135 +4,39 @@ import Container from "@/components/Container";
 import ProductCard from "@/components/ProductCard";
 import SectionTitle from "@/components/SectionTitle";
 import ScrollContainer from "@/components/Scroll/ScrollContainer";
+import { useContext } from "react";
+import { CartContext } from "@/app/contexts/CartContext";
+import { product } from "@/app/(home)/types/product";
 
-export default function Promotions() {
+interface PromotionsProps {
+  products: product[];
+}
+
+export default function Promotions({ products }: PromotionsProps) {
+  const discountedProducts = products.filter(
+    (product) => product.sectionHomePage === "promotion",
+  );
+
+  const { addProductToCart } = useContext(CartContext)!;
+
   return (
     <section className="my-20">
       <Container>
         <div className="relative">
           <SectionTitle>Promoções do dia</SectionTitle>
           <ScrollContainer type="animated">
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
-            <ProductCard
-              label="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            ajsdjasdkasdjkajsd ajksdjasdjasdj asdjasd"
-              price={440.0}
-              promotionalPrice={389.3}
-              img="https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/a/l/alicate-universal-meghazine-au3037_136909_1.jpg"
-              installments={4}
-              reviewsQuantity={8}
-              reviewsNote={3}
-              promotion
-            />
+            {discountedProducts.map((product, index) => (
+              <ProductCard
+                key={index}
+                label={product.name}
+                price={product.price}
+                promotionalPrice={product.promotionalPrice}
+                img={product.image}
+                reviews={product.reviews}
+                promotion
+                onBuy={() => addProductToCart(product)}
+              />
+            ))}
           </ScrollContainer>
         </div>
       </Container>

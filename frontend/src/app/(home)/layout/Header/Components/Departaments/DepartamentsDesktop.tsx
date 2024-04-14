@@ -1,10 +1,10 @@
 import { Icon } from "@iconify/react";
-import { departaments } from "../../TypeDepartaments";
 import React, { Dispatch, SetStateAction } from "react";
+import { departament } from "@/app/(home)/types/departament";
 
 interface DepartamentsMobileProps {
   openDepartaments: boolean;
-  departaments: departaments[];
+  departaments: departament[];
   selectedDepartament: string | null;
   setSelectedDepartament: Dispatch<SetStateAction<string | null>>;
 }
@@ -28,7 +28,7 @@ export default function DepartamentsDesktop({
                     onMouseEnter={() =>
                       setSelectedDepartament(departament.name)
                     }
-                    href={departament.url}
+                    href={departament.link}
                     className={`flex items-center justify-between hover:bg-brand-secondary px-4 py-3 hover:text-white transition-colors ${selectedDepartament === departament.name && "bg-brand-secondary text-white"}`}
                   >
                     <span className="text-sm">{departament.name}</span>
@@ -50,7 +50,7 @@ export default function DepartamentsDesktop({
                         {departament.categories.map((category, index) => (
                           <li key={index}>
                             <a
-                              href={category.url}
+                              href={category.link}
                               className="text-sm hover:text-brand-secondary animate-fadeIn"
                             >
                               {category.name}

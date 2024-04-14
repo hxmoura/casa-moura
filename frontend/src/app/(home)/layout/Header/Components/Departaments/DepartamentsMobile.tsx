@@ -1,12 +1,12 @@
 import { Icon } from "@iconify/react";
-import { departaments } from "../../TypeDepartaments";
 import React, { Dispatch, SetStateAction } from "react";
 import useAnimatedUnmount from "@/hooks/useAnimatedEnd";
+import { departament } from "@/app/(home)/types/departament";
 
 interface DepartamentsMobileProps {
   openDepartaments: boolean;
   setOpenDepartaments: Dispatch<SetStateAction<boolean>>;
-  departaments: departaments[];
+  departaments: departament[];
   setSelectedDepartament: Dispatch<SetStateAction<string | null>>;
   selectedDepartament: string | null;
 }
@@ -85,7 +85,7 @@ export default function DepartamentsMobile({
                               className="h-10 border-b border-background-softLight"
                             >
                               <a
-                                href={category.url}
+                                href={category.link}
                                 className="p-3 rounded-[4px] text-xs flex justify-between"
                               >
                                 {category.name}

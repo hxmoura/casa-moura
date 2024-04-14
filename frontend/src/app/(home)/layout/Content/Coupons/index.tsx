@@ -1,6 +1,5 @@
 import Container from "@/components/Container";
 import SectionTitle from "@/components/SectionTitle";
-
 import Coupon from "./Coupon";
 
 export default function Coupons() {

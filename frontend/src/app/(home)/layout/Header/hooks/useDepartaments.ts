@@ -43,7 +43,7 @@ export default function useDepartaments() {
     }
   }
 
-  function handleMobileBgMenu(event: any) {
+  function handleMobileBgMenu(event: React.MouseEvent) {
     if (event.target === event.currentTarget) {
       setOpenMobileMenu((prevState) => !prevState);
       setOpenDepartaments(false);

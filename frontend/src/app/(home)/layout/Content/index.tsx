@@ -8,19 +8,35 @@ import Brands from "./Brands";
 import Coupons from "./Coupons";
 import SeeToo from "./SeeToo";
 import Newsletter from "./Newsletter";
+import { blog } from "../../types/blog";
+import { product } from "../../types/product";
+import { brand } from "../../types/brand";
+import { departament } from "../../types/departament";
 
-export default function Content() {
+interface ContentProps {
+  departaments: departament[];
+  products: product[];
+  blog: blog[];
+  brands: brand[];
+}
+
+export default function Content({
+  departaments,
+  products,
+  blog,
+  brands,
+}: ContentProps) {
   return (
     <main>
       <Slides />
       <Informations />
-      <Departament />
-      <Promotions />
-      <Highlights />
-      <Blog />
-      <Brands />
+      <Departament departaments={departaments} />
+      <Promotions products={products} />
+      <Highlights products={products} />
+      <Blog blog={blog} />
+      <Brands brands={brands} />
       <Coupons />
-      <SeeToo />
+      <SeeToo products={products} />
       <Newsletter />
     </main>
   );
