@@ -34,7 +34,9 @@ export default function Slides() {
                 <img
                   src={image.src}
                   alt={`Banner ${index + 1}`}
-                  ref={(img) => (carouselImagesRefs.current![index] = img!)}
+                  ref={(img) => {
+                    carouselImagesRefs.current![index] = img!;
+                  }}
                 />
               </a>
             ))}
