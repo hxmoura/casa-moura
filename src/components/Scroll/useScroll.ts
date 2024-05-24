@@ -1,4 +1,4 @@
-import { createRef } from "react";
+import { MouseEvent, createRef } from "react";
 
 export default function useScroll() {
   const scrollRef = createRef<HTMLDivElement>();
@@ -15,5 +15,23 @@ export default function useScroll() {
     }
   }
 
-  return { handleLeft, handleRight, scrollRef };
+  function handleMouseMove(event: globalThis.MouseEvent) {
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft -= event.movementX;
+    }
+  }
+
+  function handleMouseDown(event: MouseEvent) {
+    if (scrollRef.current) {
+      event.preventDefault();
+      scrollRef.current.style.scrollBehavior = "auto";
+      document.addEventListener("mousemove", handleMouseMove);
+    }
+  }
+
+  function handleMouseUp() {
+    document.removeEventListener("mousemove", handleMouseMove);
+  }
+
+  return { handleLeft, handleRight, scrollRef, handleMouseDown, handleMouseUp };
 }

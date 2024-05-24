@@ -1,34 +1,57 @@
-import { Metadata } from "next";
-import Header from "./layout/Header";
-import Content from "./layout/Content";
-import Footer from "./layout/Footer";
-import getDepartaments from "./api/departaments";
-import getProducts from "./api/products";
-import getBlog from "./api/blog";
-import getBrands from "./api/brands";
-
-export const metadata: Metadata = {
-  title: "Casa Moura - Materiais elétricos, hidráulicos e miudezas em geral",
-};
+import HeaderMaster from "@/components/HeaderMaster";
+import Content from "./layout";
+import Footer from "@/components/Footer";
+import getDepartaments from "@/api/departaments";
+import { getProductWithCondition } from "@/api/products";
+import getBrands from "@/api/brands";
+import getBlog from "@/api/blog";
+import { Product } from "@/types/product";
 
 export const revalidate = 3600;
 
 export default async function Home() {
-  const [departaments, products, blog, brands] = await Promise.all([
+  const [
+    departaments,
+    blog,
+    brands,
+    seeTooProducts,
+    highlightProducts,
+    promotionProducts,
+  ] = await Promise.all([
     getDepartaments(),
-    getProducts(),
     getBlog(),
     getBrands(),
+    getProductWithCondition({
+      property: "sectionHomePage",
+      value: "SeeToo",
+      operator: "==",
+    }),
+    getProductWithCondition({
+      property: "sectionHomePage",
+      value: "highlight",
+      operator: "==",
+    }),
+    getProductWithCondition({
+      property: "sectionHomePage",
+      value: "promotion",
+      operator: "==",
+    }),
   ]);
+
+  const seeTooProductsTypes = seeTooProducts as Product[];
+  const highlightProductsTypes = highlightProducts as Product[];
+  const promotionProductsTypes = promotionProducts as Product[];
 
   return (
     <>
-      <Header departaments={departaments} />
+      <HeaderMaster />
       <Content
         departaments={departaments}
-        products={products}
         blog={blog}
         brands={brands}
+        seeTooProducts={seeTooProductsTypes}
+        highlightProducts={highlightProductsTypes}
+        promotionProducts={promotionProductsTypes}
       />
       <Footer />
     </>

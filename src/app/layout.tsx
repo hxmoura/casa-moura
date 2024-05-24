@@ -1,10 +1,13 @@
-"use client";
-
 import { Inter } from "next/font/google";
-import "./globals.css";
-import CartProvider from "./contexts/CartContext";
+import "@/styles/globals.css";
+import App from "./App";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Casa Moura - Materiais elétricos, hidráulicos e miudezas em geral",
+};
 
 export default function RootLayout({
   children,
@@ -12,10 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <CartProvider>
+    <App>
       <html lang="pt-br">
         <body className={inter.className}>{children}</body>
       </html>
-    </CartProvider>
+    </App>
   );
 }

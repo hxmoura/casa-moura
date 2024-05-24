@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import responsive from "./src/utils/breakpoints";
 
 const config: Config = {
   content: [
@@ -8,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundSize: {
+        "500": "500%",
+      },
       keyframes: {
         entryRightSide: {
           from: { transform: "translateX(100%)" },
@@ -33,6 +37,15 @@ const config: Config = {
           "0%, 80%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        fadeOut: {
+          from: { opacity: "1" },
+          to: { opacity: "0" },
+        },
+        scaleUp: {
+          "0%": { transform: "scale(0)" },
+          "90%": { transform: "scale(1.1)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
       animation: {
         "entryRightSide-300": "entryRightSide .3s forwards",
@@ -43,6 +56,8 @@ const config: Config = {
         "exitLeftSide-200": "exitLeftSide .2s forwards",
         expand: "expand .4s forwards",
         fadeIn: "fadeIn .3s forwards",
+        fadeOut: "fadeOut 1s forwards",
+        scaleUp: "scaleUp .2s forwards",
       },
       colors: {
         brand: {
@@ -77,8 +92,8 @@ const config: Config = {
       },
     },
     screens: {
-      md: "450px", // Minimum 450px ( tablet )
-      lg: "900px", // Minimum 900px ( desktop )
+      md: `${responsive.breakpoints.md}px`, // Minimum 450px ( tablet )
+      lg: `${responsive.breakpoints.lg}px`, // Minimum 900px ( desktop )
     },
   },
   plugins: [],

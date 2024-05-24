@@ -7,7 +7,7 @@ import useAnimatedUnmount from "@/hooks/useAnimatedEnd";
 
 interface ScrollContainerProps {
   children: ReactNode;
-  type: "fixed" | "animated";
+  type?: "fixed" | "animated";
   spacing?: number;
 }
 
@@ -17,7 +17,8 @@ export default function ScrollContainer({
   spacing = 24,
 }: ScrollContainerProps) {
   const [visible, setVisible] = useState(false);
-  const { scrollRef, handleLeft, handleRight } = useScroll();
+  const { scrollRef, handleLeft, handleRight, handleMouseDown, handleMouseUp } =
+    useScroll();
   const { shouldRender, animatedElementRef } = useAnimatedUnmount(visible);
 
   return (
@@ -31,6 +32,9 @@ export default function ScrollContainer({
           ref={scrollRef}
           className={`flex overflow-x-scroll disableScroll scroll-smooth relative`}
           style={{ gap: `${spacing}px` }}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
         >
           {children}
         </div>
