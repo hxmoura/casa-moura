@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import React, { Dispatch, SetStateAction } from "react";
 import useAnimatedUnmount from "@/hooks/useAnimatedEnd";
 import { Departament } from "@/types/departament";
+import Link from "next/link";
 
 interface DepartamentsMobileProps {
   openDepartaments: boolean;
@@ -47,7 +48,7 @@ export default function DepartamentsMobile({
                   key={index}
                   className="h-10 border-b border-background-softLight"
                 >
-                  <a
+                  <Link
                     href="#"
                     className="p-3 rounded-[4px] text-xs flex justify-between"
                   >
@@ -57,7 +58,7 @@ export default function DepartamentsMobile({
                       className="text-text-light w-4 h-4"
                       onClick={() => setSelectedDepartament(departament.name)}
                     />
-                  </a>
+                  </Link>
 
                   {selectedDepartament === departament.name && (
                     <div
@@ -84,12 +85,12 @@ export default function DepartamentsMobile({
                               key={index}
                               className="h-10 border-b border-background-softLight"
                             >
-                              <a
+                              <Link
                                 href={category.link}
                                 className="p-3 rounded-[4px] text-xs flex justify-between"
                               >
                                 {category.name}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>

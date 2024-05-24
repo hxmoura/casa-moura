@@ -1,5 +1,6 @@
 import { Departament } from "@/types/departament";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 import React, { Dispatch, SetStateAction } from "react";
 
 interface DepartamentsMobileProps {
@@ -24,7 +25,7 @@ export default function DepartamentsDesktop({
             <ul className="h-full overflow-y-scroll">
               {departaments.map((departament, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     onMouseEnter={() =>
                       setSelectedDepartament(departament.name)
                     }
@@ -36,7 +37,7 @@ export default function DepartamentsDesktop({
                       icon="heroicons:chevron-right-20-solid"
                       className="w-5 h-5"
                     />
-                  </a>
+                  </Link>
                   {selectedDepartament === departament.name && (
                     <div
                       className={`absolute left-full h-full overflow-y-auto top-0 bg-white animate-expand shadow-md`}
@@ -49,12 +50,12 @@ export default function DepartamentsDesktop({
                       <ul className="grid grid-cols-2 gap-4 px-7 pb-7">
                         {departament.categories.map((category, index) => (
                           <li key={index}>
-                            <a
+                            <Link
                               href={category.link}
                               className="text-sm hover:text-brand-secondary animate-fadeIn"
                             >
                               {category.name}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>

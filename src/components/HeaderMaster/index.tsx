@@ -75,12 +75,12 @@ export default function Header() {
             </form>
             <div className="flex gap-3 lg:gap-5">
               <button className="lg:w-9 lg:h-9" title="Lojas físicas">
-                <a href="#" className="text-white">
+                <Link href="#" className="text-white">
                   <Icon
                     className="w-7 h-7 lg:w-8 lg:h-8 lg:hover:w-9 lg:hover:h-9 transition-all"
                     icon="lucide:map-pin"
                   />
-                </a>
+                </Link>
               </button>
               <button className="lg:w-9 lg:h-9" title="Conta">
                 <Link href="/signin" className="text-white">
@@ -168,29 +168,29 @@ export default function Header() {
                     />
                   </li>
                   <li className="border-b border-background-softLight p-3 lg:p-0 lg:border-none">
-                    <a href="#" className="lg:text-white text-xs lg:text-sm">
+                    <Link href="#" className="lg:text-white text-xs lg:text-sm">
                       Promoções do dia
-                    </a>
+                    </Link>
                   </li>
                   <li className="border-b border-background-softLight p-3 lg:p-0 lg:border-none">
-                    <a href="#" className="lg:text-white text-xs lg:text-sm">
+                    <Link href="#" className="lg:text-white text-xs lg:text-sm">
                       Cupons
-                    </a>
+                    </Link>
                   </li>
                   <li className="border-b border-background-softLight p-3 lg:p-0 lg:border-none">
-                    <a href="#" className="lg:text-white text-xs lg:text-sm">
+                    <Link href="#" className="lg:text-white text-xs lg:text-sm">
                       Serviços
-                    </a>
+                    </Link>
                   </li>
                   <li className="border-b border-background-softLight p-3 lg:p-0 lg:border-none">
-                    <a href="#" className="lg:text-white text-xs lg:text-sm">
+                    <Link href="#" className="lg:text-white text-xs lg:text-sm">
                       Dicas
-                    </a>
+                    </Link>
                   </li>
                   <li className="border-b border-background-softLight p-3 lg:p-0 lg:border-none">
-                    <a href="#" className="lg:text-white text-xs lg:text-sm">
+                    <Link href="#" className="lg:text-white text-xs lg:text-sm">
                       Suporte
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
