@@ -6,25 +6,26 @@ export interface Review {
   title: string;
 }
 
+export interface Informations {
+  weight: string;
+  color: string;
+  brand: string;
+  width: string;
+  height: string;
+  material: string;
+  model: string;
+  guarantee: string;
+}
+
 export interface Product {
   id: string;
   name: string;
-  brand: string;
   price: number;
   promotionalPrice: number;
   quantityInStock: number;
   sectionHomePage: string;
   images: Array<string>;
   reviews: Array<Review>;
-  informations: string;
-  characteristics: {
-    weight: string;
-    color: string;
-    brand: string;
-    width: string;
-    height: string;
-    material: string;
-    model: string;
-    ensure: string;
-  };
+  description: string;
+  informations: Informations;
 }

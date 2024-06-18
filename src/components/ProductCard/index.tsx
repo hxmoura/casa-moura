@@ -1,3 +1,5 @@
+"use client";
+
 import { currencyConverter } from "@/utils/CurrencyConverter";
 import { Icon } from "@iconify/react";
 import ImageFallback from "../ImageFallback";
@@ -20,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <article className="w-[220px] h-[400px] border border-background-softLight lg:hover:border-brand-secondary rounded-lg group flex-shrink-0 transition-colors lg:hover:shadow-xl overflow-hidden">
+    <article className="w-full md:w-[220px] h-[400px] border border-background-softLight lg:hover:border-brand-secondary rounded-lg group flex-shrink-0 transition-colors lg:hover:shadow-xl overflow-hidden">
       <Link href={`/produto/${product.id}`}>
         <div className="relative">
           {product.promotionalPrice && (
@@ -39,7 +41,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             classNameFallback="w-full h-[218px]"
           />
           <button
-            className="bg-brand-secondary text-white items-center justify-center absolute bottom-0 gap-2 h-9 hover:bg-brand-secondaryDark flex opacity-0 lg:group-hover:opacity-100 transition-opacity w-full"
+            className="bg-brand-secondary text-white items-center justify-center absolute bottom-0 gap-2 h-9 hover:bg-brand-secondaryDark opacity-0 lg:group-hover:opacity-100 transition-opacity w-full hidden lg:flex"
             onClick={(event) => btnBuy(event)}
           >
             <Icon icon="lucide:shopping-cart" className="w-6 h-6" />

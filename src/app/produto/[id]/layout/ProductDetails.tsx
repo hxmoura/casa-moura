@@ -11,7 +11,7 @@ import ProductCounter from "@/components/Cart/ProductCounter";
 import MenuDesktop from "../components/MenuDesktop";
 import { MenuOptions } from "../components/MenuOptions";
 import { InformationsContent, ReviewsContent } from "../components/ContentMenu";
-import MenuMobile from "../components/MenuMobile";
+import MenuDropdown from "../../../../components/MenuDropdown";
 import PaymentsModal from "../components/PaymentsModal";
 import ProductImages from "../components/ProductImages";
 
@@ -112,12 +112,12 @@ export default function ProductDetails({ product }: ProductProps) {
           <MenuDesktop product={product} />
 
           <ul className="lg:hidden flex flex-col gap-6">
-            <MenuMobile option={MenuOptions.informations}>
+            <MenuDropdown label={MenuOptions.informations}>
               {InformationsContent(product)}
-            </MenuMobile>
-            <MenuMobile option={MenuOptions.reviews}>
+            </MenuDropdown>
+            <MenuDropdown label={MenuOptions.reviews}>
               {ReviewsContent(product)}
-            </MenuMobile>
+            </MenuDropdown>
           </ul>
         </section>
       </Container>

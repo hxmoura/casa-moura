@@ -6,21 +6,19 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 export function InformationsContent(product: Product) {
   return (
     <div className="mt-5 lg:mt-10 mb-14">
-      <p>{product.informations}</p>
+      <p>{product.description}</p>
       <table className="mt-16 border-collapse lg:max-w-[536px] w-full">
         <tbody>
-          {Object.entries(product.characteristics).map(
-            ([key, value], index) => (
-              <tr key={index} className="even:bg-background-softLight">
-                <th className="border-2 border-background-softLight py-1 px-6 text-center lg:w-52 text-sm lg:text-base">
-                  {key}
-                </th>
-                <td className="border-2 border-background-softLight py-1 pl-3 text-left text-xs lg:text-sm">
-                  {value === "n/a" ? "Sem informação" : value}
-                </td>
-              </tr>
-            ),
-          )}
+          {Object.entries(product.informations).map(([key, value], index) => (
+            <tr key={index} className="even:bg-background-softLight">
+              <th className="border-2 border-background-softLight py-1 px-6 text-center lg:w-52 text-sm lg:text-base">
+                {key}
+              </th>
+              <td className="border-2 border-background-softLight py-1 pl-3 text-left text-xs lg:text-sm">
+                {value === "n/a" ? "Sem informação" : value}
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

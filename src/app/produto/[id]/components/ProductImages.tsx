@@ -1,55 +1,31 @@
+import Magnify from "@/components/Magnify";
+import useSlides from "@/hooks/useSlides";
 import { Product } from "@/types/product";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { MouseEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function ProductImages({ product }: { product: Product }) {
-  const [currentImg, setCurrentImg] = useState<number>(0);
-  const [magnify, setMagnify] = useState<object>({});
-  const selectedRef = useRef<HTMLButtonElement>(null);
+  const refOfSelectedImage = useRef<HTMLButtonElement>(null);
 
-  const magnifySize = 160;
-  const magnifySizeHalf = magnifySize / 2;
+  const {
+    handleNextImg,
+    handlePrevImg,
+    handleTouchEnd,
+    handleTouchMove,
+    handleTouchStart,
+    currentImg,
+    carouselImagesRefs,
+    carouselContainerRef,
+    handleCurrentImg,
+  } = useSlides(product.images);
 
   useEffect(() => {
-    setMagnify((prev) => ({
-      ...prev,
-      backgroundImage: `url(${product.images[currentImg]})`,
-    }));
-
-    if (selectedRef.current) {
-      selectedRef.current.scrollIntoView({
+    if (refOfSelectedImage.current) {
+      refOfSelectedImage.current.scrollIntoView({
         block: "nearest",
       });
     }
-  }, [currentImg, product.images]);
-
-  function handleMouseMove(event: MouseEvent) {
-    const { offsetX, offsetY, target } = event.nativeEvent;
-    const { offsetWidth, offsetHeight } = target as HTMLElement;
-
-    const xPercentage = (offsetX / offsetWidth) * 100;
-    const yPercentage = (offsetY / offsetHeight) * 100;
-
-    setMagnify((prev) => ({
-      ...prev,
-      display: "block",
-      top: `${offsetY - magnifySizeHalf}px`,
-      left: `${offsetX - magnifySizeHalf}px`,
-      backgroundPosition: `${xPercentage}% ${yPercentage}%`,
-    }));
-  }
-
-  function handleMouseLeave() {
-    setMagnify((prev) => ({ ...prev, display: "none" }));
-  }
-
-  function handleNextImg() {
-    setCurrentImg((prev) => (prev + 1 >= product.images.length ? 0 : prev + 1));
-  }
-
-  function handlePrevImg() {
-    setCurrentImg((prev) => (prev <= 0 ? product.images.length - 1 : prev - 1));
-  }
+  }, [currentImg]);
 
   return (
     <section className="flex flex-col gap-6 lg:flex-row items-center justify-center lg:h-[430px] w-full lg:w-2/4">
@@ -65,14 +41,15 @@ export default function ProductImages({ product }: { product: Product }) {
             {product.images.map((image, index) => (
               <button
                 key={index}
-                ref={index === currentImg ? selectedRef : null}
-                onClick={() => setCurrentImg(index)}
+                ref={index === currentImg ? refOfSelectedImage : null}
+                onClick={() => handleCurrentImg(index)}
                 className={`relative border-2 overflow-hidden rounded-full ${index === currentImg ? "border-brand-secondary" : "border-background-softLight"} flex-shrink-0`}
               >
                 <img
                   src={image}
                   alt="Imagem ilustrativa"
                   className="w-16 h-16"
+                  draggable={false}
                 />
                 <div
                   className={`absolute inset-0 bg-white bg-opacity-30 ${currentImg === index ? "hidden" : ""}`}
@@ -88,19 +65,25 @@ export default function ProductImages({ product }: { product: Product }) {
           </button>
         </div>
       )}
-      <div className="max-w-[430px] order-1 lg:order-2 relative cursor-none">
-        <img
-          src={product.images[currentImg]}
-          alt={`Imagem ilustrativa de ${product.name}`}
-          className="rounded-2xl w-full h-full object-contain"
-          draggable={false}
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-        />
+
+      <div className="relative order-1 lg:order-2">
         <div
-          className="absolute bg-no-repeat rounded-full border-2 border-background-softLight bg-center bg-500 pointer-events-none hidden animate-scaleUp"
-          style={{ ...magnify, width: magnifySize, height: magnifySize }}
-        ></div>
+          className="flex items-start justify-start max-w-[430px] max-h-[430px] overflow-hidden"
+          ref={carouselContainerRef}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {product.images.map((image, index) => (
+            <Magnify
+              key={index}
+              image={image}
+              imgRef={(img) => {
+                carouselImagesRefs.current![index] = img!;
+              }}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

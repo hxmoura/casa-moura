@@ -1,12 +1,20 @@
-"use client";
+import pageTitle from "../../utils/pageTitle";
+import Header from "@/components/HeaderMaster";
+import Footer from "@/components/Footer";
+import Content from "./Content";
 
-import { Suspense } from "react";
-import Query from "./Query";
+export async function generateMetadata({ searchParams }: any) {
+  return {
+    title: `${searchParams.q} | ${pageTitle}`,
+  };
+}
 
 export default function Search() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Query />
-    </Suspense>
+    <>
+      <Header />
+      <Content />
+      <Footer />
+    </>
   );
 }

@@ -30,7 +30,10 @@ export default function useScroll() {
   }
 
   function handleMouseUp() {
-    document.removeEventListener("mousemove", handleMouseMove);
+    if (scrollRef.current) {
+      scrollRef.current.style.scrollBehavior = "smooth";
+      document.removeEventListener("mousemove", handleMouseMove);
+    }
   }
 
   return { handleLeft, handleRight, scrollRef, handleMouseDown, handleMouseUp };

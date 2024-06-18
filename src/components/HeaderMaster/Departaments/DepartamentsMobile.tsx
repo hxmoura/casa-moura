@@ -27,7 +27,7 @@ export default function DepartamentsMobile({
       {shouldRender && (
         <div
           ref={animatedElementRef}
-          className={`lg:hidden fixed top-0 bottom-0 left-0 w-full flex flex-col animate-entryLeftSide-200 ${!openDepartaments && "animate-exitLeftSide-200"}`}
+          className={`lg:hidden fixed top-0 bottom-0 left-0 w-full flex flex-col animate-entryLeft ${!openDepartaments && "animate-exitLeft"}`}
         >
           <header className="bg-brand-primary p-3 min-h-[60px] flex items-center">
             <button
@@ -62,7 +62,7 @@ export default function DepartamentsMobile({
 
                   {selectedDepartament === departament.name && (
                     <div
-                      className={`fixed top-0 bottom-0 left-0 w-full flex flex-col animate-entryLeftSide-200`}
+                      className={`fixed top-0 bottom-0 left-0 w-full flex flex-col animate-entryLeft`}
                     >
                       <header className="bg-brand-primary p-3 min-h-[60px] flex items-center">
                         <button

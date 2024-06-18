@@ -7,7 +7,9 @@
             "quantityInStock": 4,
             "sectionHomePage": "promotion",
             "images": [
-                "https://cdn.leroymerlin.com.br/products/furadeira_de_impacto_gsb_450_3_8_127v__110v__bosch_90203162_e8ad_600x600.jpg"
+                "https://cdn.leroymerlin.com.br/products/furadeira_de_impacto_gsb_450_3_8_127v__110v__bosch_90203162_e8ad_600x600.jpg",
+                "https://images.cws.digital/produtos/gg/70/97/furadeira-de-impacto-bosch-38-gsb-450-re-450w-127v-10089770-1696441190626.jpg",
+                "https://http2.mlstatic.com/D_NQ_NP_658196-MLB52368128305_112022-O.webp"
             ],
             "reviews": [
                 {
@@ -53,16 +55,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "A Furadeira de Impacto Bosch GSB 450 RE, Com a potência de 450 W; Pesa apenas 1,2 Kg, perfura alvenaria, madeira e metal, com e sem impacto, graças ao botão comutador. Realize, também, parafusamentos através da função de reversão e faça trabalhos contínuos com o auxílio do botão trava.",
-            "characteristics": {
-                "Peso": "1,49KG",
-                "Cor": "Azul",
-                "Marca": "Bosch",
-                "Largura": "24,2",
-                "Altura": "7,2",
-                "Material": "Poliamida, metal e elastômero",
-                "Modelo": "GSB-450",
-                "Garantia": "12 meses"
+            "description": "A Furadeira de Impacto Bosch GSB 450 RE, Com a potência de 450 W; Pesa apenas 1,2 Kg, perfura alvenaria, madeira e metal, com e sem impacto, graças ao botão comutador. Realize, também, parafusamentos através da função de reversão e faça trabalhos contínuos com o auxílio do botão trava.",
+            "informations": {
+                "weight": "1,49KG",
+                "color": "Azul",
+                "brand": "Bosch",
+                "width": "24,2",
+                "height": "7,2",
+                "material": "Poliamida, metal e elastômero",
+                "model": "GSB-450",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -139,16 +141,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Este Modeloo possui oito degraus com estrutura e chapas em alumínio, Material super leve, durável (mesmo em áreas litorâneas). Peças plásticas em polipropileno de alta resistência, as Escadas de alumínio Mor são fabricadas de acordo com a nova portaria do inmetro N° 615 e 616, o que garante a certeza de um excelente produto, suportam até 120 kg. Possui duas fitas de travamento, além do travamento automático na plataforma superior",
-            "characteristics": {
-                "Peso": "5,63KG",
-                "Cor": "Azul e prata",
-                "Marca": "Mor",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Este modelo possui oito degraus com estrutura e chapas em alumínio, Material super leve, durável (mesmo em áreas litorâneas). Peças plásticas em polipropileno de alta resistência, as Escadas de alumínio Mor são fabricadas de acordo com a nova portaria do inmetro N° 615 e 616, o que garante a certeza de um excelente produto, suportam até 120 kg. Possui duas fitas de travamento, além do travamento automático na plataforma superior",
+            "informations": {
+                "weight": "5,63KG",
+                "color": "Azul e prata",
+                "brand": "Mor",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -190,16 +192,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Vonder",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Vonder",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -332,16 +334,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Sil",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Sil",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -432,16 +434,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Rhamos & Brito",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Rhamos & Brito",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -561,16 +563,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Lorenzetti",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Lorenzetti",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -640,16 +642,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Loctite",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Loctite",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -712,16 +714,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Megatron",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Megatron",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -784,16 +786,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Krona",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Krona",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -828,16 +830,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Hikari",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Hikari",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1138,16 +1140,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Megatron",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Megatron",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1231,16 +1233,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Corgin",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Corgin",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1282,16 +1284,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Deca",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Deca",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1375,16 +1377,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Mebuki",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Mebuki",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1461,16 +1463,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Castor",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Castor",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1547,16 +1549,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "n/a",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Sem marca",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1689,16 +1691,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Fame",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Fame",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1754,16 +1756,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Philips",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Philips",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1771,9 +1773,9 @@
             "price": 608.25,
             "promotionalPrice": 554.90,
             "quantityInStock": 4,
-            "sectionHomePage": "highlightHorizontal",
+            "sectionHomePage": "promotion",
             "images": [
-                "https://cdn.vnda.com.br/elevato/2021/10/27/11_10_3_382_DesenhotecniCorenzetti2.jpg?v=1635344179"
+                "https://m.media-amazon.com/images/I/51idVhnZeWL._AC_UF894,1000_QL80_.jpg"
             ],
             "reviews": [
                 {
@@ -1812,16 +1814,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Lorenzetti",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Lorenzetti",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
@@ -1829,7 +1831,7 @@
             "price": 52.50,
             "promotionalPrice": 40.50,
             "quantityInStock": 57,
-            "sectionHomePage": "highlightHorizontal",
+            "sectionHomePage": "promotion",
             "images": [
                 "https://images.tcdn.com.br/img/img_prod/670572/torneira_tanque_pia_cozinha_tanque_abs_cromada_c31_17_cm_parede_531_1_e458100729060c3aaa8c5d0f386623b8.jpg"
             ],
@@ -1912,24 +1914,24 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Docol",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "AxLxP",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Docol",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "AxLxP",
+                "guarantee": "12 meses"
             }
         },
         {
-            "name": "Serra Tico Tico 450W 220V Modeloo-GST-650",
+            "name": "Serra Tico Tico 450W 220V Modelo-GST-650",
             "price": 499.99,
             "promotionalPrice": 423.00,
             "quantityInStock": 1,
-            "sectionHomePage": "highlightHorizontal",
+            "sectionHomePage": "promotion",
             "images": [
                 "https://images.tcdn.com.br/img/img_prod/1034283/serra_tico_tico_450w_220v_modelo_gst_650_bosch_217_1_a07ad2946450c4281674ab4016987003.jpg"
             ],
@@ -2005,16 +2007,16 @@
                     "date": "29/04/2024"
                 }
             ],
-            "informations": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "characteristics": {
-                "Peso": "1KG",
-                "Cor": "Branco",
-                "Marca": "Bosch",
-                "Largura": "51,0 cm",
-                "Altura": "222,0 cm",
-                "Material": "Alumínio",
-                "Modelo": "GST 650",
-                "Garantia": "12 meses"
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "informations": {
+                "weight": "1KG",
+                "color": "Branco",
+                "brand": "Bosch",
+                "width": "51,0 cm",
+                "height": "222,0 cm",
+                "material": "Alumínio",
+                "model": "GST 650",
+                "guarantee": "12 meses"
             }
         }
     ],

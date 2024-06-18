@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import useScreenWidth from "@/hooks/useScreenWidth";
+import { useState } from "react";
 
 export default function useDepartaments() {
   const [openDepartaments, setOpenDepartaments] = useState<boolean>(false);
@@ -7,21 +8,11 @@ export default function useDepartaments() {
   );
 
   const [openMobileMenu, setOpenMobileMenu] = useState<boolean>(false);
-  const [width, setWidth] = useState<number>(0);
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const { isDesktop } = useScreenWidth();
 
   function handleMenu() {
-    if (width >= 900) {
+    if (isDesktop) {
       if (openDepartaments) {
         setOpenDepartaments(false);
         setSelectedDepartament(null);

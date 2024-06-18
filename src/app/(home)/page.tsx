@@ -2,10 +2,13 @@ import HeaderMaster from "@/components/HeaderMaster";
 import Content from "./layout";
 import Footer from "@/components/Footer";
 import getDepartaments from "@/api/departaments";
-import { getProductWithCondition } from "@/api/products";
+import { getProducts } from "@/api/products";
 import getBrands from "@/api/brands";
 import getBlog from "@/api/blog";
 import { Product } from "@/types/product";
+import { Departament } from "@/types/departament";
+import { Brand } from "@/types/brand";
+import { Blog } from "@/types/blog";
 
 export const revalidate = 3600;
 
@@ -17,30 +20,21 @@ export default async function Home() {
     seeTooProducts,
     highlightProducts,
     promotionProducts,
-  ] = await Promise.all([
+  ] = (await Promise.all([
     getDepartaments(),
     getBlog(),
     getBrands(),
-    getProductWithCondition({
-      property: "sectionHomePage",
-      value: "SeeToo",
-      operator: "==",
-    }),
-    getProductWithCondition({
-      property: "sectionHomePage",
-      value: "highlight",
-      operator: "==",
-    }),
-    getProductWithCondition({
-      property: "sectionHomePage",
-      value: "promotion",
-      operator: "==",
-    }),
-  ]);
-
-  const seeTooProductsTypes = seeTooProducts as Product[];
-  const highlightProductsTypes = highlightProducts as Product[];
-  const promotionProductsTypes = promotionProducts as Product[];
+    getProducts("sectionHomePage", "SeeToo", "=="),
+    getProducts("sectionHomePage", "highlight", "=="),
+    getProducts("sectionHomePage", "promotion", "=="),
+  ])) as unknown as [
+    Departament[],
+    Blog[],
+    Brand[],
+    Product[],
+    Product[],
+    Product[],
+  ];
 
   return (
     <>
@@ -49,9 +43,9 @@ export default async function Home() {
         departaments={departaments}
         blog={blog}
         brands={brands}
-        seeTooProducts={seeTooProductsTypes}
-        highlightProducts={highlightProductsTypes}
-        promotionProducts={promotionProductsTypes}
+        seeTooProducts={seeTooProducts}
+        highlightProducts={highlightProducts}
+        promotionProducts={promotionProducts}
       />
       <Footer />
     </>

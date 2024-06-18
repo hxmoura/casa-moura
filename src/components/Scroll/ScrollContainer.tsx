@@ -41,12 +41,12 @@ export default function ScrollContainer({
         {type === "animated" && shouldRender && (
           <div ref={animatedElementRef} className="hidden lg:flex">
             <div
-              className={`absolute top-2/4 left-0 animate-entryLeftSide-200 ${!visible && "animate-exitLeftSide-200"}`}
+              className={`absolute top-2/4 left-0 animate-entryLeft ${!visible && "animate-exitLeft"}`}
             >
               <ScrollButton direction="left" onClick={handleLeft} />
             </div>
             <div
-              className={`absolute top-2/4 right-0 animate-entryRightSide-200 ${!visible && "animate-exitRightSide-200"}`}
+              className={`absolute top-2/4 right-0 animate-entryRight ${!visible && "animate-exitRight"}`}
             >
               <ScrollButton direction="right" onClick={handleRight} />
             </div>

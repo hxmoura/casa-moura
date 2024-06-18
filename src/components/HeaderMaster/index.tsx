@@ -3,7 +3,7 @@
 import Container from "@/components/Container";
 import Logo from "@/components/Logo";
 import { Icon } from "@iconify/react";
-import { useContext, useEffect, useState } from "react";
+import { MouseEvent, useContext, useState } from "react";
 import useAnimatedUnmount from "@/hooks/useAnimatedEnd";
 import useDepartaments from "./hooks/useDepartaments";
 import Link from "next/link";
@@ -13,6 +13,8 @@ import Cart from "../Cart";
 import { CartContext } from "@/contexts/CartContext";
 import { Departament } from "@/types/departament";
 import getDepartaments from "@/api/departaments";
+import { useRouter } from "next/navigation";
+import useFetcher from "@/hooks/useFetcher";
 
 export default function Header() {
   const {
@@ -31,16 +33,16 @@ export default function Header() {
   const { animatedElementRef, shouldRender } =
     useAnimatedUnmount(openMobileMenu);
 
-  const [departaments, setDepartaments] = useState<Departament[]>([]);
+  const [inputSearch, setInputSearch] = useState("");
+  const router = useRouter();
 
-  useEffect(() => {
-    async function getData() {
-      const departaments = await getDepartaments();
-      setDepartaments(departaments);
-    }
+  const { data: departaments } = useFetcher<Departament[]>(getDepartaments);
 
-    getData();
-  }, []);
+  function handleSearch(evt: MouseEvent) {
+    evt.preventDefault();
+    router.push(`/search?q=${inputSearch}`);
+    setInputSearch("");
+  }
 
   return (
     <header className="h-[120px] lg:h-[150px] bg-brand-primary">
@@ -63,9 +65,14 @@ export default function Header() {
                 type="text"
                 className="w-full outline-none rounded-l px-5 py-3 text-xs lg:text-sm"
                 placeholder="Pesquise pelo produto"
+                onChange={(e) => setInputSearch(e.target.value)}
+                value={inputSearch}
               />
               <div className="bg-white rounded-r p-1">
-                <button className="bg-brand-secondary text-white rounded h-full w-[37px] flex items-center justify-center">
+                <button
+                  className="bg-brand-secondary text-white rounded h-full w-[37px] flex items-center justify-center"
+                  onClick={handleSearch}
+                >
                   <Icon
                     icon="heroicons:magnifying-glass-16-solid"
                     className="w-7 h-7"
@@ -111,7 +118,7 @@ export default function Header() {
           >
             <div
               ref={animatedElementRef}
-              className={`bg-white lg:bg-transparent w-11/12 h-full animate-entryLeftSide-200 ${!openMobileMenu && "animate-exitLeftSide-200"} lg:animate-entryLeftSide-200`}
+              className={`bg-white lg:bg-transparent w-11/12 h-full animate-entryLeft ${!openMobileMenu && "animate-exitLeft"} lg:animate-entryLeft`}
             >
               <header className="bg-brand-primary p-3 min-h-[60px] flex justify-between items-center lg:hidden">
                 <strong className="text-white text-base font-medium">
@@ -154,7 +161,7 @@ export default function Header() {
                     </button>
                     <DepartamentsDesktop
                       openDepartaments={openDepartaments}
-                      departaments={departaments}
+                      departaments={departaments || []}
                       selectedDepartament={selectedDepartament}
                       setSelectedDepartament={setSelectedDepartament}
                     />
@@ -162,7 +169,7 @@ export default function Header() {
                     <DepartamentsMobile
                       openDepartaments={openDepartaments}
                       setOpenDepartaments={setOpenDepartaments}
-                      departaments={departaments}
+                      departaments={departaments || []}
                       setSelectedDepartament={setSelectedDepartament}
                       selectedDepartament={selectedDepartament}
                     />

@@ -2,11 +2,12 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import App from "./App";
 import { Metadata } from "next";
+import pageTitle from "../utils/pageTitle";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Casa Moura - Materiais elétricos, hidráulicos e miudezas em geral",
+  title: pageTitle,
 };
 
 export default function RootLayout({

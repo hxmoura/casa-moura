@@ -13,19 +13,19 @@ const config: Config = {
         "500": "500%",
       },
       keyframes: {
-        entryRightSide: {
+        entryRight: {
           from: { transform: "translateX(100%)" },
           to: { transform: "translateX(0)" },
         },
-        exitRightSide: {
+        exitRight: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(100%)" },
         },
-        entryLeftSide: {
+        entryLeft: {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(0)" },
         },
-        exitLeftSide: {
+        exitLeft: {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(-100%)" },
         },
@@ -34,8 +34,8 @@ const config: Config = {
           to: { width: "500px" },
         },
         fadeIn: {
-          "0%, 80%": { opacity: "0" },
-          "100%": { opacity: "1" },
+          from: { opacity: "0" },
+          to: { opacity: "1" },
         },
         fadeOut: {
           from: { opacity: "1" },
@@ -48,16 +48,14 @@ const config: Config = {
         },
       },
       animation: {
-        "entryRightSide-300": "entryRightSide .3s forwards",
-        "exitRightSide-300": "exitRightSide .3s forwards",
-        "entryRightSide-200": "entryRightSide .2s forwards",
-        "exitRightSide-200": "exitRightSide .2s forwards",
-        "entryLeftSide-200": "entryLeftSide .2s forwards",
-        "exitLeftSide-200": "exitLeftSide .2s forwards",
+        entryRight: "entryRight .2s forwards",
+        exitRight: "exitRight .2s forwards",
+        entryLeft: "entryLeft .2s forwards",
+        exitLeft: "exitLeft .2s forwards",
         expand: "expand .4s forwards",
         fadeIn: "fadeIn .3s forwards",
-        fadeOut: "fadeOut 1s forwards",
-        scaleUp: "scaleUp .2s forwards",
+        fadeOut: "fadeOut .3s forwards",
+        scaleUp: "scaleUp .3s forwards",
       },
       colors: {
         brand: {
