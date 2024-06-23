@@ -9,11 +9,13 @@ import InputMoney from "./InputMoney";
 interface FiltersProps {
   filteredProductsBySearch: Product[];
   setFilterProducts: Dispatch<SetStateAction<Product[]>>;
+  setOpenModalFilters: Dispatch<SetStateAction<boolean>>;
 }
 
 export default function Filters({
   filteredProductsBySearch,
   setFilterProducts,
+  setOpenModalFilters,
 }: FiltersProps) {
   const searchParams = useSearchParams();
   const params = useMemo(
@@ -202,7 +204,10 @@ export default function Filters({
           </div>
         </div>
       </div>
-      <button className="bg-brand-secondary h-10 rounded-md text-white font-medium text-sm w-full mt-6 lg:hidden disabled:bg-background-softLight disabled:text-text-light">
+      <button
+        className="bg-brand-secondary h-10 rounded-md text-white font-medium text-sm w-full mt-6 lg:hidden disabled:bg-background-softLight disabled:text-text-light"
+        onClick={() => setOpenModalFilters(false)}
+      >
         Ver resultados
       </button>
     </section>

@@ -1,3 +1,3 @@
 export function currencyConverter(value: number): string {
-  return value?.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
+  return value.toLocaleString("pt-br", { style: "currency", currency: "BRL" });
 }

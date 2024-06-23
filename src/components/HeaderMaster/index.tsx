@@ -3,7 +3,7 @@
 import Container from "@/components/Container";
 import Logo from "@/components/Logo";
 import { Icon } from "@iconify/react";
-import { MouseEvent, useContext, useState } from "react";
+import { MouseEvent, useContext, useRef, useState } from "react";
 import useAnimatedUnmount from "@/hooks/useAnimatedEnd";
 import useDepartaments from "./hooks/useDepartaments";
 import Link from "next/link";
@@ -15,6 +15,7 @@ import { Departament } from "@/types/departament";
 import getDepartaments from "@/api/departaments";
 import { useRouter } from "next/navigation";
 import useFetcher from "@/hooks/useFetcher";
+import SearchHistory from "./SearchHistory";
 
 export default function Header() {
   const {
@@ -33,15 +34,48 @@ export default function Header() {
   const { animatedElementRef, shouldRender } =
     useAnimatedUnmount(openMobileMenu);
 
-  const [inputSearch, setInputSearch] = useState("");
+  const [inputSearch, setInputSearch] = useState<string>("");
   const router = useRouter();
 
   const { data: departaments } = useFetcher<Departament[]>(getDepartaments);
 
+  const [showSearchHistory, setShowSearchHistory] = useState<boolean>(false);
+  const [searchHistory, setSearchHistory] = useState<string[]>([]);
+
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
   function handleSearch(evt: MouseEvent) {
     evt.preventDefault();
-    router.push(`/search?q=${inputSearch}`);
-    setInputSearch("");
+    const searchValue = inputSearch.trim();
+
+    if (searchValue) {
+      router.push(`/search?q=${inputSearch}`);
+
+      const getSearchHistory = localStorage.getItem("searchHistory");
+      const newSearchHistory =
+        getSearchHistory && Array.isArray(JSON.parse(getSearchHistory))
+          ? JSON.parse(getSearchHistory)
+          : [];
+      newSearchHistory.push(inputSearch);
+      localStorage.setItem(
+        "searchHistory",
+        JSON.stringify(newSearchHistory.slice(-5)),
+      );
+
+      searchInputRef.current?.blur();
+
+      setShowSearchHistory(false);
+      setInputSearch("");
+      setSearchHistory((prev) => [...prev, inputSearch]);
+    }
+  }
+
+  function handleBlur() {
+    setTimeout(() => {
+      if (!searchInputRef.current?.contains(document.activeElement)) {
+        setShowSearchHistory(false);
+      }
+    }, 80);
   }
 
   return (
@@ -60,24 +94,35 @@ export default function Header() {
               </button>
               <Logo link />
             </div>
-            <form className="w-full lg:mx-24 flex absolute lg:static bottom-0 h-10 lg:h-11">
-              <input
-                type="text"
-                className="w-full outline-none rounded-l px-5 py-3 text-xs lg:text-sm"
-                placeholder="Pesquise pelo produto"
-                onChange={(e) => setInputSearch(e.target.value)}
-                value={inputSearch}
-              />
-              <div className="bg-white rounded-r p-1">
-                <button
-                  className="bg-brand-secondary text-white rounded h-full w-[37px] flex items-center justify-center"
-                  onClick={handleSearch}
-                >
-                  <Icon
-                    icon="heroicons:magnifying-glass-16-solid"
-                    className="w-7 h-7"
-                  />
-                </button>
+            <form className="w-full absolute lg:static bottom-0 h-10 lg:h-11 lg:mx-24">
+              <div className="lg:relative flex w-full">
+                <input
+                  type="text"
+                  ref={searchInputRef}
+                  className="w-full outline-none rounded-l px-5 py-3 text-xs lg:text-sm"
+                  placeholder="Pesquise pelo produto"
+                  onChange={(e) => setInputSearch(e.target.value)}
+                  value={inputSearch}
+                  onFocus={() => setShowSearchHistory(true)}
+                  onBlur={handleBlur}
+                />
+                <div className="bg-white rounded-r p-1">
+                  <button
+                    className="bg-brand-secondary text-white rounded h-full w-[37px] flex items-center justify-center"
+                    onClick={handleSearch}
+                  >
+                    <Icon
+                      icon="heroicons:magnifying-glass-16-solid"
+                      className="w-7 h-7"
+                    />
+                  </button>
+                </div>
+                <SearchHistory
+                  showSearchHistory={showSearchHistory}
+                  searchHistory={searchHistory}
+                  searchInputRef={searchInputRef}
+                  setSearchHistory={setSearchHistory}
+                />
               </div>
             </form>
             <div className="flex gap-3 lg:gap-5">

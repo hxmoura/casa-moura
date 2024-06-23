@@ -83,6 +83,7 @@ export default function Content() {
             <Filters
               filteredProductsBySearch={filterProductsBySearch}
               setFilterProducts={setFilterProducts}
+              setOpenModalFilters={setOpenModalFilters}
             />
           </div>
           <div className="absolute">
@@ -100,6 +101,7 @@ export default function Content() {
                 <Filters
                   filteredProductsBySearch={filterProductsBySearch}
                   setFilterProducts={setFilterProducts}
+                  setOpenModalFilters={setOpenModalFilters}
                 />
               </div>
             </Modal>
