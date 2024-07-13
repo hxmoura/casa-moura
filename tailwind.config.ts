@@ -46,6 +46,10 @@ const config: Config = {
           "90%": { transform: "scale(1.1)" },
           "100%": { transform: "scale(1)" },
         },
+        rotate: {
+          from: { transform: "rotate(0)" },
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         entryRight: "entryRight .2s forwards",
@@ -56,6 +60,7 @@ const config: Config = {
         fadeIn: "fadeIn .3s forwards",
         fadeOut: "fadeOut .3s forwards",
         scaleUp: "scaleUp .3s forwards",
+        rotate: "rotate .8s infinite linear",
       },
       colors: {
         brand: {

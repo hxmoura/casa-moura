@@ -1,28 +1,42 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import {
-  Dispatch,
-  MouseEvent,
-  RefObject,
-  SetStateAction,
-  useEffect,
-} from "react";
+import { Dispatch, RefObject, SetStateAction, useEffect } from "react";
 
 interface SearchHistoryProps {
   showSearchHistory: boolean;
   searchHistory: string[];
-  searchInputRef: RefObject<HTMLInputElement>;
   setSearchHistory: Dispatch<SetStateAction<string[]>>;
+  setShowSearchHistory: Dispatch<SetStateAction<boolean>>;
+  searchHistoryRef: RefObject<HTMLDivElement>;
+  searchInputRef: RefObject<HTMLInputElement>;
 }
 
 export default function SearchHistory({
   showSearchHistory,
   searchHistory,
-  searchInputRef,
   setSearchHistory,
+  setShowSearchHistory,
+  searchHistoryRef,
+  searchInputRef,
 }: SearchHistoryProps) {
   const router = useRouter();
+
+  useEffect(() => {
+    function handleClickElement(evt: MouseEvent) {
+      if (
+        searchInputRef.current &&
+        searchHistoryRef.current &&
+        !searchInputRef.current.contains(evt.target as Node) &&
+        !searchHistoryRef.current.contains(evt.target as Node)
+      ) {
+        setShowSearchHistory(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickElement);
+    return () => document.removeEventListener("mousedown", handleClickElement);
+  }, [searchInputRef, searchHistoryRef, setShowSearchHistory]);
 
   useEffect(() => {
     const getSearchHistory = localStorage.getItem("searchHistory");
@@ -32,9 +46,10 @@ export default function SearchHistory({
     }
   }, [setSearchHistory]);
 
-  function handleHistory(evt: MouseEvent, search: string) {
+  function handleHistory(evt: React.MouseEvent, search: string) {
     evt.preventDefault();
     router.push(`/search?q=${search}`);
+    setShowSearchHistory(false);
   }
 
   function clearSearchHistory() {
@@ -46,8 +61,8 @@ export default function SearchHistory({
     <>
       {showSearchHistory && searchHistory.length > 0 && (
         <div
+          ref={searchHistoryRef}
           className="bg-white p-4 rounded absolute top-full mt-1 w-full border border-background-softLight z-50"
-          onClick={() => searchInputRef.current?.focus()}
         >
           <div className="flex items-center justify-between mb-4">
             <strong className="font-medium text-sm">Buscas recentes</strong>

@@ -23,7 +23,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <article className="w-full md:w-[220px] h-[400px] border border-background-softLight lg:hover:border-brand-secondary rounded-lg group flex-shrink-0 transition-colors lg:hover:shadow-xl overflow-hidden">
-      <Link href={`/produto/${product.id}`}>
+      <Link href={`/product/${product.id}`}>
         <div className="relative">
           {product.promotionalPrice && (
             <span className="bg-brand-secondary text-white absolute top-3 left-3 rounded-lg px-2 py-1 text-sm font-medium">

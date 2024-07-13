@@ -6,15 +6,8 @@ export interface Review {
   title: string;
 }
 
-export interface Informations {
-  weight: string;
-  color: string;
-  brand: string;
-  width: string;
-  height: string;
-  material: string;
-  model: string;
-  guarantee: string;
+interface Informations {
+  [key: string]: string;
 }
 
 export interface Product {

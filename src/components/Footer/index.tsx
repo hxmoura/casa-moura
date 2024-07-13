@@ -9,7 +9,7 @@ import Newsletter from "./components/Newsletter";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="mt-20">
       <Newsletter />
       <div className="bg-background-light pt-7 lg:pt-14 pb-7">
         <Container>

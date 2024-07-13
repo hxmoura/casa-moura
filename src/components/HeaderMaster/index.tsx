@@ -3,7 +3,7 @@
 import Container from "@/components/Container";
 import Logo from "@/components/Logo";
 import { Icon } from "@iconify/react";
-import { MouseEvent, useContext, useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import useAnimatedUnmount from "@/hooks/useAnimatedEnd";
 import useDepartaments from "./hooks/useDepartaments";
 import Link from "next/link";
@@ -16,6 +16,7 @@ import getDepartaments from "@/api/departaments";
 import { useRouter } from "next/navigation";
 import useFetcher from "@/hooks/useFetcher";
 import SearchHistory from "./SearchHistory";
+import { useUser } from "@/contexts/UserContext";
 
 export default function Header() {
   const {
@@ -43,8 +44,11 @@ export default function Header() {
   const [searchHistory, setSearchHistory] = useState<string[]>([]);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchHistoryRef = useRef<HTMLDivElement>(null);
 
-  function handleSearch(evt: MouseEvent) {
+  const { user } = useUser();
+
+  function handleSearch(evt: any) {
     evt.preventDefault();
     const searchValue = inputSearch.trim();
 
@@ -70,14 +74,6 @@ export default function Header() {
     }
   }
 
-  function handleBlur() {
-    setTimeout(() => {
-      if (!searchInputRef.current?.contains(document.activeElement)) {
-        setShowSearchHistory(false);
-      }
-    }, 80);
-  }
-
   return (
     <header className="h-[120px] lg:h-[150px] bg-brand-primary">
       <Cart />
@@ -94,8 +90,11 @@ export default function Header() {
               </button>
               <Logo link />
             </div>
-            <form className="w-full absolute lg:static bottom-0 h-10 lg:h-11 lg:mx-24">
-              <div className="lg:relative flex w-full">
+            <form
+              className="w-full absolute lg:static bottom-0 h-10 lg:h-11 lg:mx-24"
+              onSubmit={handleSearch}
+            >
+              <div className="relative flex w-full">
                 <input
                   type="text"
                   ref={searchInputRef}
@@ -104,12 +103,11 @@ export default function Header() {
                   onChange={(e) => setInputSearch(e.target.value)}
                   value={inputSearch}
                   onFocus={() => setShowSearchHistory(true)}
-                  onBlur={handleBlur}
                 />
                 <div className="bg-white rounded-r p-1">
                   <button
                     className="bg-brand-secondary text-white rounded h-full w-[37px] flex items-center justify-center"
-                    onClick={handleSearch}
+                    type="submit"
                   >
                     <Icon
                       icon="heroicons:magnifying-glass-16-solid"
@@ -120,8 +118,10 @@ export default function Header() {
                 <SearchHistory
                   showSearchHistory={showSearchHistory}
                   searchHistory={searchHistory}
-                  searchInputRef={searchInputRef}
                   setSearchHistory={setSearchHistory}
+                  setShowSearchHistory={setShowSearchHistory}
+                  searchHistoryRef={searchHistoryRef}
+                  searchInputRef={searchInputRef}
                 />
               </div>
             </form>
@@ -135,7 +135,7 @@ export default function Header() {
                 </Link>
               </button>
               <button className="lg:w-9 lg:h-9" title="Conta">
-                <Link href="/signin" className="text-white">
+                <Link href={user ? "/user" : "/login"} className="text-white">
                   <Icon
                     className="w-7 h-7 lg:w-8 lg:h-8 lg:hover:w-9 lg:hover:h-9 transition-all"
                     icon="lucide:user"

@@ -1,6 +1,6 @@
+import { MenuOptions } from "@/app/(public)/product/[id]/components/MenuOptions";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState } from "react";
-import { MenuOptions } from "../../app/produto/[id]/components/MenuOptions";
 
 interface OptionMobile {
   children: React.ReactNode;

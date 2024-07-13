@@ -30,7 +30,7 @@ export default function useQueryParams() {
     updateUrl();
   }
 
-  function updateQuery(key: string, value: string) {
+  function updateQuery(key: string, value: any) {
     params.set(key, value);
     updateUrl();
   }

@@ -24,7 +24,9 @@ const firestore = {
     const docRef = doc(db, col, id);
     const docSnap = await getDoc(docRef);
 
-    return { ...docSnap.data(), id: docSnap.id };
+    if (docSnap.exists()) {
+      return { ...docSnap.data(), id: docSnap.id };
+    }
   },
 
   async getByCondition(

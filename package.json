@@ -10,6 +10,7 @@
     "db": "tsx src/db/datas.ts"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "firebase": "^10.12.2",
     "next": "14.2.4",
     "react": "^18.3.1",
