@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+    <img src="imgs/banner.png"/>
+</div>
 
-## Getting Started
+## 📝 Sobre o projeto
+Casa Moura é um e-commerce voltado a materiais de construção.
 
-First, run the development server:
+## 💻 Tecnologias usadas
+- [NextJS](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [TailwindCSS](https://tailwindcss.com)
+- [Firebase](https://firebase.google.com/products/firestore)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Principais funcionalidades:
+- [x] Página principal interativa, com slides e scrolls.
+- [x] Geração estática da página principal para melhor desempenho, com revalidação a cada 1 hora.
+- [x] Carrinho de compras (adicionar, alterar, remover)
+- [x] Pesquisa e filtragem de produtos
+- [x] Página que mostra as informações de um produto específico
+- [x] Cadastro e login de usuários com Firebase Auth
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Layout
+Guia de estilo e prototipação das telas estão disponíveis no [Figma](https://www.figma.com/design/VfI83my6VZsLKM4GZJkBhO/Casa-Moura)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Configuração do projeto
+Antes de começar, certifique se possui todas as ferramentas necessárias para a execução do projeto, como o [NodeJS](https://nodejs.org), [Git](https://git-scm.com) e [VS Code](https://code.visualstudio.com). Também é importante que tenha uma conta criada no [Firebase](https://firebase.google.com/products/firestore). Feito isso, siga para as etapas de configuração:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [🔥 Configuração do Firebase](settingsFirebase.md)
+- [🚀 Configuração do projeto](settingsProject.md)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 💡 Autor
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/hxmoura">
+        <img src="https://avatars.githubusercontent.com/u/83625190?s=400&u=c14272b53a723916acf0b19f251a97e5e50eb93d&v=4" width="100px;" alt="Foto de hxmoura no Github"/><br>
+        <sub>
+          <b>Henrique Moura</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
