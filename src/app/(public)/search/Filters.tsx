@@ -3,12 +3,10 @@ import { Dispatch, SetStateAction, useEffect, useMemo, useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Product } from "@/types/product";
 import InputMoney from "./InputMoney";
-import {
-  currencyConverter,
-  currencyIntoNumberConverter,
-} from "@/utils/CurrencyConverter";
+import { currencyIntoNumberConverter } from "@/utils/CurrencyConverter";
 import useQueryParams from "@/hooks/useQueryParams";
 import Checkbox from "@/components/Checkbox";
+import Button from "@/components/Button";
 
 interface FiltersProps {
   filteredProductsBySearch: Product[];
@@ -138,7 +136,7 @@ export default function Filters({
         <div className="w-full bg-background-softLight h-10 px-4 py-2">
           <strong className="font-medium">Marcas</strong>
         </div>
-        <div className="p-6 flex flex-col gap-3">
+        <div className="p-6 flex flex-col gap-3 overflow-y-scroll max-h-56">
           {brands.map((brand) => (
             <label key={brand} className="flex items-center gap-2">
               <Checkbox
@@ -194,12 +192,11 @@ export default function Filters({
           </div>
         </div>
       </div>
-      <button
-        className="bg-brand-secondary h-10 rounded-md text-white font-medium text-sm w-full mt-6 lg:hidden disabled:bg-background-softLight disabled:text-text-light"
-        onClick={() => setOpenModalFilters(false)}
-      >
-        Ver resultados
-      </button>
+      <div className="mt-6 lg:hidden">
+        <Button onClick={() => setOpenModalFilters(false)}>
+          Ver resultados
+        </Button>
+      </div>
     </section>
   );
 }

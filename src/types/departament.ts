@@ -1,6 +1,6 @@
 export interface Departament {
   name: string;
-  link: string;
+  slug: string;
   icon: string;
   categories: Array<{
     name: string;

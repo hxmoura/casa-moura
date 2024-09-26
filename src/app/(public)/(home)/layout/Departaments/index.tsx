@@ -24,7 +24,7 @@ export default function Departaments({ departaments }: DepartamentsProps) {
                     key={index}
                     icon={departament.icon}
                     label={departament.name}
-                    link={departament.link}
+                    link={departament.slug}
                   />
                 ))}
               </ScrollContainer>

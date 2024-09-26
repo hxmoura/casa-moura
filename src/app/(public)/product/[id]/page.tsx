@@ -1,31 +1,35 @@
-import { getProduct } from "@/api/products";
+import { getProduct } from "@/api/queries/products";
 import ProductDetails from "./layout/ProductDetails";
-import { Product } from "@/types/product";
-import HeaderMaster from "@/components/HeaderMaster";
 import Footer from "@/components/Footer";
 import Recommendations from "./layout/Recommendations";
+import { redirect } from "next/navigation";
+import Header from "@/components/Header";
 
 interface Props {
   params: { id: string };
 }
 
 export async function generateMetadata({ params }: Props) {
-  const product = (await getProduct(params.id)) as Product;
+  const product = await getProduct(params.id);
 
-  if (!product) return;
+  if (!product.isSuccess) return;
 
   return {
-    title: product.name,
+    title: product.data.name,
   };
 }
 
 export default async function Page({ params }: Props) {
-  const product = (await getProduct(params.id)) as Product;
+  const product = await getProduct(params.id);
+
+  if (!product.isSuccess) {
+    return redirect("/not-found");
+  }
 
   return (
     <>
-      <HeaderMaster />
-      <ProductDetails product={product} />
+      <Header />
+      <ProductDetails product={product.data} />
       <Recommendations />
       <Footer />
     </>

@@ -4,7 +4,7 @@ import Container from "../Container";
 import Logo from "../Logo";
 import Skeleton from "../Skeleton";
 
-export default function HeaderMasterLoading() {
+export default function HeaderFullLoading() {
   return (
     <header className="bg-brand-primary h-[120px] lg:h-[150px]">
       <Container>

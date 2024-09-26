@@ -16,6 +16,14 @@ export default function DepartamentsDesktop({
   selectedDepartament,
   setSelectedDepartament,
 }: DepartamentsMobileProps) {
+  function formatDepartamentName(departament: string) {
+    const transform = departament
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+    const textoTransformado = transform.replace(/\s+/g, "-");
+    return textoTransformado.toLowerCase();
+  }
+
   return (
     <>
       {openDepartaments && (
@@ -26,10 +34,10 @@ export default function DepartamentsDesktop({
               {departaments.map((departament, index) => (
                 <li key={index}>
                   <Link
+                    href={`/departament/${formatDepartamentName(departament.name)}`}
                     onMouseEnter={() =>
                       setSelectedDepartament(departament.name)
                     }
-                    href={departament.link}
                     className={`flex items-center justify-between hover:bg-brand-secondary px-4 py-3 hover:text-white transition-colors ${selectedDepartament === departament.name && "bg-brand-secondary text-white"}`}
                   >
                     <span className="text-sm">{departament.name}</span>

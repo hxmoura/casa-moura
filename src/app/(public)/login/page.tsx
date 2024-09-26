@@ -3,13 +3,13 @@
 import AuthInput from "@/components/AuthInput";
 import Button from "@/components/Button";
 import Container from "@/components/Container";
-import Logo from "@/components/Logo";
 import Link from "next/link";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/db/firebase";
 import { useRouter } from "next/navigation";
 import useAuthInput from "@/components/AuthInput/useAuthInput";
+import Header from "@/components/Header";
 
 export default function Login() {
   const router = useRouter();
@@ -54,13 +54,7 @@ export default function Login() {
 
   return (
     <>
-      <header className="h-20 bg-brand-primary">
-        <Container>
-          <div className="flex items-center h-full">
-            <Logo link />
-          </div>
-        </Container>
-      </header>
+      <Header type="short" />
       <main className="my-20">
         <Container>
           <div className="flex flex-col items-center">
@@ -69,7 +63,7 @@ export default function Login() {
               Seja bem-vindo(a) de volta!
             </p>
             <form
-              className="border border-background-softLight rounded-lg p-7 max-w-[480px] mt-7 mb-10 w-full"
+              className="border border-background-softLight rounded p-7 max-w-[480px] mt-7 mb-10 w-full"
               onSubmit={handleSubmit}
             >
               <div className="space-y-5">

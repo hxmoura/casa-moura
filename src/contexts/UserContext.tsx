@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/db/firebase";
 import { useRouter } from "next/navigation";
-import { getUser } from "@/api/user";
+import { getUser } from "@/api/queries/user";
 import { User } from "@/types/user";
 
 interface UserProviderValue {
@@ -23,8 +23,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const dbUser = onAuthStateChanged(auth, async (user) => {
       if (user && user.email) {
-        const dataUser = await getUser(user.uid);
-        setUser({ ...dataUser, email: user.email });
+        const { data } = await getUser(user.uid);
+        setUser({ ...data, email: user.email });
       }
     });
 

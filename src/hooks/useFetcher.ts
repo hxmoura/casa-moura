@@ -1,18 +1,23 @@
-import { useEffect, useState } from "react";
+import { ResponseType } from "@/api/types/Response";
+import { useState, useEffect } from "react";
 
-export default function useFetcher<T>(fn: (...args: any[]) => Promise<T>): {
-  data: T | null;
-} {
-  const [data, setData] = useState<T | null>(null);
+export default function useFetcher<T>(fn: () => Promise<ResponseType<T>>) {
+  const [response, setResponse] = useState<ResponseType<T> | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    async function getData(...args: any[]) {
-      const d = await fn(...args);
-      setData(d);
-    }
+    const callFn = async () => {
+      if (typeof fn === "function") {
+        const res = await fn();
+        setResponse(res);
+        setLoading(false);
+      }
+    };
 
-    getData();
+    callFn();
+
+    return () => setLoading(true);
   }, [fn]);
 
-  return { data };
+  return { response, loading };
 }

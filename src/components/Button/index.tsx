@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
+import Link from "next/link";
 import React from "react";
 
 interface ButtonProps {
@@ -6,30 +7,68 @@ interface ButtonProps {
   loading?: boolean;
   children: React.ReactNode;
   height?: number;
+  width?: number;
+  type?: "primary" | "secondary" | "outline";
+  href?: string;
+  onClick?: () => void;
 }
 
 export default function Button({
   disabled,
   loading,
   children,
-  height = 44,
+  height = 40,
+  width,
+  type = "primary",
+  href,
+  onClick,
 }: ButtonProps) {
+  const types = {
+    primary:
+      "bg-brand-secondary text-white border-transparent hover:bg-brand-secondaryDark",
+    secondary:
+      "text-brand-secondary border-brand-secondary hover:text-white hover:bg-brand-secondary",
+    outline: "text-text-light border-text-light",
+  };
+
   return (
-    <button
-      className="bg-brand-secondary rounded-lg w-full text-white flex items-center justify-center font-medium disabled:bg-background-softLight disabled:text-text-light disabled:cursor-not-allowed hover:bg-brand-secondaryDark relative overflow-hidden"
-      style={{ height: `${height}px` }}
-      disabled={disabled}
-    >
-      <span
-        className={`${loading ? "-translate-y-10" : "translate-y-0"} transition-transform duration-300`}
-      >
-        {children}
-      </span>
-      <span
-        className={`${loading ? "translate-y-0" : "translate-y-10"} transition-transform duration-300 absolute`}
-      >
-        <Icon icon="gg:spinner" className="w-7 h-7 animate-rotate" />
-      </span>
-    </button>
+    <>
+      {href ? (
+        <Link
+          href={href}
+          onClick={onClick}
+          className={`border rounded w-full flex items-center justify-center text-sm transition-all
+            ${type === "primary" && types.primary}
+            ${type === "secondary" && types.secondary}
+            ${type === "outline" && types.outline}
+          `}
+          style={{ height: `${height}px`, width: `${width}px` }}
+        >
+          {children}
+        </Link>
+      ) : (
+        <button
+          className={`border rounded w-full flex items-center justify-center disabled:bg-background-softLight disabled:text-text-light disabled:cursor-not-allowed relative overflow-hidden text-sm transition-all
+            ${type === "primary" && types.primary}
+            ${type === "secondary" && types.secondary}
+            ${type === "outline" && types.outline}
+          `}
+          style={{ height: `${height}px`, width: `${width}px` }}
+          onClick={onClick}
+          disabled={disabled}
+        >
+          <span
+            className={`${loading ? "-translate-y-10" : "translate-y-0"} transition-transform duration-300`}
+          >
+            {children}
+          </span>
+          <span
+            className={`${loading ? "translate-y-0" : "translate-y-10"} transition-transform duration-300 absolute`}
+          >
+            <Icon icon="gg:spinner" className="w-7 h-7 animate-rotate" />
+          </span>
+        </button>
+      )}
+    </>
   );
 }

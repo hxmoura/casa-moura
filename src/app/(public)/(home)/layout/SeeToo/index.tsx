@@ -13,7 +13,7 @@ interface SeeTooProps {
 export default function SeeToo({ products }: SeeTooProps) {
   return (
     <>
-      {products.length > 0 && (
+      {products?.length > 0 && (
         <section className="mt-20">
           <Container>
             <div className="relative">

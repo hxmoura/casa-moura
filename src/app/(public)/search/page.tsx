@@ -1,7 +1,7 @@
-import Header from "@/components/HeaderMaster";
 import Footer from "@/components/Footer";
 import Content from "./Content";
 import pageTitle from "@/utils/pageTitle";
+import Header from "@/components/Header";
 
 export async function generateMetadata({ searchParams }: any) {
   return {

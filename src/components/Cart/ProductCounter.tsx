@@ -17,7 +17,7 @@ export default function ProductCounter({
 }: ProductCounterProps) {
   return (
     <div
-      className={`border border-background-softLight rounded-lg flex items-center w-full ${small ? "max-w-20 h-7" : "max-w-36 h-11"} overflow-hidden`}
+      className={`border border-background-softLight rounded flex items-center w-full ${small ? "max-w-20 h-7" : "max-w-36 h-11"} overflow-hidden`}
     >
       <button
         className={`h-full ${small ? "w-12" : "w-20"} flex items-center justify-center transition-colors ${inputValue === 1 ? "cursor-default text-text-light" : "hover:bg-brand-secondary hover:text-white"}`}

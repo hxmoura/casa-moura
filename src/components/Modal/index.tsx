@@ -51,8 +51,8 @@ export default function Modal({
             ref={animatedElementRef}
             className={`
               bg-white
-              ${center && "animate-fadeIn"}
-              ${!openModal && center && "animate-fadeOut"}
+              ${center && "animate-entryBottom absolute"}
+              ${!openModal && center && "animate-exitBottom"}
 
               ${left && "animate-entryLeft absolute left-0"} 
               ${!openModal && left && "animate-exitLeft"}

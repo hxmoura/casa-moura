@@ -50,7 +50,7 @@ export default function AuthInput({
           id={label}
           onChange={onChange}
           value={value}
-          className={`rounded-lg border border-background-softLight h-10 p-2 text-xs outline-none focus:border-notify-info w-full ${error && "border-notify-error"}`}
+          className={`rounded border border-background-softLight h-10 p-2 text-xs outline-none focus:border-notify-info w-full ${error && "border-notify-error"}`}
         />
       </div>
       <p className="text-notify-error text-xs">{error}</p>

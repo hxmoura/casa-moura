@@ -6,6 +6,7 @@
             "promotionalPrice": 279.90,
             "quantityInStock": 4,
             "sectionHomePage": "promotion",
+            "departament": "equipamentos",
             "images": [
                 "https://cdn.leroymerlin.com.br/products/furadeira_de_impacto_gsb_450_3_8_127v__110v__bosch_90203162_e8ad_600x600.jpg",
                 "https://images.cws.digital/produtos/gg/70/97/furadeira-de-impacto-bosch-38-gsb-450-re-450w-127v-10089770-1696441190626.jpg",
@@ -73,6 +74,7 @@
             "promotionalPrice": 319.90,
             "quantityInStock": 8,
             "sectionHomePage": "promotion",
+            "departament": "ferramentas",
             "images": [
                 "https://casamattos.fbitsstatic.net/img/p/escada-aluminio-7-degraus-e1207-71525/258034.jpg"
             ],
@@ -159,6 +161,7 @@
             "promotionalPrice": 43.45,
             "quantityInStock": 43,
             "sectionHomePage": "promotion",
+            "departament": "ferramentas",
             "images": [
                 "https://img.lojadomecanico.com.br/IMAGENS/2/121/128452/Jogo-de-chaves-de-fendaphillips-com-10-pecas-VONDER-PLUS-7893946161842-2.JPG"
             ],
@@ -210,6 +213,7 @@
             "promotionalPrice": 153.54,
             "quantityInStock": 18,
             "sectionHomePage": "promotion",
+            "departament": "materiais-eletricos",
             "images": [
                 "https://static.construlardistribuidora.com.br/public/construlardistribuidora/imagens/produtos/cabo-fio-eletrico-flexivel-sil-2-5mm-rolo-100-metros-azul-2509.jpg"
             ],
@@ -352,6 +356,7 @@
             "promotionalPrice": 147.24,
             "quantityInStock": 50,
             "sectionHomePage": "promotion",
+            "departament": "ferramentas",
             "images": [
                 "https://images.tcdn.com.br/img/img_prod/806551/pistola_de_cola_quente_profissional_23w_100w_k_1000_bastao_de_cola_quente_grossa_11_5mm_45_1_f8afbc29e3a1f882decab822199fe00c.jpg"
             ],
@@ -452,6 +457,7 @@
             "promotionalPrice": 128.71,
             "quantityInStock": 10,
             "sectionHomePage": "promotion",
+            "departament": "materiais-hidraulicos",
             "images": [
                 "https://m.media-amazon.com/images/I/31R5grXUtZL._AC_UF894,1000_QL80_.jpg",
                 "https://casaegaragem.fbitsstatic.net/img/p/chuveiro-advanced-multitemperaturas-7500w-220v-lorenzetti-71155/257987-1.jpg",
@@ -581,6 +587,7 @@
             "promotionalPrice": null,
             "quantityInStock": 87,
             "sectionHomePage": "highlight",
+            "departament": "ferramentas",
             "images": [
                 "https://decorpecas.fbitsstatic.net/img/p/massa-adesiva-epoxi-durepoxi-loctite-100g-91878/278391.jpg"
             ],
@@ -660,6 +667,7 @@
             "promotionalPrice": null,
             "quantityInStock": 90,
             "sectionHomePage": "highlight",
+            "departament": "materiais-eletricos",
             "images": [
                 "https://http2.mlstatic.com/D_NQ_NP_717291-MLB54460139424_032023-O.webp"
             ],
@@ -732,6 +740,7 @@
             "promotionalPrice": null,
             "quantityInStock": 15,
             "sectionHomePage": "highlight",
+            "departament": "materiais-hidraulicos",
             "images": [
                 "https://cdn.leroymerlin.com.br/products/cano_pvc_marrom_solda_1m_1_1_2_50mm_equation_90119883_c27d_600x600.jpg"
             ],
@@ -804,6 +813,7 @@
             "promotionalPrice": null,
             "quantityInStock": 24,
             "sectionHomePage": "highlight",
+            "departament": "ferramentas",
             "images": [
                 "https://www.saravati.com.br/media/catalog/product/cache/ff61517d26ace703648229d56c081b52/4/0/40106ee1b1.jpg"
             ],
@@ -848,6 +858,7 @@
             "promotionalPrice": null,
             "quantityInStock": 40,
             "sectionHomePage": "highlight",
+            "departament": "materiais-eletricos",
             "images": [
                 "https://d2l6qh3bt135o5.cloudfront.net/Custom/Content/Products/45/05/45052_filtro-de-linha-c-6-tomadas-pp-circular-3x0-75-c-1mt-preto-pr-13145-33_m1_637842454861081039.png"
             ],
@@ -1158,6 +1169,7 @@
             "promotionalPrice": null,
             "quantityInStock": 15,
             "sectionHomePage": "highlight",
+            "departament": "pintura",
             "images": [
                 "https://acdn.mitiendanube.com/stores/001/797/134/products/12345631-b4146c86ce3d59b9be16402716118760-640-0.png"
             ],
@@ -1251,6 +1263,7 @@
             "promotionalPrice": null,
             "quantityInStock": 23,
             "sectionHomePage": "SeeToo",
+            "departament": "materiais-hidraulicos",
             "images": [
                 "https://images.cws.digital/produtos/gg/60/07/torneira-de-boia-para-caixa-dagua-12-bruto-7450760-1600456035762.jpg"
             ],
@@ -1302,6 +1315,7 @@
             "promotionalPrice": null,
             "quantityInStock": 2,
             "sectionHomePage": "SeeToo",
+            "departament": "equipamentos",
             "images": [
                 "https://cinquentamaissaude.vteximg.com.br/arquivos/ids/160307-1000-1000/assento-tampa-vaso-sanitario-elevado-almofadado-7-5.jpg?v=637952192688830000"
             ],
@@ -1395,6 +1409,7 @@
             "promotionalPrice": null,
             "quantityInStock": 8,
             "sectionHomePage": "SeeToo",
+            "departament": "pintura",
             "images": [
                 "https://outletdastintas.com.br/wp-content/uploads/2016/11/kit-pintura-tigre-brinde-coral.jpg"
             ],
@@ -1481,6 +1496,7 @@
             "promotionalPrice": null,
             "quantityInStock": 13,
             "sectionHomePage": "SeeToo",
+            "departament": "iluminacao",
             "images": [
                 "https://global.cdn.magazord.com.br/ledtube/img/2024/01/produto/3865/spot-sobrepor-7w-preto-6130.jpg"
             ],
@@ -1565,6 +1581,7 @@
             "promotionalPrice": null,
             "quantityInStock": 27,
             "sectionHomePage": "SeeToo",
+            "departament": "materiais-eletricos",
             "images": [
                 "https://img.irroba.com.br/fluzaoco/catalog/api/fluzaoco_citelirr/646fa189e746c.jpg"
             ],
@@ -1707,6 +1724,7 @@
             "promotionalPrice": null,
             "quantityInStock": 27,
             "sectionHomePage": "SeeToo",
+            "departament": "iluminacao",
             "images": [
                 "https://shoppr.com.br/cdn/shop/products/Imagem3_bdc18016-92f7-4320-aacb-2fcac7abef79_2048x.png"
             ],
@@ -1772,6 +1790,7 @@
             "promotionalPrice": 554.90,
             "quantityInStock": 4,
             "sectionHomePage": "promotion",
+            "departament": "materiais-hidraulicos",
             "images": [
                 "https://m.media-amazon.com/images/I/51idVhnZeWL._AC_UF894,1000_QL80_.jpg"
             ],
@@ -1830,6 +1849,7 @@
             "promotionalPrice": 40.50,
             "quantityInStock": 57,
             "sectionHomePage": "promotion",
+            "departament": "materiais-hidraulicos",
             "images": [
                 "https://images.tcdn.com.br/img/img_prod/670572/torneira_tanque_pia_cozinha_tanque_abs_cromada_c31_17_cm_parede_531_1_e458100729060c3aaa8c5d0f386623b8.jpg"
             ],
@@ -1930,6 +1950,7 @@
             "promotionalPrice": 423.00,
             "quantityInStock": 1,
             "sectionHomePage": "promotion",
+            "departament": "ferramentas",
             "images": [
                 "https://leaoferramentas.agilecdn.com.br/16951-1_1.jpg",
                 "https://static.felap.com.br/public/felap/imagens/produtos/serra-tico-tico-gst-650-450w-220v-bosch-06015a80e0-63c5461f8bcef.jpg",
@@ -2021,6 +2042,7 @@
         },
         {
             "name": "Prego Polido Com Cabeça 08x08",
+            "departament": "ferragens",
             "price": 46.99,
             "promotionalPrice": null,
             "quantityInStock": 80,
@@ -2118,6 +2140,7 @@
             "promotionalPrice": null,
             "quantityInStock": 20,
             "sectionHomePage": null,
+            "departament": "ferragens",
             "images": [
                 "https://t74920.vteximg.com.br/arquivos/ids/160100/pregos-gerdau.jpg?v=637539181748270000"
             ],
@@ -2211,6 +2234,7 @@
             "promotionalPrice": null,
             "quantityInStock": 20,
             "sectionHomePage": null,
+            "departament": "ferramentas",
             "images": [
                 "https://img.lojadomecanico.com.br/IMAGENS/2/253/125953/1601553687233.JPG"
             ],
@@ -2304,6 +2328,7 @@
             "promotionalPrice": null,
             "quantityInStock": 20,
             "sectionHomePage": null,
+            "departament": "ferramentas",
             "images": [
                 "https://d365e82sgxmduv.cloudfront.net/Custom/Content/Products/10/73/1073530_martelo-de-unha-20mm-40200020-tramontina_z4_637977256776151132.jpg",
                 "https://d365e82sgxmduv.cloudfront.net/Custom/Content/Products/10/73/1073530_martelo-de-unha-polido-e-envernizado-20mm-40200020-tramontina_z3_637329126452784878.jpg"
@@ -2430,7 +2455,7 @@
     "departaments": [
         {
             "name": "Materiais elétricos",
-            "link": "#",
+            "slug": "materiais-eletricos",
             "icon": "material-symbols:energy-savings-leaf",
             "categories": [
                 {
@@ -2477,7 +2502,7 @@
         },
         {
             "name": "Ferramentas",
-            "link": "#",
+            "slug": "ferramentas",
             "icon": "mingcute:tool-fill",
             "categories": [
                 {
@@ -2520,7 +2545,7 @@
         },
         {
             "name": "Ferragens",
-            "link": "#",
+            "slug": "ferragens",
             "icon": "mdi:screw-flat-top",
             "categories": [
                 {
@@ -2555,7 +2580,7 @@
         },
         {
             "name": "Materiais hidráulicos",
-            "link": "#",
+            "slug": "materiais-hidraulicos",
             "icon": "mdi:pipe-valve",
             "categories": [
                 {
@@ -2586,7 +2611,7 @@
         },
         {
             "name": "Iluminação",
-            "link": "#",
+            "slug": "iluminacao",
             "icon": "ic:baseline-lightbulb",
             "categories": [
                 {
@@ -2625,7 +2650,7 @@
         },
         {
             "name": "Duchas e chuveiros",
-            "link": "#",
+            "slug": "duchas-e-chuveiros",
             "icon": "fa6-solid:shower",
             "categories": [
                 {
@@ -2656,7 +2681,7 @@
         },
         {
             "name": "Segurança",
-            "link": "#",
+            "slug": "seguranca",
             "icon": "ri:door-lock-fill",
             "categories": [
                 {
@@ -2679,7 +2704,7 @@
         },
         {
             "name": "Pintura",
-            "link": "#",
+            "slug": "pintura",
             "icon": "game-icons:paint-bucket",
             "categories": [
                 {
@@ -2718,7 +2743,7 @@
         },
         {
             "name": "Equipamentos",
-            "link": "#",
+            "slug": "equipamentos",
             "icon": "clarity:tools-solid",
             "categories": [
                 {
@@ -2745,7 +2770,7 @@
         },
         {
             "name": "Sinalização",
-            "link": "#",
+            "slug": "sinalizacao",
             "icon": "ic:round-pan-tool",
             "categories": [
                 {

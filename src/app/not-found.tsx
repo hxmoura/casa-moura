@@ -1,14 +1,15 @@
 "use client";
 
+import Button from "@/components/Button";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
-import HeaderMaster from "@/components/HeaderMaster";
+import Header from "@/components/Header";
 import { Icon } from "@iconify/react";
 
 export default function notFound() {
   return (
     <>
-      <HeaderMaster />
+      <Header />
       <main>
         <Container>
           <section className="flex flex-col items-center justify-center py-28">
@@ -23,12 +24,9 @@ export default function notFound() {
               Você digitou o endereço errado, ou a página não está mais
               disponível.
             </p>
-            <a
-              href="/"
-              className="text-white text-sm font-medium bg-brand-secondary rounded-md h-11 w-full max-w-[424px] hover:bg-brand-secondaryDark flex items-center justify-center"
-            >
-              Ir para a página inicial
-            </a>
+            <div className="max-w-[424px] w-full">
+              <Button href="/">Ir para a página inicial</Button>
+            </div>
           </section>
         </Container>
       </main>

@@ -50,6 +50,14 @@ const config: Config = {
           from: { transform: "rotate(0)" },
           to: { transform: "rotate(360deg)" },
         },
+        entryBottom: {
+          from: { transform: "translateY(100%)", bottom: "0" },
+          to: { transform: "translateY(50%)", bottom: "50%" },
+        },
+        exitBottom: {
+          from: { transform: "translateY(50%)", bottom: "50%" },
+          to: { transform: "translateY(100%)", bottom: "0" },
+        },
       },
       animation: {
         entryRight: "entryRight .2s forwards",
@@ -61,6 +69,8 @@ const config: Config = {
         fadeOut: "fadeOut .3s forwards",
         scaleUp: "scaleUp .3s forwards",
         rotate: "rotate .8s infinite linear",
+        entryBottom: "entryBottom .4s forwards",
+        exitBottom: "exitBottom .4s forwards",
       },
       colors: {
         brand: {
@@ -77,7 +87,7 @@ const config: Config = {
           dark: "#292929",
         },
         background: {
-          light: "#FAFAFA",
+          light: "#F5F5F5",
           softLight: "#E9E9E9",
           dark: "#1B1B1B",
           softDark: "#5F5F5F",

@@ -1,6 +1,6 @@
 "use client";
 
-import { getProducts } from "@/api/products";
+import { getProducts } from "@/api/queries/products";
 import Container from "@/components/Container";
 import Modal from "@/components/Modal";
 import ModalHeader from "@/components/Modal/ModalHeader";
@@ -12,12 +12,13 @@ import useScreenWidth from "@/hooks/useScreenWidth";
 import { Product } from "@/types/product";
 import Filters from "./Filters";
 import useFetcher from "@/hooks/useFetcher";
+import Button from "@/components/Button";
 
 export default function Content() {
   const searchParams = useSearchParams();
   const search = searchParams.get("q") || "";
 
-  const { data: products } = useFetcher<Product[]>(getProducts);
+  const { response: products } = useFetcher<Product[]>(getProducts);
   const [filterProductsBySearch, setFilterProductsBySearch] = useState<
     Product[]
   >([]);
@@ -41,7 +42,7 @@ export default function Content() {
 
   useEffect(() => {
     const filterBySearch =
-      products?.filter((product) =>
+      products?.data?.filter((product) =>
         simplifyText(product.name).includes(simplifyText(search)),
       ) || [];
 
@@ -69,13 +70,18 @@ export default function Content() {
           <p className="text-text-light font-medium lg:font-semibold text-xs lg:text-xl ">
             Você pesquisou por &quot;{search}&quot;
           </p>
-          <button
-            className="lg:hidden flex items-center gap-1 border border-background-softLight rounded-sm px-2 py-1"
-            onClick={() => setOpenModalFilters(true)}
-          >
-            <Icon icon="lucide:list-filter" className="w-4 h-4" />
-            <span className="text-xs">Filtros</span>
-          </button>
+          <div className="lg:hidden">
+            <Button
+              onClick={() => setOpenModalFilters(true)}
+              type="outline"
+              height={28}
+            >
+              <div className="flex items-center gap-1 p-1">
+                <Icon icon="lucide:list-filter" className="w-4 h-4" />
+                <span className="text-xs">Filtros</span>
+              </div>
+            </Button>
+          </div>
         </section>
 
         <div className="flex flex-col lg:flex-row gap-7">
@@ -107,10 +113,16 @@ export default function Content() {
             </Modal>
           </div>
 
-          <section className="flex flex-wrap justify-center lg:justify-start gap-5">
-            {filterProducts.map((product, index) => (
-              <ProductCard product={product} key={index} />
-            ))}
+          <section className="flex flex-wrap justify-center lg:justify-start gap-5 w-full">
+            {filterProducts.length > 0 ? (
+              filterProducts.map((product, index) => (
+                <ProductCard product={product} key={index} />
+              ))
+            ) : (
+              <p className="font-semibold text-lg">
+                Não foi possível encontrar nenhum produto.
+              </p>
+            )}
           </section>
         </div>
       </Container>

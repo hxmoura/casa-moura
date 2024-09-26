@@ -22,11 +22,11 @@ export default function ProductCard({ product }: ProductCardProps) {
   }
 
   return (
-    <article className="w-full md:w-[220px] h-[400px] border border-background-softLight lg:hover:border-brand-secondary rounded-lg group flex-shrink-0 transition-colors lg:hover:shadow-xl overflow-hidden">
+    <article className="w-[46%] md:w-[220px] h-80 md:h-[400px] border border-background-softLight lg:hover:border-brand-secondary rounded group flex-shrink-0 transition-colors lg:hover:shadow-xl overflow-hidden">
       <Link href={`/product/${product.id}`}>
         <div className="relative">
           {product.promotionalPrice && (
-            <span className="bg-brand-secondary text-white absolute top-3 left-3 rounded-lg px-2 py-1 text-sm font-medium">
+            <span className="bg-brand-secondary text-white absolute top-3 left-3 rounded-lg px-2 py-1 text-xs md:text-sm font-medium">
               -
               {Math.round(
                 ((product.price - product.promotionalPrice) / product.price) *
@@ -37,8 +37,8 @@ export default function ProductCard({ product }: ProductCardProps) {
           )}
           <ImageFallback
             image={product.images?.[0]}
-            className="w-full h-[218px] object-contain"
-            classNameFallback="w-full h-[218px]"
+            className="w-full h-36 md:h-[218px] object-contain"
+            classNameFallback="w-full h-36 md:h-[218px]"
           />
           <button
             className="bg-brand-secondary text-white items-center justify-center absolute bottom-0 gap-2 h-9 hover:bg-brand-secondaryDark opacity-0 lg:group-hover:opacity-100 transition-opacity w-full hidden lg:flex"
@@ -49,7 +49,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </button>
         </div>
         <div className="p-3 mt-3 ">
-          <p className="text-sm lineLimit mb-2">{product.name}</p>
+          <p className="text-xs md:text-sm lineLimit mb-2">{product.name}</p>
           <Reviews reviews={product.reviews} />
           <div className="flex flex-col mt-2">
             {product.promotionalPrice && (
@@ -57,7 +57,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 {currencyConverter(product.price)}
               </small>
             )}
-            <strong className="text-lg font-semibold">
+            <strong className="text-sm font-medium md:text-lg md:font-semibold">
               {product.promotionalPrice
                 ? currencyConverter(product.promotionalPrice)
                 : currencyConverter(product.price)}

@@ -4,14 +4,14 @@ import Container from "@/components/Container";
 import SectionTitle from "@/components/SectionTitle";
 import ProductCard from "@/components/ProductCard";
 import ScrollContainer from "@/components/Scroll/ScrollContainer";
-import { getProducts } from "@/api/products";
+import { getProducts } from "@/api/queries/products";
 import { Product } from "@/types/product";
 import useFetcher from "@/hooks/useFetcher";
 
 export default function Recommendations() {
-  const { data: products } = useFetcher<Product[]>(getProducts) || [];
+  const { response: products } = useFetcher<Product[]>(getProducts);
 
-  const recommendationsProducts = products
+  const recommendationsProducts = products?.data
     ?.sort(() => {
       return 0.5 - Math.random();
     })
@@ -19,7 +19,7 @@ export default function Recommendations() {
 
   return (
     <>
-      {products && products.length > 0 && (
+      {products && products.data.length > 0 && (
         <section className="mt-28">
           <Container>
             <div className="relative">

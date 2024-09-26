@@ -1,7 +1,6 @@
 "use client";
 
 import Container from "@/components/Container";
-import Logo from "@/components/Logo";
 import Checkbox from "@/components/Checkbox";
 import Link from "next/link";
 import { auth, db } from "@/db/firebase";
@@ -12,6 +11,7 @@ import AuthInput from "@/components/AuthInput";
 import Button from "@/components/Button";
 import useAuthInput from "@/components/AuthInput/useAuthInput";
 import { useRouter } from "next/navigation";
+import Header from "@/components/Header";
 
 export default function Register() {
   const [name, setName] = useState<string>("");
@@ -149,13 +149,7 @@ export default function Register() {
 
   return (
     <>
-      <header className="h-20 bg-brand-primary">
-        <Container>
-          <div className="flex items-center h-full">
-            <Logo link />
-          </div>
-        </Container>
-      </header>
+      <Header type="short" />
       <main className="my-20">
         <Container>
           <div className="flex flex-col items-center">
@@ -164,7 +158,7 @@ export default function Register() {
               Crie sua conta e aproveite as promoções!
             </p>
             <form
-              className="border border-background-softLight rounded-lg p-7 max-w-[480px] mt-7 mb-10 w-full"
+              className="border border-background-softLight rounded p-7 max-w-[480px] mt-7 mb-10 w-full"
               onSubmit={handleSubmit}
             >
               <div className="space-y-5">
@@ -218,7 +212,7 @@ export default function Register() {
                 <div className="flex items-center gap-3">
                   <div className="relative h-1 w-40">
                     <div
-                      className={`absolute h-full rounded-sm transition-all
+                      className={`absolute h-full rounded transition-all
                         ${passwordLevel === "Fraca" && "bg-notify-error"}
                         ${passwordLevel === "Razoável" && "bg-notify-warning"}
                         ${passwordLevel === "Forte" && "bg-notify-success"}
@@ -227,7 +221,7 @@ export default function Register() {
                         width: `${!password.length ? 0 : passwordLevel === "Fraca" ? 20 : passwordLevel === "Razoável" ? 60 : 100}%`,
                       }}
                     ></div>
-                    <div className="bg-background-softLight w-full h-full rounded-sm"></div>
+                    <div className="bg-background-softLight w-full h-full rounded"></div>
                   </div>
                   <p className="text-xs">{passwordLevel}</p>
                 </div>

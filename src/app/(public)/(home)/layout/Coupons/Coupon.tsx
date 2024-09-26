@@ -17,12 +17,12 @@ export default function Coupon({
   img,
 }: CouponProps) {
   return (
-    <article className="bg-brand-primary w-full h-[150px] rounded-xl relative overflow-hidden">
+    <article className="bg-brand-primary w-full h-[150px] rounded relative overflow-hidden">
       <div className="absolute right-0 w-1/2 h-full">
         <img src={img} alt={label} className="h-full w-full object-cover" />
         <div className="absolute top-0 right-0 left-0 bottom-0 bg-gradient-to-r from-brand-primary to-[#34219f09]"></div>
       </div>
-      <div className="bg-brand-secondary rounded-bl-xl py-2 px-4 absolute top-0 right-0">
+      <div className="bg-brand-secondary rounded-bl py-2 px-4 absolute top-0 right-0">
         <strong className={`text-white font-black ${nunito.className}`}>
           {discountPercentage}% OFF
         </strong>

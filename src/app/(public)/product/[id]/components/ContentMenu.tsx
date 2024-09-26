@@ -7,7 +7,7 @@ export function InformationsContent(product: Product) {
   return (
     <div className="mt-5 lg:mt-10 mb-14">
       <p>{product.description}</p>
-      <table className="mt-16 border-collapse lg:max-w-[536px] w-full overflow-hidden rounded-md">
+      <table className="mt-16 border-collapse lg:max-w-[536px] w-full overflow-hidden rounded">
         <tbody>
           {Object.entries(product.informations)
             .sort()

@@ -4,12 +4,10 @@ import {
   SetStateAction,
   createContext,
   useCallback,
-  useEffect,
-  useRef,
   useState,
 } from "react";
 import { Product } from "@/types/product";
-import { getProduct } from "@/api/products";
+import { getProduct } from "@/api/queries/products";
 
 interface CartProviderProps {
   children: ReactNode;
@@ -25,6 +23,8 @@ interface CartContext {
   openCart: boolean;
   setOpenCart: Dispatch<SetStateAction<boolean>>;
   handleCartOpening: () => void;
+  handleOpenCart: () => void;
+  handleCloseCart: () => void;
   fetchProductsFromLocalStorage: () => void;
 }
 
@@ -41,52 +41,66 @@ interface LocalProduct {
 
 export default function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<ProductCart[]>([]);
-  const [localCart, setLocalCart] = useState<LocalProduct[]>([]);
   const [openCart, setOpenCart] = useState<boolean>(false);
-  const oldCart = useRef(cart);
-
-  useEffect(() => {
-    const getLocalCart = localStorage.getItem("cart");
-    setLocalCart(getLocalCart ? JSON.parse(getLocalCart) : []);
-  }, []);
-
-  useEffect(() => {
-    if (oldCart.current !== cart) {
-      const summaryCart = cart.map(({ id, quantityInCart }) => {
-        return { id, quantityInCart };
-      });
-      localStorage.setItem("cart", JSON.stringify(summaryCart));
-    }
-  }, [cart]);
 
   function handleCartOpening() {
     setOpenCart((prevState) => !prevState);
   }
 
-  const fetchProductsFromLocalStorage = useCallback(() => {
-    if (localCart.length > 0) {
-      const fetchLocalCart = localCart.map(
-        async (localProduct: LocalProduct) => {
-          const product = await getProduct(localProduct.id);
+  function handleOpenCart() {
+    setOpenCart(true);
+  }
 
-          const productWithQuantity = {
-            ...product,
-            quantityInCart: localProduct.quantityInCart,
-          } as ProductCart;
+  function handleCloseCart() {
+    setOpenCart(false);
+  }
 
-          return productWithQuantity;
-        },
+  function getLocalCart() {
+    const localCart = localStorage.getItem("cart");
+
+    try {
+      const data = localCart ? JSON.parse(localCart) : [];
+
+      const validateProperty = data.every(
+        (obj: LocalProduct) =>
+          typeof obj.id === "string" && typeof obj.quantityInCart === "number",
       );
 
-      Promise.all(fetchLocalCart)
-        .then((products) => setCart(products))
-        .catch(() => setCart([]));
+      return validateProperty ? data : localStorage.removeItem("cart");
+    } catch {
+      return localStorage.removeItem("cart");
     }
-  }, [localCart]);
+  }
+
+  function addLocalCart(item: LocalProduct[]) {
+    localStorage.setItem("cart", JSON.stringify(item));
+  }
+
+  const fetchProductsFromLocalStorage = useCallback(() => {
+    const getCart = getLocalCart();
+
+    const fetchLocalCart = getCart?.map(async (localProduct: LocalProduct) => {
+      const product = await getProduct(localProduct.id);
+
+      if (product.isSuccess) {
+        const productWithQuantity = {
+          ...product.data,
+          quantityInCart: localProduct.quantityInCart,
+        };
+
+        return productWithQuantity;
+      }
+    });
+
+    Promise.all(fetchLocalCart)
+      .then((products) => products.filter((p: ProductCart) => p))
+      .then((products) => setCart(products))
+      .catch(() => setCart([]));
+  }, []);
 
   function addProductToCart(product: Product, quantity: number = 1) {
     const existingProduct = cart.find((p) => p.id === product.id);
-    handleCartOpening();
+    handleOpenCart();
 
     if (existingProduct) {
       return addProductQuantity(existingProduct, quantity);
@@ -96,12 +110,17 @@ export default function CartProvider({ children }: CartProviderProps) {
       ...prevState,
       { quantityInCart: quantity, ...product },
     ]);
+
+    addLocalCart([...getLocalCart(), { id: product.id, quantityInCart: 1 }]);
   }
 
   function deleteProductToCart(product: Product) {
-    return setCart((prevState) =>
-      prevState.filter((item) => item.id !== product.id),
+    const newLocalCart = getLocalCart().filter(
+      (p: LocalProduct) => p.id !== product.id,
     );
+    addLocalCart(newLocalCart);
+
+    setCart((prevState) => prevState.filter((item) => item.id !== product.id));
   }
 
   function calculateCartTotal() {
@@ -119,6 +138,11 @@ export default function CartProvider({ children }: CartProviderProps) {
       ? product.quantityInCart + quantity
       : product.quantityInCart + 1;
 
+    const newLocalCart = getLocalCart().map((p: LocalProduct) =>
+      p.id === product.id ? { ...p, quantityInCart: changeQuantity } : p,
+    );
+    addLocalCart(newLocalCart);
+
     setCart((prevState) =>
       prevState.map((p) =>
         p.id === product.id
@@ -132,6 +156,13 @@ export default function CartProvider({ children }: CartProviderProps) {
     if (product.quantityInCart === 1) {
       return;
     }
+
+    const newLocalCart = getLocalCart().map((p: LocalProduct) =>
+      p.id === product.id
+        ? { ...p, quantityInCart: product.quantityInCart - 1 }
+        : p,
+    );
+    addLocalCart(newLocalCart);
 
     setCart((prevState) =>
       prevState.map((p) =>
@@ -154,6 +185,8 @@ export default function CartProvider({ children }: CartProviderProps) {
         openCart,
         setOpenCart,
         handleCartOpening,
+        handleOpenCart,
+        handleCloseCart,
         fetchProductsFromLocalStorage,
       }}
     >

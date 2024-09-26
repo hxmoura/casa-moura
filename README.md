@@ -11,7 +11,7 @@ Casa Moura é um e-commerce voltado a materiais de construção.
 - [TailwindCSS](https://tailwindcss.com)
 - [Firebase](https://firebase.google.com/products/firestore)
 
-## ✨ Principais funcionalidades:
+## ✨ Principais funcionalidades
 - [x] Página principal interativa, com slides e scrolls.
 - [x] Geração estática da página principal para melhor desempenho, com revalidação a cada 1 hora.
 - [x] Carrinho de compras (adicionar, alterar, remover)

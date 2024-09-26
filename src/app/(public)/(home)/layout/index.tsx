@@ -7,39 +7,39 @@ import Blog from "./Blog";
 import Brands from "./Brands";
 import Coupons from "./Coupons";
 import SeeToo from "./SeeToo";
-import { Departament as DepartamentType } from "@/types/departament";
-import { Product } from "@/types/product";
-import { Blog as BlogType } from "@/types/blog";
-import { Brand } from "@/types/brand";
+import getDepartaments from "@/api/queries/departaments";
+import getBrands from "@/api/queries/brands";
+import { getProducts } from "@/api/queries/products";
+import getBlog from "@/api/queries/blog";
 
-interface ContentProps {
-  departaments: DepartamentType[];
-  blog: BlogType[];
-  brands: Brand[];
-  seeTooProducts: Product[];
-  highlightProducts: Product[];
-  promotionProducts: Product[];
-}
+export default async function Content() {
+  const [
+    departaments,
+    blog,
+    brands,
+    seeTooProducts,
+    highlightProducts,
+    promotionProducts,
+  ] = await Promise.all([
+    getDepartaments(),
+    getBlog(),
+    getBrands(),
+    getProducts("sectionHomePage", "SeeToo", "=="),
+    getProducts("sectionHomePage", "highlight", "=="),
+    getProducts("sectionHomePage", "promotion", "=="),
+  ]);
 
-export default function Content({
-  departaments,
-  blog,
-  brands,
-  seeTooProducts,
-  highlightProducts,
-  promotionProducts,
-}: ContentProps) {
   return (
     <main>
       <Slides />
       <Informations />
-      <Departament departaments={departaments} />
-      <Promotions products={promotionProducts} />
-      <Highlights products={highlightProducts} />
-      <Blog blog={blog} />
-      <Brands brands={brands} />
+      <Departament departaments={departaments.data} />
+      <Promotions products={promotionProducts.data} />
+      <Highlights products={highlightProducts.data} />
+      <Blog blog={blog.data} />
+      <Brands brands={brands.data} />
       <Coupons />
-      <SeeToo products={seeTooProducts} />
+      <SeeToo products={seeTooProducts.data} />
     </main>
   );
 }

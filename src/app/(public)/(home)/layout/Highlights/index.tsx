@@ -13,7 +13,7 @@ interface HighlightsProps {
 export default function Highlights({ products }: HighlightsProps) {
   return (
     <>
-      {products.length > 0 && (
+      {products?.length > 0 && (
         <section className="my-20">
           <Container>
             <div className="relative">
