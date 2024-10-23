@@ -30,7 +30,7 @@ export default function ScrollContainer({
       >
         <div
           ref={scrollRef}
-          className={`flex overflow-x-scroll disableScroll scroll-smooth relative`}
+          className={`flex overflow-x-scroll disable-scroll scroll-smooth relative`}
           style={{ gap: `${spacing}px` }}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}

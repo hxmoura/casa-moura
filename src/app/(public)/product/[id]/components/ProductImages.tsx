@@ -37,7 +37,7 @@ export default function ProductImages({ product }: { product: Product }) {
               className="w-6 h-6 lg:rotate-90"
             />
           </button>
-          <div className="flex lg:flex-col gap-6 overflow-auto disableScroll scroll-smooth">
+          <div className="flex lg:flex-col gap-6 overflow-auto disable-scroll scroll-smooth">
             {product.images.map((image, index) => (
               <button
                 key={index}

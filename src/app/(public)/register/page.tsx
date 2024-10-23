@@ -7,11 +7,11 @@ import { auth, db } from "@/db/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
-import AuthInput from "@/components/AuthInput";
 import Button from "@/components/Button";
-import useAuthInput from "@/components/AuthInput/useAuthInput";
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
+import InputText from "@/components/InputText";
+import useInputValidate from "@/hooks/useInputValidate";
 
 export default function Register() {
   const [name, setName] = useState<string>("");
@@ -31,25 +31,32 @@ export default function Register() {
   const [sendingForm, setSendingForm] = useState<boolean>(false);
 
   const router = useRouter();
-
   const {
-    addError,
     errors,
-    validateConfirmPassword,
-    validatePassword,
-    validateEmail,
-    validateLastName,
-    validateName,
-  } = useAuthInput();
+    isEmptyErrors,
+    validate,
+    isEmail,
+    isRequired,
+    minLength,
+    maxLength,
+    comparePasswords,
+  } = useInputValidate();
 
   async function handleSubmit(evt: FormEvent) {
     evt.preventDefault();
 
-    validateName(name);
-    validateLastName(lastName);
-    validateEmail(email);
-    validatePassword(password);
-    validateConfirmPassword(confirmPassword, password);
+    validate("name", name, [isRequired]);
+    validate("lastname", name, [isRequired]);
+    validate("email", email, [isEmail, isRequired]);
+    validate("password", password, [
+      (value) => maxLength(value, 24),
+      (value) => minLength(value, 6),
+      isRequired,
+    ]);
+    validate("confirmPassword", confirmPassword, [
+      (value) => (value !== password ? "As senhas não são iguais" : null),
+      isRequired,
+    ]);
 
     if (
       name.trim() &&
@@ -57,7 +64,7 @@ export default function Register() {
       email.trim() &&
       password.trim() &&
       confirmPassword.trim() &&
-      !errors.length &&
+      isEmptyErrors &&
       communicationCheckbox &&
       termsCheckbox &&
       !sendingForm
@@ -74,14 +81,12 @@ export default function Register() {
         await setDoc(doc(db, "users", userCredential.user.uid), {
           name,
           lastName,
+          orders: [],
         });
         router.push("/login");
       } catch (err: any) {
         if (err.code === "auth/email-already-in-use") {
-          addError({
-            input: "email",
-            message: "Já existe uma conta com este e-mail.",
-          });
+          validate("email", "", [() => "Já existe uma conta com este e-mail."]);
         } else {
           console.log("Ocorreu um erro ao criar sua conta, tente novamente!");
         }
@@ -92,38 +97,45 @@ export default function Register() {
   }
 
   function handleName(evt: ChangeEvent<HTMLInputElement>) {
-    const inputValue = evt.target.value;
-    setName(inputValue);
+    const { value, name } = evt.target;
+    setName(value);
 
-    validateName(inputValue);
+    validate(name, value, [isRequired]);
   }
 
   function handleLastName(evt: ChangeEvent<HTMLInputElement>) {
-    const inputValue = evt.target.value;
-    setLastName(inputValue);
+    const { value, name } = evt.target;
+    setLastName(value);
 
-    validateLastName(inputValue);
+    validate(name, value, [isRequired]);
   }
 
   function handleEmail(evt: ChangeEvent<HTMLInputElement>) {
-    const inputValue = evt.target.value;
-    setEmail(inputValue);
+    const { value, name } = evt.target;
+    setEmail(value);
 
-    validateEmail(inputValue);
+    validate(name, value, [isEmail, isRequired]);
   }
 
   function handlePassword(evt: ChangeEvent<HTMLInputElement>) {
-    const inputValue = evt.target.value;
-    setPassword(inputValue);
+    const { value, name } = evt.target;
+    setPassword(value);
 
-    validatePassword(inputValue);
+    validate(name, value, [
+      (value) => maxLength(value, 24),
+      (value) => minLength(value, 6),
+      isRequired,
+    ]);
   }
 
   function handleConfirmPassword(evt: ChangeEvent<HTMLInputElement>) {
-    const inputValue = evt.target.value;
-    setConfirmPassword(inputValue);
+    const { value, name } = evt.target;
+    setConfirmPassword(value);
 
-    validateConfirmPassword(inputValue, password);
+    validate(name, value, [
+      (value) => comparePasswords(value, password),
+      isRequired,
+    ]);
   }
 
   useEffect(() => {
@@ -163,47 +175,45 @@ export default function Register() {
             >
               <div className="space-y-5">
                 <div className="flex flex-col md:flex-row gap-5">
-                  <AuthInput
+                  <InputText
                     label="Nome"
+                    name="name"
                     value={name}
                     onChange={handleName}
-                    error={errors.find((err) => err.input === "name")?.message}
+                    error={errors.name}
                   />
-                  <AuthInput
+                  <InputText
                     label="Sobrenome"
+                    name="lastname"
                     value={lastName}
                     onChange={handleLastName}
-                    error={
-                      errors.find((err) => err.input === "lastname")?.message
-                    }
+                    error={errors.lastname}
                   />
                 </div>
-                <AuthInput
+                <InputText
                   label="E-mail"
+                  name="email"
                   type="email"
                   value={email}
                   onChange={handleEmail}
-                  error={errors.find((err) => err.input === "email")?.message}
+                  error={errors.email}
                 />
-                <AuthInput
+                <InputText
                   label="Senha"
+                  name="password"
                   type="password"
                   value={password}
                   onChange={handlePassword}
-                  error={
-                    errors.find((err) => err.input === "password")?.message
-                  }
+                  error={errors.password}
                   eyePassword
                 />
-                <AuthInput
+                <InputText
                   label="Confirmar senha"
+                  name="confirmPassword"
                   type="password"
                   value={confirmPassword}
                   onChange={handleConfirmPassword}
-                  error={
-                    errors.find((err) => err.input === "confirmPassword")
-                      ?.message
-                  }
+                  error={errors.confirmPassword}
                   eyePassword
                 />
               </div>
@@ -247,20 +257,21 @@ export default function Register() {
                   />
                   <label className="text-xs">
                     Declaro que estou de acordo com os{" "}
-                    <Link href="#" className="font-medium">
+                    <Link href="#" className="font-medium hover:underline">
                       Termos e condições
                     </Link>
                   </label>
                 </div>
               </div>
               <Button
+                type="submit"
                 disabled={
                   !name.trim() ||
                   !lastName.trim() ||
                   !email.trim() ||
                   !password.trim() ||
                   !confirmPassword.trim() ||
-                  !!errors.length ||
+                  !isEmptyErrors ||
                   !communicationCheckbox ||
                   !termsCheckbox ||
                   sendingForm
@@ -270,20 +281,22 @@ export default function Register() {
                 Criar conta
               </Button>
 
-              <p className="text-center mt-5 text-sm">
-                Já tem cadastro?{" "}
-                <Link href="/login" className="font-medium">
-                  entre aqui
+              <div className="text-center mt-5">
+                <Link
+                  href="/login"
+                  className="font-medium text-sm hover:underline"
+                >
+                  Já tem cadastro? Entre aqui
                 </Link>
-              </p>
+              </div>
             </form>
             <p className="text-text-light text-xs text-center max-w-[480px] w-full">
               Seus dados estão protegidos de acordo com nossa{" "}
-              <Link href="#" className="font-medium">
+              <Link href="#" className="font-medium hover:underline">
                 política de privacidade
               </Link>{" "}
               e{" "}
-              <Link href="#" className="font-medium">
+              <Link href="#" className="font-medium hover:underline">
                 termos e condições
               </Link>
               . Todos os direitos reservados - Casa Moura.

@@ -6,6 +6,7 @@ import {
   getDoc,
   getDocs,
   query,
+  updateDoc,
   where,
 } from "firebase/firestore";
 import { Response } from "../services/Response";
@@ -63,6 +64,17 @@ const firestore = {
         return { ...doc.data(), id: doc.id };
       });
 
+      return Response.Success(data);
+    } catch {
+      return Response.Failure(
+        "Unable to complete the operation, please try again",
+      );
+    }
+  },
+
+  async updateDocument(col: string, docId: string, docData: any) {
+    try {
+      const data = await updateDoc(doc(db, col, docId), docData);
       return Response.Success(data);
     } catch {
       return Response.Failure(

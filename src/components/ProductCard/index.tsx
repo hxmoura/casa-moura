@@ -49,7 +49,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </button>
         </div>
         <div className="p-3 mt-3 ">
-          <p className="text-xs md:text-sm lineLimit mb-2">{product.name}</p>
+          <p className="text-xs md:text-sm line-limit mb-2">{product.name}</p>
           <Reviews reviews={product.reviews} />
           <div className="flex flex-col mt-2">
             {product.promotionalPrice && (

@@ -73,7 +73,7 @@ export default function Content() {
           <div className="lg:hidden">
             <Button
               onClick={() => setOpenModalFilters(true)}
-              type="outline"
+              style="outline"
               height={28}
             >
               <div className="flex items-center gap-1 p-1">

@@ -6,17 +6,31 @@ body {
   @apply text-text-main;
 }
 
-.disableScroll::-webkit-scrollbar {
+.disable-scroll::-webkit-scrollbar {
   display: none;
 }
 
-.disableScroll {
+.disable-scroll {
   scrollbar-width: none;
 }
 
-.lineLimit {
+.line-limit {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   overflow: hidden;
   -webkit-box-orient: vertical;
+}
+
+
+.input-radio:checked::before {
+  @apply bg-brand-secondary;
+
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

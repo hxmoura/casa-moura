@@ -4,6 +4,7 @@ import {
   SetStateAction,
   createContext,
   useCallback,
+  useContext,
   useState,
 } from "react";
 import { Product } from "@/types/product";
@@ -15,6 +16,7 @@ interface CartProviderProps {
 
 interface CartContext {
   cart: ProductCart[];
+  isLoading: boolean;
   addProductToCart: (product: Product, quantity?: number) => void;
   deleteProductToCart: (product: Product) => void;
   calculateCartTotal: () => number;
@@ -28,8 +30,6 @@ interface CartContext {
   fetchProductsFromLocalStorage: () => void;
 }
 
-export const CartContext = createContext<CartContext | null>(null);
-
 interface ProductCart extends Product {
   quantityInCart: number;
 }
@@ -39,8 +39,15 @@ interface LocalProduct {
   quantityInCart: number;
 }
 
+export const CartContext = createContext<CartContext>(null as any);
+
+export function useCart() {
+  return useContext(CartContext);
+}
+
 export default function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<ProductCart[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [openCart, setOpenCart] = useState<boolean>(false);
 
   function handleCartOpening() {
@@ -95,6 +102,7 @@ export default function CartProvider({ children }: CartProviderProps) {
     Promise.all(fetchLocalCart)
       .then((products) => products.filter((p: ProductCart) => p))
       .then((products) => setCart(products))
+      .then(() => setIsLoading(false))
       .catch(() => setCart([]));
   }, []);
 
@@ -177,6 +185,7 @@ export default function CartProvider({ children }: CartProviderProps) {
     <CartContext.Provider
       value={{
         cart,
+        isLoading,
         addProductToCart,
         deleteProductToCart,
         calculateCartTotal,

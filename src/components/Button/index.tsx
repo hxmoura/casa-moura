@@ -8,7 +8,8 @@ interface ButtonProps {
   children: React.ReactNode;
   height?: number;
   width?: number;
-  type?: "primary" | "secondary" | "outline";
+  style?: "primary" | "secondary" | "outline";
+  type?: "button" | "submit" | "reset";
   href?: string;
   onClick?: () => void;
 }
@@ -19,16 +20,17 @@ export default function Button({
   children,
   height = 40,
   width,
-  type = "primary",
+  style = "primary",
+  type = "button",
   href,
   onClick,
 }: ButtonProps) {
-  const types = {
+  const styles = {
     primary:
       "bg-brand-secondary text-white border-transparent hover:bg-brand-secondaryDark",
     secondary:
       "text-brand-secondary border-brand-secondary hover:text-white hover:bg-brand-secondary",
-    outline: "text-text-light border-text-light",
+    outline: "text-text-light border-text-light hover:bg-background-light",
   };
 
   return (
@@ -38,9 +40,9 @@ export default function Button({
           href={href}
           onClick={onClick}
           className={`border rounded w-full flex items-center justify-center text-sm transition-all
-            ${type === "primary" && types.primary}
-            ${type === "secondary" && types.secondary}
-            ${type === "outline" && types.outline}
+            ${style === "primary" && styles.primary}
+            ${style === "secondary" && styles.secondary}
+            ${style === "outline" && styles.outline}
           `}
           style={{ height: `${height}px`, width: `${width}px` }}
         >
@@ -48,10 +50,11 @@ export default function Button({
         </Link>
       ) : (
         <button
+          type={type}
           className={`border rounded w-full flex items-center justify-center disabled:bg-background-softLight disabled:text-text-light disabled:cursor-not-allowed relative overflow-hidden text-sm transition-all
-            ${type === "primary" && types.primary}
-            ${type === "secondary" && types.secondary}
-            ${type === "outline" && types.outline}
+            ${style === "primary" && styles.primary}
+            ${style === "secondary" && styles.secondary}
+            ${style === "outline" && styles.outline}
           `}
           style={{ height: `${height}px`, width: `${width}px` }}
           onClick={onClick}

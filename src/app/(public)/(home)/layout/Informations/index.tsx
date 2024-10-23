@@ -7,7 +7,7 @@ export default function Informations() {
   return (
     <section>
       <Container>
-        <ul className="flex lg:justify-center gap-24 overflow-x-scroll disableScroll">
+        <ul className="flex lg:justify-center gap-24 overflow-x-scroll disable-scroll">
           <Card
             icon="heroicons:truck"
             title="Frete"

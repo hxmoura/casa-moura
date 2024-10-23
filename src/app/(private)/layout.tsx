@@ -2,7 +2,7 @@
 
 import { useUser } from "@/contexts/UserContext";
 import { auth } from "@/db/firebase";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function AuthLayout({
@@ -12,16 +12,17 @@ export default function AuthLayout({
 }>) {
   const { user } = useUser();
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const authValidate = auth.onAuthStateChanged((user) => {
       if (!user) {
-        router.replace("/login");
+        router.replace(`/login?redirect=${pathname}`);
       }
     });
 
     return () => authValidate();
-  }, [router]);
+  }, [router, pathname]);
 
   return user && children;
 }
