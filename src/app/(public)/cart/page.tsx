@@ -11,13 +11,18 @@ import CheckoutContainer from "@/components/CheckoutContainer";
 import Header from "@/components/Header";
 import CalculateDelivery from "@/components/CalculateDelivery";
 import ProductSummary from "@/components/ProductSummary";
+import Loading from "./loading";
 
 export default function Cart() {
-  const { cart, fetchProductsFromLocalStorage } = useCart();
+  const { cart, fetchProductsFromLocalStorage, isLoading } = useCart();
 
   useEffect(() => {
     fetchProductsFromLocalStorage();
   }, [fetchProductsFromLocalStorage]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div

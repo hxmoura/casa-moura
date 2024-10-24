@@ -58,7 +58,7 @@ export default function Loading() {
               </CheckoutContainer>
             </div>
             <div className="w-full lg:min-w-[424px] lg:max-w-[424px]">
-              <CheckoutContainer>
+              {/* <CheckoutContainer>
                 <div className="flex flex-col gap-7">
                   <div className="flex gap-2 items-center">
                     <Skeleton className="w-7 h-7 rounded" />
@@ -128,7 +128,7 @@ export default function Loading() {
                   </div>
                   <Skeleton className="rounded w-full h-10" />
                 </div>
-              </CheckoutContainer>
+              </CheckoutContainer> */}
             </div>
           </div>
         </Container>

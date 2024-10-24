@@ -101,12 +101,11 @@ const config: Config = {
       },
       maxWidth: {
         container: "1368px",
-        // container: '1320px',
       },
     },
     screens: {
-      md: `${responsive.breakpoints.md}px`, // Minimum 450px ( tablet )
-      lg: `${responsive.breakpoints.lg}px`, // Minimum 900px ( desktop )
+      md: `${responsive.breakpoints.md}px`,
+      lg: `${responsive.breakpoints.lg}px`,
     },
   },
   plugins: [],
