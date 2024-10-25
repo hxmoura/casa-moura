@@ -3,17 +3,17 @@
 import Container from "@/components/Container";
 import Checkbox from "@/components/Checkbox";
 import Link from "next/link";
-import { auth, db } from "@/db/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
-import { doc, setDoc } from "firebase/firestore";
 import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
 import InputText from "@/components/InputText";
 import useInputValidate from "@/hooks/useInputValidate";
+import { useUser } from "@/contexts/UserContext";
 
 export default function Register() {
+  const { handleRegister } = useUser();
+
   const [name, setName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -71,18 +71,7 @@ export default function Register() {
     ) {
       try {
         setSendingForm(true);
-
-        const userCredential = await createUserWithEmailAndPassword(
-          auth,
-          email,
-          password,
-        );
-
-        await setDoc(doc(db, "users", userCredential.user.uid), {
-          name,
-          lastName,
-          orders: [],
-        });
+        await handleRegister(email, password, { name, lastName });
         router.push("/login");
       } catch (err: any) {
         if (err.code === "auth/email-already-in-use") {

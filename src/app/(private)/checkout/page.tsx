@@ -88,7 +88,7 @@ export default function Checkout() {
                 <Summary
                   paymentMethodData={paymentMethodData}
                   cardData={cardData}
-                  deliveryData={deliveryData}
+                  deliveryData={deliveryData!}
                   formEditing={formEditing}
                 />
               </div>

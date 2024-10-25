@@ -319,7 +319,7 @@ export default function Payment({
               </Button>
             </div>
           ) : (
-            <p className="text-sm text-text-light">
+            <p className="text-xs lg:text-sm text-text-light">
               Preencha as informações de entrega para escolher o método de
               pagamento!
             </p>

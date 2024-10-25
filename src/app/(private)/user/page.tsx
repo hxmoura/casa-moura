@@ -7,7 +7,9 @@ export default function User() {
 
   return (
     <>
-      <h1>{user && user.name}</h1>
+      <h1>
+        {user?.data.name} {user?.data.lastName}
+      </h1>
       <button onClick={handleLogout}>logout</button>
     </>
   );

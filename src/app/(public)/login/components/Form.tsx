@@ -1,14 +1,14 @@
 import Button from "@/components/Button";
 import InputText from "@/components/InputText";
-import { auth } from "@/db/firebase";
+import { useUser } from "@/contexts/UserContext";
 import useInputValidate from "@/hooks/useInputValidate";
-import { signInWithEmailAndPassword } from "firebase/auth";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 export default function Form() {
   const router = useRouter();
+  const { handleLogin } = useUser();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -27,7 +27,7 @@ export default function Form() {
     if (email.trim() && password.trim() && !sendingForm && isEmptyErrors) {
       try {
         setSendingForm(true);
-        await signInWithEmailAndPassword(auth, email, password);
+        await handleLogin(email, password);
 
         return router.push(searchParams.get("redirect") || "/user");
       } catch (e) {
