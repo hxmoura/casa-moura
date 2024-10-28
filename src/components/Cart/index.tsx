@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { currencyConverter } from "@/utils/CurrencyConverter";
-import { CartContext } from "@/contexts/CartContext";
+import { useCart } from "@/contexts/CartContext";
 import Modal from "../Modal";
 import ModalHeader from "../Modal/ModalHeader";
 import Button from "../Button";
@@ -14,9 +14,8 @@ export default function Cart() {
     handleCartOpening,
     openCart,
     setOpenCart,
-
     fetchProductsFromLocalStorage,
-  } = useContext(CartContext)!;
+  } = useCart();
 
   useEffect(() => {
     fetchProductsFromLocalStorage();

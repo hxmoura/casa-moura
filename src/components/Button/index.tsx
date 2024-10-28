@@ -12,6 +12,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   href?: string;
   onClick?: () => void;
+  className?: string;
 }
 
 export default function Button({
@@ -24,6 +25,7 @@ export default function Button({
   type = "button",
   href,
   onClick,
+  className = "",
 }: ButtonProps) {
   const styles = {
     primary:
@@ -43,6 +45,7 @@ export default function Button({
             ${style === "primary" && styles.primary}
             ${style === "secondary" && styles.secondary}
             ${style === "outline" && styles.outline}
+            ${className}
           `}
           style={{ height: `${height}px`, width: `${width}px` }}
         >
@@ -55,6 +58,7 @@ export default function Button({
             ${style === "primary" && styles.primary}
             ${style === "secondary" && styles.secondary}
             ${style === "outline" && styles.outline}
+            ${className}
           `}
           style={{ height: `${height}px`, width: `${width}px` }}
           onClick={onClick}

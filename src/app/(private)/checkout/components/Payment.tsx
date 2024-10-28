@@ -114,9 +114,7 @@ export default function Payment({
         <div className="rounded-full w-6 h-6 lg:w-7 lg:h-7 bg-text-main flex justify-center items-center">
           <span className="text-white font-medium text-sm lg:text-base">2</span>
         </div>
-        <strong className="text-sm lg:text-lg font-medium">
-          Métodos de pagamento
-        </strong>
+        <h5 className="text-sm lg:text-lg font-medium">Métodos de pagamento</h5>
       </div>
       {formStep === "payment" ? (
         <form onSubmit={handleSubmitPayment}>

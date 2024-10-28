@@ -1,12 +1,11 @@
 "use client";
 
-import { CartContext } from "@/contexts/CartContext";
+import { useCart } from "@/contexts/CartContext";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { useContext } from "react";
 import Button from "../Button";
 
 export default function EmptyCart() {
-  const { handleCartOpening } = useContext(CartContext)!;
+  const { handleCartOpening } = useCart();
 
   return (
     <div className="flex flex-col justify-center items-center h-full">

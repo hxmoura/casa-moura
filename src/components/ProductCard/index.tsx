@@ -4,8 +4,7 @@ import { currencyConverter } from "@/utils/CurrencyConverter";
 import { Icon } from "@iconify/react";
 import ImageFallback from "../ImageFallback";
 import Link from "next/link";
-import { useContext } from "react";
-import { CartContext } from "@/contexts/CartContext";
+import { useCart } from "@/contexts/CartContext";
 import { Product } from "@/types/product";
 import Reviews from "../Reviews";
 
@@ -14,7 +13,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { addProductToCart } = useContext(CartContext)!;
+  const { addProductToCart } = useCart();
 
   function btnBuy(event: React.MouseEvent) {
     event.preventDefault();

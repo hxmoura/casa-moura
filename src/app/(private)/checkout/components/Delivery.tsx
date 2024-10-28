@@ -110,9 +110,7 @@ export default function Delivery({
         <div className="rounded-full w-6 h-6 lg:w-7 lg:h-7 bg-text-main flex justify-center items-center">
           <span className="text-white font-medium text-sm lg:text-base">1</span>
         </div>
-        <strong className="text-sm lg:text-lg font-medium">
-          Endereço de entrega
-        </strong>
+        <h5 className="text-sm lg:text-lg font-medium">Endereço de entrega</h5>
       </div>
       {formStep === "delivery" ? (
         <form className="flex flex-col gap-6" onSubmit={handleSubmitDelivery}>

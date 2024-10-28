@@ -7,6 +7,7 @@ interface ProductSummaryProps {
   onClick?: () => void;
   disabled?: boolean;
   loading?: boolean;
+  installments?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 }
 
 export default function ProductSummary({
@@ -14,6 +15,7 @@ export default function ProductSummary({
   onClick,
   disabled,
   loading,
+  installments,
 }: ProductSummaryProps) {
   const { cart, calculateCartTotal } = useCart();
 
@@ -43,9 +45,16 @@ export default function ProductSummary({
           <p className="text-right font-medium text-lg">
             {currencyConverter(calculateCartTotal())}
           </p>
-          <small className="text-text-light text-sm">
-            até 12x de {currencyConverter(calculateCartTotal() / 12)}
-          </small>
+          {installments && installments !== 1 ? (
+            <small className="text-text-light text-sm">
+              {installments}x de{" "}
+              {currencyConverter(calculateCartTotal() / installments)}
+            </small>
+          ) : (
+            <small className="text-text-light text-sm">
+              1x de {currencyConverter(calculateCartTotal())}
+            </small>
+          )}
         </div>
       </div>
       <Button

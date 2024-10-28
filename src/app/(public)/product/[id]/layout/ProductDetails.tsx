@@ -2,8 +2,8 @@
 
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Container from "@/components/Container";
-import { useContext, useState } from "react";
-import { CartContext } from "@/contexts/CartContext";
+import { useState } from "react";
+import { useCart } from "@/contexts/CartContext";
 import { Product } from "@/types/product";
 import { currencyConverter } from "@/utils/CurrencyConverter";
 import ProductCounter from "@/components/Cart/ProductCounter";
@@ -22,7 +22,7 @@ interface ProductProps {
 }
 
 export default function ProductDetails({ product }: ProductProps) {
-  const { addProductToCart } = useContext(CartContext)!;
+  const { addProductToCart } = useCart();
   const [quantity, setQuantity] = useState<number>(1);
   const [isModalPaymentsVisible, setIsModalPaymentsVisible] =
     useState<boolean>(false);

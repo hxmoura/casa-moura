@@ -145,6 +145,7 @@ export default function Summary({
           formEditing
         }
         loading={isLoading}
+        installments={cardData?.installments}
       />
     </CheckoutContainer>
   );

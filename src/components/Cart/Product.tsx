@@ -1,8 +1,7 @@
 import { currencyConverter } from "@/utils/CurrencyConverter";
 import { Icon } from "@iconify/react";
 import ProductCounter from "./ProductCounter";
-import { useContext } from "react";
-import { CartContext } from "@/contexts/CartContext";
+import { useCart } from "@/contexts/CartContext";
 import { Product as ProductType } from "@/types/product";
 import Link from "next/link";
 
@@ -20,7 +19,7 @@ export default function Product({ product }: ProductProps) {
     addProductQuantity,
     subtractProductQuantity,
     handleCloseCart,
-  } = useContext(CartContext)!;
+  } = useCart();
 
   return (
     <article className="w-full flex justify-between items-start gap-3 border-b border-background-softLight last:border-none pb-5 last:pb-0">

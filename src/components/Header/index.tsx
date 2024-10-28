@@ -3,14 +3,14 @@
 import Container from "@/components/Container";
 import Logo from "@/components/Logo";
 import { Icon } from "@iconify/react";
-import { useContext, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import useAnimatedUnmount from "@/hooks/useAnimatedEnd";
 import useDepartaments from "./hooks/useDepartaments";
 import Link from "next/link";
 import DepartamentsDesktop from "./Departaments/DepartamentsDesktop";
 import DepartamentsMobile from "./Departaments/DepartamentsMobile";
 import Cart from "../Cart";
-import { CartContext } from "@/contexts/CartContext";
+import { useCart } from "@/contexts/CartContext";
 import getDepartaments from "@/api/queries/departaments";
 import { useRouter } from "next/navigation";
 import useFetcher from "@/hooks/useFetcher";
@@ -35,7 +35,7 @@ export default function Header({ type = "full" }: HeaderProps) {
     setOpenMobileMenu,
   } = useDepartaments();
 
-  const { cart, handleCartOpening } = useContext(CartContext)!;
+  const { cart, handleCartOpening } = useCart();
   const { animatedElementRef, shouldRender } =
     useAnimatedUnmount(openMobileMenu);
 
