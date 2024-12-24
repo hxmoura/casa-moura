@@ -10,12 +10,14 @@ import Header from "@/components/Header";
 import InputText from "@/components/InputText";
 import useInputValidate from "@/hooks/useInputValidate";
 import { useUser } from "@/contexts/UserContext";
+import fetcher from "@/utils/fetcher";
 
 export default function Register() {
   const { handleRegister } = useUser();
 
   const [name, setName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
+  const [cpf, setCpf] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
@@ -40,27 +42,36 @@ export default function Register() {
     minLength,
     maxLength,
     comparePasswords,
+    isCpf,
   } = useInputValidate();
 
   async function handleSubmit(evt: FormEvent) {
     evt.preventDefault();
 
-    validate("name", name, [isRequired]);
-    validate("lastname", name, [isRequired]);
-    validate("email", email, [isEmail, isRequired]);
-    validate("password", password, [
-      (value) => maxLength(value, 24),
-      (value) => minLength(value, 6),
-      isRequired,
+    validate(name, "name", [{ test: isRequired }]);
+    validate(lastName, "lastName", [{ test: isRequired }]);
+    validate(cpf, "cpf", [
+      { test: isRequired, priority: 1 },
+      { test: isCpf, priority: 2 },
     ]);
-    validate("confirmPassword", confirmPassword, [
-      (value) => (value !== password ? "As senhas não são iguais" : null),
-      isRequired,
+    validate(email, "email", [
+      { test: isRequired, priority: 1 },
+      { test: isEmail, priority: 2 },
+    ]);
+    validate(password, "password", [
+      { test: isRequired, priority: 1 },
+      { test: minLength(6), priority: 2 },
+      { test: maxLength(24), priority: 3 },
+    ]);
+    validate(confirmPassword, "confirmPassword", [
+      { test: isRequired, priority: 1 },
+      { test: comparePasswords(password), priority: 2 },
     ]);
 
     if (
       name.trim() &&
       lastName.trim() &&
+      cpf.trim() &&
       email.trim() &&
       password.trim() &&
       confirmPassword.trim() &&
@@ -71,11 +82,25 @@ export default function Register() {
     ) {
       try {
         setSendingForm(true);
-        await handleRegister(email, password, { name, lastName });
+
+        const cpfNumber = cpf.replace(/\D/g, "");
+
+        const cpfSecure = await fetcher("/api/crypto/encrypt", {
+          method: "POST",
+          body: JSON.stringify({ text: cpfNumber }),
+        });
+
+        await handleRegister(email, password, {
+          name,
+          lastName,
+          cpf: cpfSecure.encrypted,
+        });
         router.push("/login");
       } catch (err: any) {
         if (err.code === "auth/email-already-in-use") {
-          validate("email", "", [() => "Já existe uma conta com este e-mail."]);
+          validate("", "email", [
+            { test: "Já existe uma conta com este e-mail" },
+          ]);
         } else {
           console.log("Ocorreu um erro ao criar sua conta, tente novamente!");
         }
@@ -89,31 +114,62 @@ export default function Register() {
     const { value, name } = evt.target;
     setName(value);
 
-    validate(name, value, [isRequired]);
+    validate(value, name, [{ test: isRequired }]);
   }
 
   function handleLastName(evt: ChangeEvent<HTMLInputElement>) {
     const { value, name } = evt.target;
     setLastName(value);
 
-    validate(name, value, [isRequired]);
+    validate(value, name, [{ test: isRequired }]);
+  }
+
+  function handleCPF(evt: ChangeEvent<HTMLInputElement>) {
+    const { value, name } = evt.target;
+
+    let maskedCPF = value;
+
+    maskedCPF = value.replace(/\D/g, "");
+
+    if (value.length > 3) {
+      maskedCPF = value.replace(/(\d{3})(\d)/, "$1.$2");
+    }
+    if (value.length > 7) {
+      maskedCPF = value.replace(/(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+    }
+    if (value.length > 11) {
+      maskedCPF = value.replace(
+        /(\d{3})\.(\d{3})\.(\d{3})(\d{2})/,
+        "$1.$2.$3-$4",
+      );
+    }
+
+    setCpf(maskedCPF);
+
+    validate(maskedCPF, name, [
+      { test: isRequired, priority: 1 },
+      { test: isCpf, priority: 2 },
+    ]);
   }
 
   function handleEmail(evt: ChangeEvent<HTMLInputElement>) {
     const { value, name } = evt.target;
     setEmail(value);
 
-    validate(name, value, [isEmail, isRequired]);
+    validate(value, name, [
+      { test: isRequired, priority: 1 },
+      { test: isEmail, priority: 2 },
+    ]);
   }
 
   function handlePassword(evt: ChangeEvent<HTMLInputElement>) {
     const { value, name } = evt.target;
     setPassword(value);
 
-    validate(name, value, [
-      (value) => maxLength(value, 24),
-      (value) => minLength(value, 6),
-      isRequired,
+    validate(value, name, [
+      { test: isRequired, priority: 1 },
+      { test: minLength(6), priority: 2 },
+      { test: maxLength(24), priority: 2 },
     ]);
   }
 
@@ -121,9 +177,9 @@ export default function Register() {
     const { value, name } = evt.target;
     setConfirmPassword(value);
 
-    validate(name, value, [
-      (value) => comparePasswords(value, password),
-      isRequired,
+    validate(value, name, [
+      { test: isRequired, priority: 1 },
+      { test: comparePasswords(password), priority: 2 },
     ]);
   }
 
@@ -179,6 +235,13 @@ export default function Register() {
                     error={errors.lastname}
                   />
                 </div>
+                <InputText
+                  label="CPF"
+                  name="cpf"
+                  value={cpf}
+                  onChange={handleCPF}
+                  error={errors.cpf}
+                />
                 <InputText
                   label="E-mail"
                   name="email"
@@ -257,6 +320,7 @@ export default function Register() {
                 disabled={
                   !name.trim() ||
                   !lastName.trim() ||
+                  !cpf.trim() ||
                   !email.trim() ||
                   !password.trim() ||
                   !confirmPassword.trim() ||

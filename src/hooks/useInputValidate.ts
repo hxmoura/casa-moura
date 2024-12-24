@@ -1,83 +1,111 @@
 import { useState } from "react";
 
-type ErrorMessage = { [key: string]: string };
-type ValidateFunction = (...args: any[]) => string | null;
+type PriorityLevels = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+
+interface Validation {
+  test: string | ((value: string) => string | null);
+  priority?: PriorityLevels;
+}
+
+interface Error {
+  [key: string]: string;
+}
 
 export default function useInputValidate() {
-  const [errors, setErrors] = useState<ErrorMessage>({});
+  const [errors, setErrors] = useState<Error>({});
+
+  const validate = (
+    value: string,
+    input: string,
+    validations: Validation[],
+  ) => {
+    let highestPriority = null;
+
+    for (let validation of validations) {
+      let errorMessage: string | null = null;
+
+      if (typeof validation.test === "function") {
+        errorMessage = validation.test(value);
+      } else if (typeof validation.test === "string") {
+        errorMessage = validation.test;
+      }
+
+      if (!validation.priority) {
+        validation.priority = 1;
+      }
+
+      if (
+        errorMessage &&
+        (!highestPriority || validation.priority < highestPriority.priority)
+      ) {
+        highestPriority = { test: errorMessage, priority: validation.priority };
+      }
+    }
+
+    if (highestPriority) {
+      setErrors((prev) => ({
+        ...prev,
+        [input]: highestPriority.test,
+      }));
+    } else {
+      setErrors((prev) => {
+        const { [input]: _, ...updated } = prev;
+        return updated;
+      });
+    }
+  };
 
   const isEmptyErrors = Object.keys(errors).length === 0;
 
-  function validate(
-    inputName: string,
-    value: string,
-    validations: ValidateFunction[],
-  ) {
-    let newErrors: ErrorMessage = {};
+  const isRequired = (value: string) => {
+    return !value ? "O campo é obrigatório" : null;
+  };
 
-    validations.forEach((validation) => {
-      const error = validation(value);
-
-      if (error) {
-        newErrors[inputName] = error;
-      }
-    });
-
-    setErrors((prevErrors) => {
-      if (Object.keys(newErrors).length === 0) {
-        const { [inputName]: _, ...rest } = prevErrors;
-        return rest;
-      }
-
-      return {
-        ...prevErrors,
-        ...newErrors,
-      };
-    });
-  }
-
-  function isRequired(value: string) {
-    return value ? null : "O campo é obrigatório";
-  }
-
-  function minLength(value: string, length: number) {
-    return value.length > 0 && value.length < length
-      ? `O limite minimo é de ${length} caracteres`
+  const minLength = (min: number) => (value: string) => {
+    return value.length < min
+      ? `O campo deve ter no minimo ${min} caracteres`
       : null;
-  }
+  };
 
-  function maxLength(value: string, length: number) {
-    return length >= value.length
-      ? null
-      : `O limite máximo é de ${length} caracteres`;
-  }
+  const maxLength = (max: number) => (value: string) => {
+    return value.length > max
+      ? `O campo deve ter no máximo ${max} caracteres`
+      : null;
+  };
 
-  function isEmail(value: string) {
+  const isEmail = (value: string) => {
     const validateEmailRegEx =
       /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 
     return validateEmailRegEx.test(value) ? null : "O e-mail é inválido";
-  }
+  };
 
-  function onlyNumber(value: string) {
+  const onlyNumber = (value: string) => {
     return /\D/g.test(value)
       ? "O valor informado deve ser apenas números"
       : null;
-  }
+  };
 
-  function comparePasswords(password: string, confirmPassword: string) {
+  const comparePasswords = (password: string) => (confirmPassword: string) => {
     return password !== confirmPassword ? "As senhas não são iguais" : null;
-  }
+  };
+
+  const isCpf = (value: string) => {
+    const validateCpfRegEx = /^(?!\b(\d)\1+\b)(\d{3}\.?\d{3}\.?\d{3}-?\d{2})$/;
+
+    return validateCpfRegEx.test(value) ? null : "O CPF é inválido";
+  };
 
   return {
+    validate,
     errors,
     isEmptyErrors,
-    validate,
     isRequired,
     minLength,
     maxLength,
     isEmail,
     onlyNumber,
     comparePasswords,
+    isCpf,
   };
 }

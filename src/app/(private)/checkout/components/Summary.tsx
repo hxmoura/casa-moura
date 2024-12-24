@@ -1,4 +1,3 @@
-import { createOrder } from "@/api/queries/user";
 import Button from "@/components/Button";
 import CheckoutContainer from "@/components/CheckoutContainer";
 import InputText from "@/components/InputText";
@@ -8,17 +7,20 @@ import { currencyConverter } from "@/utils/CurrencyConverter";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { CardInformations, PaymentMethod } from "../types/payment";
 import { Delivery } from "../types/delivery";
 import dataValidate from "@/utils/dataValidate";
 import { useUser } from "@/contexts/UserContext";
+import { createOrder, createPayment } from "@/api/queries/order";
+import fetcher from "@/utils/fetcher";
 
 interface SummaryProps {
-  paymentMethodData: PaymentMethod | null;
+  paymentMethodData: PaymentMethod;
   cardData: CardInformations | null;
   deliveryData: Delivery;
   formEditing: boolean;
+  onLoadingCheckout: (value: boolean) => void;
+  loadingCheckout: boolean;
 }
 
 export default function Summary({
@@ -26,49 +28,71 @@ export default function Summary({
   cardData,
   deliveryData,
   formEditing,
+  onLoadingCheckout,
+  loadingCheckout,
 }: SummaryProps) {
-  const { cart, calculateCartTotal } = useCart();
+  const { cart, calculateCartTotal, handleResetCart } = useCart();
   const { user } = useUser();
   const router = useRouter();
 
   const [showCupom, setShowCupom] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [cupom, setCupom] = useState("");
 
   async function handleOrderSubmit() {
     try {
-      if (
-        paymentMethodData &&
-        dataValidate(deliveryData!) &&
-        !formEditing &&
-        user
-      ) {
-        setIsLoading(true);
-        const orderId = uuidv4();
+      if (user) {
+        onLoadingCheckout(true);
 
-        await createOrder(user.uid, {
-          id: orderId,
+        const cpf = await fetcher("/api/crypto/decrypt", {
+          method: "POST",
+          body: JSON.stringify({ text: user.data.cpf }),
+        });
+
+        const pay = await createPayment({
+          token: cardData?.token,
+          price: calculateCartTotal(),
           paymentMethod: paymentMethodData,
           installments:
             paymentMethodData === "card" && cardData
               ? cardData.installments
               : 1,
-          delivery: deliveryData,
-          price: calculateCartTotal(),
-          products: cart.map((product) => ({
-            id: product.id,
-            quantity: product.quantityInCart,
-            unitPrice: product.promotionalPrice || product.price,
-          })),
-          date: new Date().toLocaleDateString("pt-br"),
-          time: new Date().toLocaleTimeString("pt-br"),
+          user: {
+            id: user.uid,
+            email: user.email!,
+            name: user.data.name,
+            lastname: user.data.lastName,
+            cpf: cpf.decrypted,
+            delivery: deliveryData,
+          },
         });
 
-        router.push(`/order/${orderId}`);
+        if (pay.data) {
+          const cardPayApproved =
+            pay.data.payment_type_id === "credit_card" &&
+            pay.data.status === "approved";
+          const pixPay = pay.data.payment_method_id === "pix";
+          const ticketPay = pay.data.payment_method_id === "bolbradesco";
+
+          if (cardPayApproved || pixPay || ticketPay) {
+            await createOrder({
+              payment: pay.data,
+              paymentMethod: paymentMethodData,
+              user,
+              delivery: deliveryData,
+              products: cart,
+            });
+
+            handleResetCart();
+            router.push(`/order/${String(pay.data.id)}`);
+            return;
+          }
+        }
+
+        throw new Error("Payment not completed");
       }
-    } catch {
-      return console.log("Aconteceu algum erro!");
-    } finally {
-      setIsLoading(false);
+    } catch (err) {
+      console.log("Não foi possível concluir o pedido, tente novamente!");
+      onLoadingCheckout(false);
     }
   }
 
@@ -125,11 +149,11 @@ export default function Summary({
         {showCupom && (
           <div className="flex items-center gap-3">
             <InputText
-              value=""
-              onChange={() => null}
+              value={cupom}
+              onChange={(e) => setCupom(e.target.value)}
               placeholder="Digite seu cupom"
             />
-            <Button disabled width={80}>
+            <Button disabled={!cupom} width={80}>
               Aplicar
             </Button>
           </div>
@@ -140,12 +164,13 @@ export default function Summary({
         onClick={handleOrderSubmit}
         disabled={
           !paymentMethodData ||
-          !dataValidate(deliveryData!) ||
-          (paymentMethodData === "card" && !dataValidate(cardData!)) ||
-          formEditing
+          !dataValidate(deliveryData) ||
+          formEditing ||
+          (paymentMethodData === "card" && !cardData?.token)
         }
-        loading={isLoading}
+        loading={loadingCheckout}
         installments={cardData?.installments}
+        paymentMethod={paymentMethodData}
       />
     </CheckoutContainer>
   );

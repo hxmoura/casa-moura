@@ -1,10 +1,17 @@
 export type PaymentMethod = "pix" | "card" | "bankSlip";
 
+export type CardFlag =
+  | "noFlag"
+  | "logos:mastercard"
+  | "logos:elo"
+  | "fontisto:american-express"
+  | "cib:cc-diners-club"
+  | "logos:visa";
+
 export interface CardInformations {
-  number: string;
   name: string;
-  cvv: string;
-  expirationMonth: number;
-  expirationYear: number;
-  installments: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  token: string;
+  installments: number;
+  lastFourDigits: string;
+  flag: CardFlag;
 }

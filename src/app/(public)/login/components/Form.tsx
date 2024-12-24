@@ -21,8 +21,11 @@ export default function Form() {
   async function handleSubmit(evt: FormEvent) {
     evt.preventDefault();
 
-    validate("email", email, [isEmail, isRequired]);
-    validate("password", password, [isRequired]);
+    validate(email, "email", [
+      { test: isRequired, priority: 1 },
+      { test: isEmail, priority: 2 },
+    ]);
+    validate(password, "password", [{ test: isRequired }]);
 
     if (email.trim() && password.trim() && !sendingForm && isEmptyErrors) {
       try {
@@ -42,14 +45,17 @@ export default function Form() {
     const { value, name } = evt.target;
     setEmail(value);
 
-    validate(name, value, [isEmail, isRequired]);
+    validate(value, name, [
+      { test: isRequired, priority: 1 },
+      { test: isEmail, priority: 2 },
+    ]);
   }
 
   function handlePassword(evt: ChangeEvent<HTMLInputElement>) {
     const { value, name } = evt.target;
     setPassword(value);
 
-    validate(name, value, [isRequired]);
+    validate(value, name, [{ test: isRequired }]);
   }
 
   return (

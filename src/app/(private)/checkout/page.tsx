@@ -25,6 +25,7 @@ export default function Checkout() {
   const [paymentMethodData, setPaymentMethodData] =
     useState<PaymentMethod | null>(null);
   const [cardData, setCardData] = useState<CardInformations | null>(null);
+  const [loadingCheckout, setLoadingCheckout] = useState<boolean>(false);
 
   function handleFormEditing(value: boolean) {
     setFormEditing(value);
@@ -44,6 +45,10 @@ export default function Checkout() {
 
   function receiveDelivery(value: DeliveryType) {
     setDeliveryData(value);
+  }
+
+  function handleLoadingCheckout(value: boolean) {
+    setLoadingCheckout(value);
   }
 
   useEffect(() => {
@@ -75,6 +80,7 @@ export default function Checkout() {
                     onFormStep={handleFormStep}
                     onReceiveDelivery={receiveDelivery}
                     onFormEditing={handleFormEditing}
+                    loadingCheckout={loadingCheckout}
                   />
                   <Payment
                     formStep={formStep}
@@ -83,13 +89,16 @@ export default function Checkout() {
                     onReceivePaymentMethod={receivePaymentMethod}
                     onReceiveCardInformations={receiveCardInformations}
                     onFormEditing={handleFormEditing}
+                    loadingCheckout={loadingCheckout}
                   />
                 </div>
                 <Summary
-                  paymentMethodData={paymentMethodData}
+                  paymentMethodData={paymentMethodData!}
                   cardData={cardData}
                   deliveryData={deliveryData!}
                   formEditing={formEditing}
+                  onLoadingCheckout={handleLoadingCheckout}
+                  loadingCheckout={loadingCheckout}
                 />
               </div>
             </Container>

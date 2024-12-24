@@ -10,7 +10,7 @@ import { useRouter } from "next/navigation";
 import { UserData } from "@/types/user";
 import { createUserData, getUserData } from "@/api/queries/user";
 
-type User = UserStore & {
+export type User = UserStore & {
   data: UserData;
 };
 

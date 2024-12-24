@@ -7,7 +7,8 @@ interface ProductSummaryProps {
   onClick?: () => void;
   disabled?: boolean;
   loading?: boolean;
-  installments?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  installments?: number;
+  paymentMethod?: any;
 }
 
 export default function ProductSummary({
@@ -16,6 +17,7 @@ export default function ProductSummary({
   disabled,
   loading,
   installments,
+  paymentMethod,
 }: ProductSummaryProps) {
   const { cart, calculateCartTotal } = useCart();
 
@@ -45,7 +47,7 @@ export default function ProductSummary({
           <p className="text-right font-medium text-lg">
             {currencyConverter(calculateCartTotal())}
           </p>
-          {installments && installments !== 1 ? (
+          {paymentMethod === "card" && installments ? (
             <small className="text-text-light text-sm">
               {installments}x de{" "}
               {currencyConverter(calculateCartTotal() / installments)}
@@ -60,7 +62,7 @@ export default function ProductSummary({
       <Button
         href={href}
         onClick={onClick}
-        disabled={disabled}
+        disabled={disabled || loading}
         loading={loading}
       >
         Finalizar pedido

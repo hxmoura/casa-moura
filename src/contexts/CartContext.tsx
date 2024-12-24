@@ -28,9 +28,10 @@ interface CartContext {
   handleOpenCart: () => void;
   handleCloseCart: () => void;
   fetchProductsFromLocalStorage: () => void;
+  handleResetCart: () => void;
 }
 
-interface ProductCart extends Product {
+export interface ProductCart extends Product {
   quantityInCart: number;
 }
 
@@ -49,6 +50,10 @@ export default function CartProvider({ children }: CartProviderProps) {
   const [cart, setCart] = useState<ProductCart[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [openCart, setOpenCart] = useState<boolean>(false);
+
+  function handleResetCart() {
+    localStorage.removeItem("cart");
+  }
 
   function handleCartOpening() {
     setOpenCart((prevState) => !prevState);
@@ -132,13 +137,15 @@ export default function CartProvider({ children }: CartProviderProps) {
   }
 
   function calculateCartTotal() {
-    return cart.reduce((price, product) => {
+    const value = cart.reduce((price, product) => {
       if (product.promotionalPrice) {
         return price + product.promotionalPrice * product.quantityInCart;
       } else {
         return price + product.price * product.quantityInCart;
       }
     }, 0);
+
+    return Number(value.toFixed(2));
   }
 
   function addProductQuantity(product: ProductCart, quantity?: number) {
@@ -197,6 +204,7 @@ export default function CartProvider({ children }: CartProviderProps) {
         handleOpenCart,
         handleCloseCart,
         fetchProductsFromLocalStorage,
+        handleResetCart,
       }}
     >
       {children}

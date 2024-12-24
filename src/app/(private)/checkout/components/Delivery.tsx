@@ -13,6 +13,7 @@ interface DeliveryProps {
   paymentMethodData: PaymentMethod | null;
   onReceiveDelivery: (value: DeliveryType) => void;
   onFormEditing: (value: boolean) => void;
+  loadingCheckout: boolean;
 }
 
 export default function Delivery({
@@ -21,6 +22,7 @@ export default function Delivery({
   paymentMethodData,
   onReceiveDelivery,
   onFormEditing,
+  loadingCheckout,
 }: DeliveryProps) {
   const { errors, validate, isRequired, minLength, onlyNumber, isEmptyErrors } =
     useInputValidate();
@@ -39,10 +41,10 @@ export default function Delivery({
 
     let newValue = value.trim();
 
-    validate(name, newValue, [
-      isRequired,
-      (value: string) => minLength(value, 8),
-      onlyNumber,
+    validate(newValue, name, [
+      { test: isRequired, priority: 1 },
+      { test: onlyNumber, priority: 2 },
+      { test: minLength(8), priority: 3 },
     ]);
 
     setDelivery((prev) => ({ ...prev, cep: newValue }));
@@ -53,9 +55,9 @@ export default function Delivery({
 
       if (cepData.uf) {
         setDelivery((prev) => ({ ...prev, state: cepData.uf }));
-        validate(name, newValue, [() => null]);
+        validate(newValue, name, [{ test: "" }]);
       } else {
-        return validate(name, newValue, [() => "O CEP é inválido"]);
+        return validate(newValue, name, [{ test: "O CEP é inválido" }]);
       }
     }
   }
@@ -64,21 +66,21 @@ export default function Delivery({
     const { value, name } = evt.target;
     setDelivery((prev) => ({ ...prev, address: value }));
 
-    validate(name, value, [isRequired]);
+    validate(value, name, [{ test: isRequired }]);
   }
 
   function handleNeighborhood(evt: ChangeEvent<HTMLInputElement>) {
     const { value, name } = evt.target;
     setDelivery((prev) => ({ ...prev, neighborhood: value }));
 
-    validate(name, value, [isRequired]);
+    validate(value, name, [{ test: isRequired }]);
   }
 
   function handleCity(evt: ChangeEvent<HTMLInputElement>) {
     const { value, name } = evt.target;
     setDelivery((prev) => ({ ...prev, city: value }));
 
-    validate(name, value, [isRequired]);
+    validate(value, name, [{ test: isRequired }]);
   }
 
   function handleNumber(evt: ChangeEvent<HTMLInputElement>) {
@@ -86,7 +88,10 @@ export default function Delivery({
 
     let newValue = value.trim();
 
-    validate(name, newValue, [isRequired, onlyNumber]);
+    validate(newValue, name, [
+      { test: isRequired, priority: 1 },
+      { test: onlyNumber, priority: 2 },
+    ]);
 
     setDelivery((prev) => ({ ...prev, number: newValue }));
   }
@@ -195,7 +200,11 @@ export default function Delivery({
               <strong className="font-medium">Estado:</strong> {delivery.state}
             </span>
           </div>
-          <Button style="outline" onClick={handleEditDelivery}>
+          <Button
+            style="outline"
+            onClick={handleEditDelivery}
+            disabled={loadingCheckout}
+          >
             Alterar endereço
           </Button>
         </div>
