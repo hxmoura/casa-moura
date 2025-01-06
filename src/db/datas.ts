@@ -31,6 +31,7 @@ const dataList = [
   { group: "departaments", data: dataMock.departaments },
   { group: "blog", data: dataMock.blog },
   { group: "brands", data: dataMock.brands },
+  { group: "orders", data: dataMock.orders },
 ];
 
 const dataPromise = dataList.map((param) => setData(param));

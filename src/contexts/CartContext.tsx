@@ -124,7 +124,10 @@ export default function CartProvider({ children }: CartProviderProps) {
       { quantityInCart: quantity, ...product },
     ]);
 
-    addLocalCart([...getLocalCart(), { id: product.id, quantityInCart: 1 }]);
+    addLocalCart([
+      ...getLocalCart(),
+      { id: product.id, quantityInCart: quantity || 1 },
+    ]);
   }
 
   function deleteProductToCart(product: Product) {
