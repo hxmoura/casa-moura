@@ -1,3 +1,4 @@
+import InputText from "@/components/InputText";
 import { currencyIntoNumberConverter } from "@/utils/CurrencyConverter";
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
 
@@ -32,11 +33,6 @@ export default function InputMoney({
   }
 
   return (
-    <input
-      value={inputValue}
-      onChange={handlePrice}
-      type="text"
-      className="w-1/2 h-8 rounded-lg border border-background-softLight outline-none px-2 text-sm focus:border-text-light"
-    />
+    <InputText value={inputValue} onChange={handlePrice} className="h-8" />
   );
 }

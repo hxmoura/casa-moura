@@ -3,7 +3,9 @@ import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  sendPasswordResetEmail,
   User as UserStore,
+  confirmPasswordReset,
 } from "firebase/auth";
 import { auth } from "@/db/firebase";
 import { useRouter } from "next/navigation";
@@ -23,6 +25,8 @@ interface UserProviderValue {
     password: string,
     data?: any,
   ) => Promise<void>;
+  sendEmailRecoverPassword: (email: string) => Promise<void>;
+  updatePassword: (oobCode: string, newPassword: string) => Promise<void>;
 }
 
 export const UserContext = createContext<UserProviderValue>(null as any);
@@ -69,6 +73,14 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
     await createUserData(user.uid, data);
   }
 
+  async function sendEmailRecoverPassword(email: string) {
+    return await sendPasswordResetEmail(auth, email);
+  }
+
+  async function updatePassword(oobCode: string, newPassword: string) {
+    return await confirmPasswordReset(auth, oobCode, newPassword);
+  }
+
   return (
     <UserContext.Provider
       value={{
@@ -76,6 +88,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         handleLogout,
         handleLogin,
         handleRegister,
+        sendEmailRecoverPassword,
+        updatePassword,
       }}
     >
       {children}

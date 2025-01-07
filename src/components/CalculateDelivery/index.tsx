@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Button from "../Button";
+import InputText from "../InputText";
 
 export default function CalculateDelivery() {
   return (
@@ -8,16 +9,11 @@ export default function CalculateDelivery() {
         Calcule o frete
       </label>
 
-      <div className="flex gap-3 mt-2">
-        <input
-          type="text"
-          id="calculateDelivery"
-          placeholder="00000-000"
-          className="h-10 w-full border border-background-softLight rounded outline-none text-sm px-3"
-        />
-        <div className="max-w-20 w-full">
-          <Button disabled>Calcular</Button>
-        </div>
+      <div className="flex items-center gap-3 mt-2">
+        <InputText value="" placeholder="00000-000" />
+        <Button disabled className="max-w-20 w-full">
+          Calcular
+        </Button>
       </div>
       <a href="#" className="text-xs flex items-center gap-1 w-fit mt-2">
         Não sei meu CEP

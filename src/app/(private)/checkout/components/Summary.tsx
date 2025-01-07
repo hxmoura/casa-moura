@@ -13,6 +13,7 @@ import dataValidate from "@/utils/dataValidate";
 import { useUser } from "@/contexts/UserContext";
 import { createOrder, createPayment } from "@/api/queries/order";
 import fetcher from "@/utils/fetcher";
+import { toast } from "react-toastify";
 
 interface SummaryProps {
   paymentMethodData: PaymentMethod;
@@ -91,7 +92,7 @@ export default function Summary({
         throw new Error("Payment not completed");
       }
     } catch (err) {
-      console.log("Não foi possível concluir o pedido, tente novamente!");
+      toast.error("Não foi possível concluir o pedido, tente novamente!");
       onLoadingCheckout(false);
     }
   }

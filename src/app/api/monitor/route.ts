@@ -31,7 +31,7 @@ export async function POST(req: Request) {
       return NextResponse.json(Response.Failure("Invalid update type"));
     }
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return NextResponse.json(Response.Failure("Unable to process payment"));
   }
 }

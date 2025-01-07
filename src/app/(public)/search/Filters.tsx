@@ -168,7 +168,7 @@ export default function Filters({
                 setErrorPriceMessage={setErrorPriceMessage}
               />
               <button
-                className="bg-brand-secondary text-white min-w-8 min-h-8 rounded-lg flex items-center justify-center ml-3 disabled:bg-background-softLight disabled:cursor-not-allowed disabled:text-text-light"
+                className="bg-brand-secondary text-white min-w-8 min-h-8 rounded flex items-center justify-center ml-3 disabled:bg-background-softLight disabled:cursor-not-allowed disabled:text-text-light"
                 disabled={
                   inputPriceOne && inputPriceTwo && !errorPriceMessage
                     ? false

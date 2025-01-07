@@ -14,6 +14,7 @@ interface AuthInputProps {
   placeholder?: string;
   readOnly?: boolean;
   maxLength?: number;
+  className?: string;
 }
 
 export default function InputText({
@@ -27,6 +28,7 @@ export default function InputText({
   placeholder,
   readOnly,
   maxLength,
+  className,
 }: AuthInputProps) {
   const [typePassword, setTypePassword] = useState<"password" | "text">(
     "password",
@@ -61,7 +63,7 @@ export default function InputText({
           name={name}
           readOnly={readOnly}
           maxLength={maxLength}
-          className={`rounded border border-background-softLight h-10 p-2 text-xs outline-none  w-full ${error && "border-notify-error"} ${readOnly ? "cursor-not-allowed" : "focus:border-notify-info"}`}
+          className={`rounded border border-background-softLight h-10 p-2 text-xs outline-none  w-full ${error && "border-notify-error"} ${readOnly ? "cursor-not-allowed" : "focus:border-notify-info"} ${className || ""}`}
           placeholder={placeholder}
         />
       </div>

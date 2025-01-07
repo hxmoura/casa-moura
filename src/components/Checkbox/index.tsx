@@ -14,7 +14,7 @@ export default function Checkbox({
   checked,
   name,
   size = 20,
-  rounded = 6,
+  rounded = 4,
 }: CheckboxProps) {
   return (
     <div

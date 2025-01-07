@@ -3,7 +3,7 @@
 import Container from "@/components/Container";
 import Checkbox from "@/components/Checkbox";
 import Link from "next/link";
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 import Header from "@/components/Header";
@@ -11,6 +11,8 @@ import InputText from "@/components/InputText";
 import useInputValidate from "@/hooks/useInputValidate";
 import { useUser } from "@/contexts/UserContext";
 import fetcher from "@/utils/fetcher";
+import { toast } from "react-toastify";
+import PasswordLevel from "../../../components/PasswordLevel";
 
 export default function Register() {
   const { handleRegister } = useUser();
@@ -21,10 +23,6 @@ export default function Register() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
-
-  const [passwordLevel, setPasswordLevel] = useState<
-    "Fraca" | "Razoável" | "Forte"
-  >("Fraca");
 
   const [communicationCheckbox, setCommunicationCheckbox] =
     useState<boolean>(false);
@@ -95,6 +93,7 @@ export default function Register() {
           lastName,
           cpf: cpfSecure.encrypted,
         });
+        toast.success("Sua conta foi criada com sucesso!");
         router.push("/login");
       } catch (err: any) {
         if (err.code === "auth/email-already-in-use") {
@@ -102,7 +101,7 @@ export default function Register() {
             { test: "Já existe uma conta com este e-mail" },
           ]);
         } else {
-          console.log("Ocorreu um erro ao criar sua conta, tente novamente!");
+          toast.error("Ocorreu um erro ao criar sua conta, tente novamente!");
         }
       } finally {
         setSendingForm(false);
@@ -183,27 +182,6 @@ export default function Register() {
     ]);
   }
 
-  useEffect(() => {
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasNumber = /\d/.test(password);
-    const hasSpecialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\-\\/]/.test(password);
-
-    if (password.length < 6) {
-      setPasswordLevel("Fraca");
-    } else if (
-      password.length >= 6 &&
-      hasLowerCase &&
-      hasUpperCase &&
-      hasNumber &&
-      hasSpecialChar
-    ) {
-      setPasswordLevel("Forte");
-    } else if (password.length >= 6 && hasLowerCase && hasUpperCase) {
-      setPasswordLevel("Razoável");
-    }
-  }, [password]);
-
   return (
     <>
       <Header type="short" />
@@ -269,25 +247,7 @@ export default function Register() {
                   eyePassword
                 />
               </div>
-              <div className="mt-5 mb-10">
-                <p className="text-xs font-medium mb-2">Nível da senha</p>
-                <div className="flex items-center gap-3">
-                  <div className="relative h-1 w-40">
-                    <div
-                      className={`absolute h-full rounded transition-all
-                        ${passwordLevel === "Fraca" && "bg-notify-error"}
-                        ${passwordLevel === "Razoável" && "bg-notify-warning"}
-                        ${passwordLevel === "Forte" && "bg-notify-success"}
-                      `}
-                      style={{
-                        width: `${!password.length ? 0 : passwordLevel === "Fraca" ? 20 : passwordLevel === "Razoável" ? 60 : 100}%`,
-                      }}
-                    ></div>
-                    <div className="bg-background-softLight w-full h-full rounded"></div>
-                  </div>
-                  <p className="text-xs">{passwordLevel}</p>
-                </div>
-              </div>
+              <PasswordLevel password={password} />
               <div className="flex flex-col gap-4 mb-7">
                 <div className="flex gap-2 items-center">
                   <Checkbox
