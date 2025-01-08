@@ -1,0 +1,36 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  @apply text-text-main;
+}
+
+.disable-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.disable-scroll {
+  scrollbar-width: none;
+}
+
+.line-limit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+
+
+.input-radio:checked::before {
+  @apply bg-brand-secondary;
+
+  content: '';
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
