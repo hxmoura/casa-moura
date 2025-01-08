@@ -25,9 +25,9 @@ Casa Moura é um e-commerce de materiais de construção.
 Guia de estilo e prototipação das telas estão disponíveis no [Figma](https://www.figma.com/design/VfI83my6VZsLKM4GZJkBhO/Casa-Moura)
 
 ## ⚙️ Configuração do projeto
-[🔥 Configurar Firebase](settingsFirebase.md)
-[💵 Configurar gateway de pagamentos](settingsProject.md)
-[🚀 Configurar projeto](settingsProject.md)
+- [🔥 Configurar Firebase](settingsFirebase.md)
+- [💵 Configurar gateway de pagamentos](settingsProject.md)
+- [🚀 Configurar projeto](settingsProject.md)
 
 ## 💡 Autor
 <table>
