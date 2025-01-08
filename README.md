@@ -26,7 +26,7 @@ Guia de estilo e prototipação das telas estão disponíveis no [Figma](https:/
 
 ## ⚙️ Configuração do projeto
 - [🔥 Configurar Firebase](settingsFirebase.md)
-- [💵 Configurar gateway de pagamentos](settingsProject.md)
+- [💵 Configurar gateway de pagamentos](settingsGateway.md)
 - [🚀 Configurar projeto](settingsProject.md)
 
 ## 💡 Autor
