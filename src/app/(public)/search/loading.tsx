@@ -1,12 +1,10 @@
 import Container from "@/components/Container";
 import FooterLoading from "@/components/Footer/FooterLoading";
-import HeaderFullLoading from "@/components/Header/HeaderFullLoading";
 import Skeleton from "@/components/Skeleton";
 
-export default function loading() {
+export default function Loading() {
   return (
     <>
-      <HeaderFullLoading />
       <main className="mb-24">
         <Container>
           <div className="flex justify-between items-center mt-6 lg:mt-16">

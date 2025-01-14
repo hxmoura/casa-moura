@@ -13,12 +13,15 @@ import { Product } from "@/types/product";
 import Filters from "./Filters";
 import useFetcher from "@/hooks/useFetcher";
 import Button from "@/components/Button";
+import useQueryParams from "@/hooks/useQueryParams";
+import Loading from "./loading";
 
 export default function Content() {
   const searchParams = useSearchParams();
   const search = searchParams.get("q") || "";
+  const page = Number(searchParams.get("page")) || 1;
 
-  const { response: products } = useFetcher<Product[]>(getProducts);
+  const { response: products, loading } = useFetcher<Product[]>(getProducts);
   const [filterProductsBySearch, setFilterProductsBySearch] = useState<
     Product[]
   >([]);
@@ -26,6 +29,45 @@ export default function Content() {
 
   const [openModalFilters, setOpenModalFilters] = useState<boolean>(false);
   const { isDesktop } = useScreenWidth();
+
+  const [paginator, setPaginator] = useState({
+    currentPage: page,
+    productsPerPage: 12,
+  });
+  const { updateQuery } = useQueryParams();
+
+  const listProduct = filterProducts.slice(
+    (paginator.currentPage - 1) * paginator.productsPerPage,
+    paginator.currentPage * paginator.productsPerPage,
+  );
+
+  const totalPages = Math.ceil(
+    filterProducts.length / paginator.productsPerPage,
+  );
+
+  useEffect(() => {
+    updateQuery("page", paginator.currentPage);
+  }, [paginator.currentPage, updateQuery]);
+
+  useEffect(() => {
+    setPaginator((prev) => ({
+      ...prev,
+      currentPage: page > totalPages ? 1 : page,
+    }));
+  }, [page, totalPages]);
+
+  function handlePage(page: number) {
+    if (page >= 1 && page <= totalPages) {
+      setPaginator((prev) => ({
+        ...prev,
+        currentPage: page,
+      }));
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  }
 
   function simplifyText(string: string) {
     return string
@@ -41,13 +83,18 @@ export default function Content() {
   }, [isDesktop]);
 
   useEffect(() => {
-    const filterBySearch =
-      products?.data?.filter((product) =>
+    if (!loading && products && products.data.length > 0) {
+      const filterBySearch = products.data.filter((product) =>
         simplifyText(product.name).includes(simplifyText(search)),
-      ) || [];
+      );
 
-    setFilterProductsBySearch(filterBySearch);
-  }, [products, search]);
+      setFilterProductsBySearch(filterBySearch);
+    }
+  }, [loading, products, search]);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   if (products && filterProductsBySearch.length <= 0) {
     return (
@@ -67,9 +114,18 @@ export default function Content() {
     <main className="mb-28">
       <Container>
         <section className="flex justify-between mt-6 mb-7 lg:mt-16 lg:mb-12 overflow-hidden">
-          <p className="text-text-light font-medium lg:font-semibold text-xs lg:text-xl ">
-            Você pesquisou por &quot;{search}&quot;
-          </p>
+          <div>
+            <p className="text-text-light font-medium lg:font-semibold text-xs lg:text-xl ">
+              Você pesquisou por &quot;{search}&quot;
+            </p>
+            <small className="text-text-light font-medium text-xs lg:text-sm">
+              {filterProducts.length === 1 ? (
+                <>{filterProducts.length} produto encontrado</>
+              ) : (
+                <>{filterProducts.length} produtos encontrados</>
+              )}
+            </small>
+          </div>
           <div className="lg:hidden">
             <Button
               onClick={() => setOpenModalFilters(true)}
@@ -113,11 +169,44 @@ export default function Content() {
             </Modal>
           </div>
 
-          <section className="flex flex-wrap justify-center lg:justify-start gap-5 w-full">
+          <section className="w-full">
             {filterProducts.length > 0 ? (
-              filterProducts.map((product, index) => (
-                <ProductCard product={product} key={index} />
-              ))
+              <>
+                <div className="flex flex-wrap justify-center lg:justify-start gap-5">
+                  {listProduct.map((product, index) => (
+                    <ProductCard product={product} key={index} />
+                  ))}
+                </div>
+                {filterProducts.length > paginator.productsPerPage && (
+                  <div className="border-t border-background-softLight w-full flex justify-center items-center pt-6 gap-2 mt-16">
+                    <button
+                      onClick={() => handlePage(paginator.currentPage - 1)}
+                      className={`${paginator.currentPage === 1 && "text-background-softLight"}`}
+                      disabled={paginator.currentPage === 1}
+                    >
+                      <Icon className="w-6 h-6" icon="raphael:arrowleft" />
+                    </button>
+                    <div className="space-x-3">
+                      {[...Array(totalPages)].map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handlePage(index + 1)}
+                          className={`rounded-full h-7 w-7 text-sm ${paginator.currentPage === index + 1 ? "bg-brand-secondary text-white" : ""}`}
+                        >
+                          {index + 1}
+                        </button>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => handlePage(paginator.currentPage + 1)}
+                      className={`${paginator.currentPage === totalPages && "text-background-softLight"}`}
+                      disabled={paginator.currentPage === totalPages}
+                    >
+                      <Icon className="w-6 h-6" icon="raphael:arrowright" />
+                    </button>
+                  </div>
+                )}
+              </>
             ) : (
               <p className="font-semibold text-lg">
                 Não foi possível encontrar nenhum produto.
