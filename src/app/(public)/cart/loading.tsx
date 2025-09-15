@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 
 export default function Loading() {
   return (
-    <div className="flex flex-col bg-background-light lg:bg-transparent">
+    <div className="flex flex-col bg-background-light lg:bg-transparent min-h-screen">
       <HeaderFullLoading />
-      <main className="mb-3 lg:my-12">
+      <main className="mb-3 lg:my-12 flex-1">
         <Container noPadding>
           <div className="flex flex-col lg:flex-row gap-3 lg:gap-6">
             <div className="w-full">

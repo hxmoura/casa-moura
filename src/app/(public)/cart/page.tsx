@@ -1,16 +1,16 @@
 "use client";
 
-import Container from "@/components/Container";
-import Recommendations from "../product/[id]/layout/Recommendations";
-import EmptyCart from "@/components/Cart/EmptyCart";
-import Footer from "@/components/Footer";
-import Product from "@/components/Cart/Product";
-import { useEffect } from "react";
-import { useCart } from "@/contexts/CartContext";
-import CheckoutContainer from "@/components/CheckoutContainer";
-import Header from "@/components/Header";
 import CalculateDelivery from "@/components/CalculateDelivery";
+import EmptyCart from "@/components/Cart/EmptyCart";
+import Product from "@/components/Cart/Product";
+import CheckoutContainer from "@/components/CheckoutContainer";
+import Container from "@/components/Container";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import ProductSummary from "@/components/ProductSummary";
+import { useCart } from "@/contexts/CartContext";
+import { useEffect } from "react";
+import Recommendations from "../product/[id]/layout/Recommendations";
 import Loading from "./loading";
 
 export default function Cart() {
@@ -26,12 +26,12 @@ export default function Cart() {
 
   return (
     <div
-      className={`flex flex-col ${cart.length > 0 ? "bg-background-light lg:bg-transparent" : "bg-transparent"}`}
+      className={`flex flex-col ${cart.length > 0 ? "bg-background-light lg:bg-transparent" : "bg-transparent"} min-h-screen`}
     >
       <Header />
 
       {cart.length > 0 ? (
-        <main className="mb-3 lg:my-12">
+        <main className="mb-3 lg:my-12 flex-1">
           <Container noPadding>
             <div className="flex flex-col lg:flex-row gap-3 lg:gap-6">
               <CheckoutContainer className="w-full space-y-5">
@@ -53,7 +53,7 @@ export default function Cart() {
           </Container>
         </main>
       ) : (
-        <main className="my-24">
+        <main className="my-24 flex-1">
           <EmptyCart />
           <Recommendations />
         </main>
